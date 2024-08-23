@@ -1,79 +1,146 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Proyecto Final - Modulo 2 - Grupo B" />
-    <meta name="author" content="Valdivia Fernando Miguel, Mendoza Mariana Eugenia, Palazzo Lobo María Valentina,
-    Infante Ezequiel, Coniglio Mauro, Lobo Valentin José" />
-    <meta name="keywords"
-        content="condicionales, variables, constantes, javascript, bucles, arrays, objetos, clases, poo, dom, bom, localstorage" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <meta
+      name="author"
+      content="Valdivia Fernando Miguel, Mendoza Mariana Eugenia, Palazzo Lobo María Valentina,
+    Infante Ezequiel, Coniglio Mauro, Lobo Valentin José"
+    />
+    <meta
+      name="keywords"
+      content="condicionales, variables, constantes, javascript, bucles, arrays, objetos, clases, poo, dom, bom, localstorage"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="../css/styles.css" />
     <title>PF-MOD2-GB</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav class="navbar navbar-expand-lg py-sm-0 py-md-3 py-lg-3">
-            <div class="container d-flex">
-                <a class="navbar-brand text-white titulo" href="../index.html">Magneto</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#opcionesNavbar"
-                    aria-controls="opcionesNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="opcionesNavbar">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-bold">
-                        <li class="nav-item">
-                            <a class="nav-link text-white" aria-current="page" href="../index.html">Inicio</a>
-                        </li>
-                        <!-- <li class="nav-item">
+      <nav class="navbar navbar-expand-lg py-sm-0 py-md-3 py-lg-3">
+        <div class="container d-flex">
+          <a class="navbar-brand text-white titulo" href="../index.html"
+            >Magneto</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#opcionesNavbar"
+            aria-controls="opcionesNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="opcionesNavbar">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-bold">
+              <li class="nav-item">
+                <a
+                  class="nav-link text-white"
+                  aria-current="page"
+                  href="../index.html"
+                  >Inicio</a
+                >
+              </li>
+              <!-- <li class="nav-item">
                                 <a class="nav-link text-white" href="./administrador.html">Administrador</a>
                             </li> -->
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="./nosotros.html">Nosotros</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-white" href="./detalleServicio.html" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Servicios
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="./detalleServicio.html">Redes Sociales</a></li>
-                                <li>
-                                    <hr class="dropdown-divider" />
-                                </li>
-                                <li><a class="dropdown-item" href="./detalleServicio.html">Email</a></li>
-                                <li>
-                                    <hr class="dropdown-divider" />
-                                </li>
-                                <li><a class="dropdown-item" href="./detalleServicio.html">Páginas Web</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item text-white">
-                            <a class="nav-link" href="./contacto.html">Contacto</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" />
-                        <button class="btn btnColor" type="submit">Buscar</button>
-                    </form>
-                    <ul class="navbar-nav ms-auto mb-lg-0 fw-bold">
-                        <li class="nav-item">
-                            <button class="btn btnColorLogin fw-bold rounded-pill ms-auto fs-6" type="button">
-                                <i class="bi bi-person-circle"></i> Login
-                            </button>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./nosotros.html"
+                  >Nosotros</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle text-white"
+                  href="./detalleServicio.html"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Servicios
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="./detalleServicio.html"
+                      >Redes Sociales</a
+                    >
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./detalleServicio.html"
+                      >Email</a
+                    >
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./detalleServicio.html"
+                      >Páginas Web</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item text-white">
+                <a class="nav-link" href="./contacto.html">Contacto</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Buscar"
+                aria-label="Search"
+              />
+              <button class="btn btnColor" type="submit">Buscar</button>
+            </form>
+            <ul class="navbar-nav ms-auto mb-lg-0 fw-bold">
+              <li class="nav-item">
+                <button
+                  class="btn btnColorLogin fw-bold rounded-pill ms-auto fs-6"
+                  type="button"
+                >
+                  <i class="bi bi-person-circle"></i> Login
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
-    <main></main>
+    <main>
+      <div class="container-fluid text-center">
+        <img class="w-100"
+          src="../img/404.png"
+          alt="Error 404 - Apreta el boton para volver para atras"
+        />
+      </div>
+
+      <div class="container-fluid text-center ">
+        <a type="button"  href="../index.html"    class="btn btn-danger">Volver al Inicio</a>
+
+      </div>
+    </main>
     <footer></footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
