@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-:root{
-   --Violeta: #a600f9;
-   --Celeste: #c8efff;
-   --Azul:#00204c;
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --Violeta: #a600f9;
+  --Celeste: #c8efff;
+  --Azul: #00204c;
 }
 body {
   min-height: 100vh;
@@ -19,11 +19,11 @@ main {
 }
 /*---------------------- HEADER--------------------------------------*/
 nav {
-    background-image: url(../img/background.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    object-fit: contain;
-    width: 100%;
+  background-image: url(../img/background.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  width: 100%;
 }
 @media all and (max-width: 992px) {
   nav {
@@ -32,19 +32,19 @@ nav {
     background-repeat: no-repeat;
     object-fit: cover;
     width: 100%;
-}
+  }
 }
 @media all and (max-width: 768px) {
-   nav {
+  nav {
     background-image: url(../img/background.png);
     background-size: 230%;
     background-repeat: no-repeat;
     object-fit: cover;
     width: 100%;
+  }
 }
-}
-.itemActive{
-    color: var(--Azul);
+.itemActive {
+  color: var(--Azul);
 }
 .navbar-toggler {
   border-color: white;
@@ -57,95 +57,107 @@ nav {
   color: white;
   border-color: white;
 }
-.btnColor{
-    background-color: var(--Violeta);
-    color: white;
+.btnColor {
+  background-color: var(--Violeta);
+  color: white;
 }
-.btnColor:hover{
-    background-color: white;
-    color: var(--Azul);
-    border-color: none;
+.btnColor:hover {
+  background-color: white;
+  color: var(--Azul);
+  border-color: none;
 }
-.btnColorLogin{
-    background-color: white;
-    color: var(--Azul);
+.btnColorLogin {
+  background-color: white;
+  color: var(--Azul);
 }
-.btnColorLogin:hover{
-    background-color: white;
-    color: var(--Violeta);
+.btnColorLogin:hover {
+  background-color: white;
+  color: var(--Violeta);
 }
-@media all and (max-width: 768px){
-    .btnColorLogin{
+@media all and (max-width: 768px) {
+  .btnColorLogin {
     background-color: white;
     color: var(--Azul);
     margin-top: 10px;
-}
-.btnColorLogin:hover{
+  }
+  .btnColorLogin:hover {
     background-color: white;
     color: var(--Violeta);
+  }
 }
-}
-.titulo{
+.titulo {
   font-family: "Black Ops One", system-ui;
   font-weight: 400;
   font-style: normal;
   font-size: 1.8rem;
 }
-.bgInputWhite{
-    background-color: rgba(255, 255, 255, 0.488);
-    color: white;
-    border-color: white;
+.bgInputWhite {
+  background-color: rgba(255, 255, 255, 0.488);
+  color: white;
+  border-color: white;
 }
-.bgInputWhite:active{
-    background-color: white;
-    color: var(--Azul);
-    border-color: white;
+.bgInputWhite:active {
+  background-color: white;
+  color: var(--Azul);
+  border-color: white;
 }
-.dropdown-menu{
-   background-color: var(--Violeta);
-   color: white;
-   border-color: none;
+.dropdown-menu {
+  background-color: var(--Violeta);
+  color: white;
+  border-color: none;
 }
-.dropdown-item{
-   background-color: var(--Violeta);
-   color: white;
-   border-color: none;
+.dropdown-item {
+  background-color: var(--Violeta);
+  color: white;
+  border-color: none;
 }
-.dropdown-item:hover{
-    background-color: white;
-    color: var(--Azul);
-    border-color: none;
+.dropdown-item:hover {
+  background-color: white;
+  color: var(--Azul);
+  border-color: none;
 }
-.dropdown-item:active{
-    background-color: white;
-    color: var(--Azul);
-    border-color: none;
+.dropdown-item:active {
+  background-color: white;
+  color: var(--Azul);
+  border-color: none;
 }
 /* --------------------------------MAIN--------------------------------------- */
-*{color: rgb(0, 32, 76 ) ;}
-
-.bg-celeste{background-color:#c8efff ;}
-
-.inicio-mensaje{border-radius: 10px;
-                box-shadow: 0px 0px 50px rgb(166, 0, 249);
-                height:35vh;
-                width: 60%;
-               }
-
-.size-menor{ transform: scale(0.7) rotate(60deg);}
-
-.size-menor-2{transform: scale(0.3);
-              top: -300px;}
-
-.size-menor-3{transform: scale(0.7)rotate(-50deg);}
-
-.bg-imagen{background-attachment: fixed;
-    background-image: url('../img/fonde-de-nav-y-footer.png');
-    background-size: cover; 
-    background-position: center;
-    background-repeat: no-repeat;
+* {
+  color: rgb(0, 32, 76);
 }
 
-.titulo-principal{size:100px;}
+.bg-celeste {
+  background-color: #c8efff;
+}
 
+.inicio-mensaje {
+  border-radius: 10px;
+  box-shadow: 0px 0px 50px rgb(166, 0, 249);
+  height: 35vh;
+  width: 60%;
+}
+
+.size-menor {
+  transform: scale(0.7) rotate(60deg);
+}
+
+.size-menor-2 {
+  transform: scale(0.3);
+  top: -300px;
+}
+
+.size-menor-3 {
+  transform: scale(0.7) rotate(-50deg);
+}
+
+.bg-imagen {
+  background-attachment: fixed;
+  background-image: url("../img/fonde-de-nav-y-footer.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.titulo-principal {
+  size: 100px;
+}
 /* ---------------------------------------------------- */
