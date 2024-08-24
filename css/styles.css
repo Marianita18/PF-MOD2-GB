@@ -1,3 +1,4 @@
+/* --------------------------------MAIN--------------------------------------- */
 *{color: rgb(0, 32, 76 ) ;}
 
 .bg-celeste{background-color:#c8efff ;}
@@ -21,5 +22,6 @@
     background-position: center;
     background-repeat: no-repeat;
 }
-
 .titulo-principal{size:100px;}
+/* ---------------------------------------------------- */
+
