@@ -10,7 +10,7 @@ body{
 }
 
 .animate-card {
-  box-shadow: 0 4px 8px #a600f9;
+  box-shadow: 0 4px 8px rgba(166, 0, 249, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
