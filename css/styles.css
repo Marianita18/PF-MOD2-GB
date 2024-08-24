@@ -121,4 +121,31 @@ nav {
     color: var(--Azul);
     border-color: none;
 }
-/* ----------------------------------------------------------------------- */
+/* --------------------------------MAIN--------------------------------------- */
+*{color: rgb(0, 32, 76 ) ;}
+
+.bg-celeste{background-color:#c8efff ;}
+
+.inicio-mensaje{border-radius: 10px;
+                box-shadow: 0px 0px 50px rgb(166, 0, 249);
+                height:35vh;
+                width: 60%;
+               }
+
+.size-menor{ transform: scale(0.7) rotate(60deg);}
+
+.size-menor-2{transform: scale(0.3);
+              top: -300px;}
+
+.size-menor-3{transform: scale(0.7)rotate(-50deg);}
+
+.bg-imagen{background-attachment: fixed;
+    background-image: url('../img/fonde-de-nav-y-footer.png');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.titulo-principal{size:100px;}
+
+/* ---------------------------------------------------- */
