@@ -53,7 +53,7 @@
 #brazo-violeta-1 {
   transform: rotate(-90deg) scale(1.4);
   position: relative;
-  left: 75%;
+  left: 72%;
 }
 
 #brazo-violeta-2 {
@@ -144,10 +144,18 @@
 }
 
 .imagenes-de-servicios {
-  border-radius: 50%;
-  margin: 10%;
-  transform: scale(0.7);
+  border-radius: 30%;
+  padding: 2%;
+
 }
+
+.color-de-titulo-servicios{color: rgb(166, 0, 249);}
+
+.botones-servicios{color: white;
+                   background-color: rgb(166, 0, 249);}
+              
+
+                   
 
 /* DISPOSITIVOS PEQUEÑOS */
 
@@ -233,5 +241,15 @@
     position: relative;
     top: 0px;
     left: 0px;
+  }
+
+  .titulo-muy-grande {
+    font-size: 2rem;
+  }
+  .resaltado {
+    background: rgba(166, 0, 249, 0.508);
+    border-radius: 40px;
+    font-size: 2rem;
+    padding: 2px;
   }
 }
