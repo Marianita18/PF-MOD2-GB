@@ -150,8 +150,8 @@ nav {
     background-repeat: no-repeat;
 }
 .titulo-principal{size:100px;}
-/* ---------------------------------------------------- */
 
+<<<<<<< HEAD
 .bg-celeste {
   background-color: #c8efff;
 }
@@ -384,3 +384,41 @@ nav {
     left: 0px;
   }
 }
+=======
+/* -----------------------FOOTER----------------------------- */
+footer {
+  background-image: url(../img/background.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  width: 100%;
+}
+@media all and (max-width: 992px) {
+ footer {
+  background-image: url(../img/background.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  width: 100%;
+}
+.fz{
+  font-size: 13px;;
+}
+}
+@media all and (max-width: 768px) {
+footer {
+  background-image: url(../img/background.png);
+  background-size: 320%;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  width: 100%;
+}
+.fz{
+  font-size: 13px;;
+}
+}
+.fz{
+  font-size: 14px;;
+}
+/* ------------------------------------------------------------- */
+>>>>>>> c5e943097ed63264607015af55912e18c2772f81
