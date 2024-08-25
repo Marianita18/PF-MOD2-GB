@@ -37,7 +37,7 @@ nav {
 @media all and (max-width: 768px) {
   nav {
     background-image: url(../img/background.png);
-    background-size: 230%;
+    background-size: 250%;
     background-repeat: no-repeat;
     object-fit: cover;
     width: 100%;
