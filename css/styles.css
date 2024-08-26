@@ -40,7 +40,7 @@ nav {
 @media all and (max-width: 768px) {
   nav {
     background-image: url(../img/background.png);
-    background-size: 230%;
+    background-size: 250%;
     background-repeat: no-repeat;
     object-fit: cover;
     width: 100%;
@@ -245,12 +245,14 @@ nav {
   border-radius: 30%;
   padding: 2%;
 }
-.color-de-titulo-servicios{color: rgb(166, 0, 249);}
+.color-de-titulo-servicios{
+  color: rgb(166, 0, 249);}
 
-.botones-servicios{color: white;
-                   background-color: rgb(166, 0, 249);
+.botones-servicios{
+  color: white;
+  background-color: rgb(166, 0, 249);
 }
-               
+
 /* DETALLES */
 textarea{resize: none;}
 
@@ -386,5 +388,16 @@ footer {
 .fz{
   font-size: 14px;;
 }
-/* ------------------------------------------------------------- */
+/* -----------------------------NOSOTROS-------------------------------- */
+.animate-card {
+  box-shadow: 0 4px 8px rgba(166, 0, 249, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.animate-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(166, 0, 249, 0.5);
+  cursor: pointer;
+}
+/* ------------------------------------------------------------------------ */
 
