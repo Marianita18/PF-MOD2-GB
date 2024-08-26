@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 * {
   color: rgb(0, 32, 76);
   font-size: 1.25rem;
-=======
->>>>>>> f72c6907a5f7d07e28bc86ba0b194cc046020412
 @import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 :root {
@@ -128,39 +125,6 @@ nav {
   border-color: none;
 }
 /* --------------------------------MAIN--------------------------------------- */
-<<<<<<< HEAD
-* {
-  color: rgb(0, 32, 76);
-}
-.bg-celeste{background-color:#c8efff ;}
-
-.inicio-mensaje{border-radius: 10px;
-                box-shadow: 0px 0px 50px rgb(166, 0, 249);
-                height:35vh;
-                width: 60%;
-               }
-
-.size-menor{ transform: scale(0.7) rotate(60deg);}
-
-.size-menor-2{transform: scale(0.3);
-              top: -300px;}
-
-.size-menor-3{transform: scale(0.7)rotate(-50deg);}
-
-.bg-imagen{background-attachment: fixed;
-    background-image: url('../img/fonde-de-nav-y-footer.png');
-    background-size: cover; 
-    background-position: center;
-    background-repeat: no-repeat;
-}
-.titulo-principal{size:100px;}
-
-.bg-celeste {
-  background-color: #c8efff;
-}
-
-=======
->>>>>>> f72c6907a5f7d07e28bc86ba0b194cc046020412
 .inicio-mensaje {
   height: 35vh;
   width: 60%;
@@ -482,10 +446,6 @@ nav {
       padding: 2px;
     }
    }
-<<<<<<< HEAD
-   
- 
-=======
 /* -----------------------FOOTER----------------------------- */
 footer {
   background-image: url(../img/background.png);
@@ -523,4 +483,3 @@ footer {
 }
 /* ------------------------------------------------------------- */
 
->>>>>>> f72c6907a5f7d07e28bc86ba0b194cc046020412
