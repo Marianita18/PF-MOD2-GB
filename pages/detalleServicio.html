@@ -187,14 +187,7 @@
 
                 <div class="terms-section mt-4">
                   <h4>Términos y Condiciones</h4>
-                  <button
-                    class="btn btn-link"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#terms-content"
-                    aria-expanded="false"
-                    aria-controls="terms-content"
-                  >
+                  <button class="btn btn-secondary botones-servicios mb-3">
                     Ver más
                   </button>
                 </div>
@@ -228,7 +221,7 @@
               <form>
                 <div class="mb-3">
                   <label for="reviewer-name" class="form-label">Nombre</label>
-                  <input maxlength="70" 
+                  <input maxlength="70" minlength="3"
                     type="text"
                     class="form-control"
                     id="reviewer-name"
@@ -243,10 +236,12 @@
                     class="form-control"
                     id="reviewer-comment"
                     rows="3"
+                    maxlength="400"
+                    minlength="3"
                     placeholder="Escribe tu reseña aquí"
                   ></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">
+                <button type="submit" class="btn btn-secondary botones-servicios mb-3">
                   Enviar Reseña
                 </button>
               </form>
