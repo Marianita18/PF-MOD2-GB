@@ -1,25 +1,272 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Proyecto Final - Modulo 2 - Grupo B" />
-    <meta name="author" content="Valdivia Fernando Miguel, Mendoza Mariana Eugenia, Palazzo Lobo María Valentina,
-    Infante Ezequiel, Coniglio Mauro, Lobo Valentin José" />
-    <meta name="keywords"
-        content="condicionales, variables, constantes, javascript, bucles, arrays, objetos, clases, poo, dom, bom, localstorage" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <meta
+      name="author"
+      content="Valdivia Fernando Miguel, Mendoza Mariana Eugenia, Palazzo Lobo María Valentina,
+    Infante Ezequiel, Coniglio Mauro, Lobo Valentin José." />
+    <meta
+      name="keywords"
+      content="condicionales, variables, constantes, javascript, bucles, arrays, objetos, clases, poo, dom, bom, localstorage" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous" />
     <link rel="stylesheet" href="../css/styles.css" />
     <title>PF-MOD2-GB</title>
-</head>
-<body>
-    <header></header>
-    <main></main>
-    <footer></footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-</body>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg py-sm-0 py-md-3 py-lg-3">
+        <div class="container d-flex">
+          <a class="navbar-brand text-white titulo" href="../index.html"
+            >Magneto</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#opcionesNavbar"
+            aria-controls="opcionesNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="opcionesNavbar">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-bold">
+              <li class="nav-item">
+                <a
+                  class="nav-link text-white"
+                  aria-current="page"
+                  href="../index.html"
+                  >Inicio</a
+                >
+              </li>
+              <!-- <li class="nav-item">
+                                <a class="nav-link text-white" href="./administrador.html">Administrador</a>
+                            </li> -->
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./nosotros.html"
+                  >Nosotros</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle text-white"
+                  href="./detalleServicio.html"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Servicios
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="./detalleServicio.html"
+                      >Redes Sociales</a
+                    >
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./detalleServicio.html"
+                      >Email</a
+                    >
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./detalleServicio.html"
+                      >Páginas Web</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item text-white">
+                <a class="nav-link" href="./contacto.html">Contacto</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Buscar"
+                aria-label="Search" />
+              <button class="btn btnColor" type="submit">Buscar</button>
+            </form>
+            <ul class="navbar-nav ms-auto mb-lg-0 fw-bold">
+              <li class="nav-item">
+                <button
+                  class="btn btnColorLogin fw-bold rounded-pill ms-auto fs-6"
+                  type="button">
+                  <i class="bi bi-person-circle"></i> Login
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container-fluid text-center d-none d-lg-block mt-5">
+        <img
+          class="w-75"
+          src="../img/404.png"
+          alt="Error 404 - Apreta el boton para volver para atras" />
+      </div>
+      <div class="container-fluid text-center d-xxl-none d-xl-none d-lg-none">
+        <img
+          class="w-75"
+          src="../img/404 v.png"
+          alt="Error 404 - Apreta el boton para volver para atras" />
+      </div>
+
+      <div class="container-fluid text-center mt-5">
+        <a type="button" href="../index.html" class="btn btn-danger"
+          >Volver al Inicio</a
+        >
+      </div>
+    </main>
+    <footer class="mt-5">
+      <section class="container-fluid text-center">
+        <article class="row py-5">
+          <div
+            class="col-12 col-sm-3 col-md-3 col-lg-3 py-2 py-sm-2 py-md-0 py-lg-0">
+            <img
+              src="../img/logomagnetohome.png"
+              class="img-fluid"
+              width="110"
+              alt="Logo Magneto" />
+            <h6>
+              <a
+                class="text-decoration-none titulo text-white"
+                href="../index.html"
+                >Magneto</a
+              >
+            </h6>
+            <a
+              class="link-secondary fz"
+              href="https://www.instagram.com/"
+              target="_blank"
+              ><i class="bi bi-instagram fs-5"></i
+            ></a>
+            <a
+              class="link-secondary fz"
+              href="https://www.facebook.com/"
+              target="_blank"
+              ><i class="bi bi-facebook fs-5"></i
+            ></a>
+            <a
+              class="link-secondary fz"
+              href="https://www.x.com/"
+              target="_blank"
+              ><i class="bi bi-twitter-x fs-5"></i
+            ></a>
+            <a
+              class="link-secondary fz"
+              href="https://www.youtube.com/"
+              target="_blank"
+              ><i class="bi bi-youtube fs-5"></i
+            ></a>
+            <a
+              class="link-secondary fz"
+              href="https://www.linkedin.com/"
+              target="_blank"
+              ><i class="bi bi-linkedin fs-5"></i
+            ></a>
+            <a
+              class="link-secondary fz"
+              href="https://discord.com/"
+              target="_blank"
+              ><i class="bi bi-discord fs-5"></i
+            ></a>
+          </div>
+          <div
+            class="col-12 col-sm-3 col-md-3 col-lg-3 text-center text-sm-center text-md-start text-lg-start py-2">
+            <h6 class="itemActive fw-bold">Contacto</h6>
+            <ul class="list-unstyled fz">
+              <li>
+                <a
+                  href="./error404.html"
+                  class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                  >Email: info@magneto.com</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./error404.html"
+                  class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                  >Teléfono: +123 456 7890</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./error404.html"
+                  class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                  >Dirección: Calle Ficticia 123, Ciudad, País</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div
+            class="col-12 col-sm-3 col-md-3 col-lg-3 text-center text-sm-center text-md-start text-lg-start py-2">
+            <h6 class="itemActive fw-bold">Políticas</h6>
+            <ul class="list-unstyled fz">
+              <li>
+                <a
+                  href="./error404.html"
+                  class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">
+                  Terminos y condiciones</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./error404.html"
+                  class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                  >Privacidad</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./error404.html"
+                  class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                  >Configuración de cookies</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./error404.html"
+                  class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                  >Terminos y condiciones</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div
+            class="col-12 col-sm-3 col-md-3 col-lg-3 text-sm-center text-md-start text-lg-start py-2">
+            <h6 class="itemActive fw-bold">Suscríbete y recibe noticias</h6>
+            <form class="d-flex ms-sm-0 me-md-0 me-lg-5">
+              <input
+                class="form-control me-2 fz"
+                type="email"
+                placeholder="Escribe tu email aqui" />
+              <button class="btn btnColor fz" type="submit">Unirse</button>
+            </form>
+          </div>
+        </article>
+      </section>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+  </body>
 </html>
