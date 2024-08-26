@@ -127,7 +127,7 @@
       <section class="mt-4">
         <div class="d-flex flex-direction-row justify-content-between mt-3">
           <h2>Tabla de Servicios</h2>
-          <button class="btn btn-primary">Nuevo</button>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAdminServicios">Nuevo</button>
         </div>
         <div  class="table-responsive">
           <table class="table table-striped">
@@ -186,6 +186,41 @@
 
 
     </main>
+
+    <!-- Modal servicios -->
+<div class="modal fade" id="modalAdminServicios" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title fs-5" id="modalAdminServicios">Administrar Servicios</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+              <label for="nombreServicio" class="form-label">Nombre del Servicio</label>
+              <input type="text" class="form-control" id="nombreServicio" placeholder="Ejemplo: Pack basico.... " required minlength="1" maxlength="30">
+          </div>
+          <div class="mb-3">
+            <label for="descripcionServicio" class="form-label">Descripcion</label>
+            <input type="text" class="form-control" id="descripcionServicio" minlength="1" maxlength="100" required>
+        </div>
+        <div class="mb-3">
+          <label for="precioServicio" class="form-label">Precio del Servicio</label>
+          <input type="text" class="form-control" id="precioServicio" required minlength="1" maxlength="9" >
+      </div>
+      <div class="mb-3">
+        <label for="tiempoServicio" class="form-label">Tiempo de Entrega</label>
+        <input type="text" class="form-control" id="tiempoServicio" required minlength="1" maxlength="10">
+    </div>
+
+    <button class="btn btn-primary">Cargar</button>
+        </form>
+      </div>
+  
+    </div>
+  </div>
+</div>
 
     <footer class="mt-5">
       <section class="container-fluid text-center">
