@@ -45,6 +45,32 @@ formServicios.reset();
 const guardarEnLocalStorage =()=>{
     localStorage.setItem('listaServiciosKey' , JSON.stringify(listaServicios))
 }
+
+const cargaServiciosInicial =()=>{
+    //Pregunta si hay contenido en local
+    if(listaServicios.length != 0){
+        //Tabla
+        listaServicios.map((servicio)=> dibujarFila())
+    }
+}
+
+const dibujarFila = ()=>{
+    const tabla = document.querySelector('tbody');
+    tabla.innerHTML += `  <tr>
+              <td>234</td>
+              <td>Reels</td>
+              <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, voluptate.</td>
+              <td>500</td>
+              <td>5 dias</td>
+              <td>
+                  <button class="btn btn-primary">Leer</button>
+                  <button class="btn btn-primary">Editar</button>
+                  <button class="btn btn-warning">Borrar</button>
+              </td>
+            </tr> `
+}
+
 //aqui agrego la logica del CRUD
-btnNuevo.addEventListener('click', mostrarModal)
-formServicios.addEventListener('submit', crearServicio)
+btnNuevo.addEventListener('click', mostrarModal);
+formServicios.addEventListener('submit', crearServicio);
+cargaServiciosInicial();
