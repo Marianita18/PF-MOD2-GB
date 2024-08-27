@@ -242,13 +242,14 @@ nav {
   border-radius: 30%;
   padding: 2%;
 }
-.color-de-titulo-servicios{color: rgb(166, 0, 249);}
+.color-de-titulo-servicios{
+  color: rgb(166, 0, 249);}
 
-.botones-servicios{color: white;
-                   background-color: rgb(166, 0, 249);
+.botones-servicios{
+  color: white;
+  background-color: rgb(166, 0, 249);
 }
                
-
 /* DISPOSITIVOS PEQUEÑOS */
 
 @media (max-width: 576px) {
@@ -489,5 +490,14 @@ footer {
   box-shadow: 0 8px 16px rgba(166, 0, 249, 0.5);
   cursor: pointer;
 }
-/* ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------ */
 
+/* -----------------------------CONTACTO-------------------------------- */
+
+.bg1 {
+  background-image: url(../img/brazos-diferentes.png);
+  background-size: 320%;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  width: 100%;
+}
