@@ -68,5 +68,28 @@ export  default class Servicios {
     set reseña(value) {
         this.#reseña = value;
     }
+
+    //metodo para que funcione json
+    toJSON(){
+        return{
+            id: this.id,
+            nombreServicio : this.nombreServicio,
+            descripcion : this.descripcion,
+            precioServicio : this.precioServicio,
+            tiempoServicio : this.tiempoServicio,
+            tipoServicio : this.tipoServicio,
+            imagen : this.imagen,
+            reseña : this.reseña
+        }
+    }
 }
+
+// #id;
+// #nombreServicio;
+// #descripcion;
+// #precioServicio;
+// #tiempoServicio;
+// #tipoServicio;
+// #imagen;
+// #reseña;
 

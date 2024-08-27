@@ -16,6 +16,8 @@ tiempoServicio = document.getElementById('tiempoServicio'),
 tipoServicio = document.getElementById('tipoServicio'),
 imagenServicio = document.getElementById('imagenServicio');
 
+const listaServicios = [];
+
 
 
 //funciones
@@ -28,11 +30,21 @@ const crearServicio = (e)=>{
     //debo validar los datos, lo vere despues
     //crear el objeto
     const servicios = new Servicios(nombreServicio.value,descripcionServicio.value,precioServicio.value,tiempoServicio.value,tipoServicio.value,imagenServicio.value);
+    console.log(servicios)
     //quiero guardar el objeto en la lista de servicio
+    listaServicios.push(servicios)
+    console.log(listaServicios)
+    limpiarFormServicios()
     //guardar en JSON
+    guardarEnLocalStorage()
 }
 
-
+const limpiarFormServicios = ()=>{
+formServicios.reset();
+}
+const guardarEnLocalStorage =()=>{
+    localStorage.setItem('listaServiciosKey' , JSON.stringify(listaServicios))
+}
 //aqui agrego la logica del CRUD
 btnNuevo.addEventListener('click', mostrarModal)
 formServicios.addEventListener('submit', crearServicio)
