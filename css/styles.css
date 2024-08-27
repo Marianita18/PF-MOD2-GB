@@ -138,29 +138,33 @@ nav {
 
 .megafono {
 transform: scale(0.45) rotate(60deg);
-position: absolute;
-top: 7%;
+/* position: absolute;
+top: 7%; */
 }
 
 .rueda-rosa {
 transform: scale(0.2);
-position: absolute;
+position: relative;
+top: -45%;
+/* position: absolute;
 top: 50%;
-left: 55%;
+left: 55%; */
 }
 
 .mensaje-con-corazon {
 transform: scale(0.5) rotate(-40deg);
 position: relative;
+top: -50%;
+/* position: relative;
 top:  0%;
 left: 1%;
-}
+} */}
 
 .sello {
 transform: scale(0.6) rotate(15deg);
-position: relative;
+/* position: relative;
 left: 70%;
-top: 7%;
+top: 7%; */
 }
 .bg-imagen {
   background-attachment: fixed;
@@ -260,9 +264,13 @@ top: 7%;
   background-color: rgb(166, 0, 249);
 }
                
+.contenedor-de-inicio{
+  width: 100vw;
+  box-sizing: border-box;
+}
 /* DISPOSITIVOS PEQUEÑOS */
 
-@media (max-width: 576px) {
+@media (max-width: 992px) {
   .titulo-principal {
     size: 1rem;
   }
@@ -360,103 +368,6 @@ top: 7%;
   
 }
 
- /* dispositivos medianos */
-   @media (min-width: 768px) and (max-width: 991.98px) {
-
-
-    .titulo-principal {
-      size: 1rem;
-    }
-  
-    * {
-      font-size: 1rem;
-    }
-  
-    .inicio-mensaje {
-      height: 30vh;
-      width: 80%;
-      padding: 20px;
-    }
-  
-    #brazo-violeta-1 {
-      transform: rotate(-90deg) scale(0.5);
-      position: relative;
-      left: 12px;
-    }
-  
-    #brazo-violeta-2 {
-      transform: rotate(90deg) scale(0.5);
-      position: relative;
-      right: 150px;
-    }
-  
-    #doble-brazos {
-      position: relative;
-      top: 100%;
-    }
-    .por-que-elegirnos {
-      font-weight: bolder;
-      font-size: 1rem;
-    }
-  
-    #estrategias-personalizadas {
-      color: rgb(183, 80, 234);
-      position: relative;
-      top: 0px;
-    }
-  
-    #gestion-integral {
-      color: rgb(71, 134, 222);
-      position: relative;
-      top: 0px;
-      left: 0px;
-    }
-  
-    #marketing-multicanal {
-      color: rgb(0, 32, 76);
-      position: relative;
-      top: 0px;
-      left: 0px;
-    }
-  
-    #nuestra-ventaja-competitiva {
-      color: rgb(239, 184, 241);
-      position: relative;
-      top: 0px;
-      left: 0px;
-    }
-  
-    #tecnologia-de-vanguardia {
-      color: rgb(143, 221, 225);
-      position: relative;
-      top: 0px;
-      left: 0px;
-    }
-  
-    #relacion-con-el-cliente {
-      color: rgb(183, 80, 234);
-      position: relative;
-      top: 0px;
-      left: 0px;
-    }
-  
-    #responsabilidad-social {
-      color: rgb(0, 32, 76);
-      position: relative;
-      top: 0px;
-      left: 0px;
-    }
-  
-    .titulo-muy-grande {
-      font-size: 2rem;
-    }
-    .resaltado {
-      background: rgba(166, 0, 249, 0.508);
-      border-radius: 40px;
-      font-size: 2rem;
-      padding: 2px;
-    }
-   }
 /* -----------------------FOOTER----------------------------- */
 footer {
   background-image: url(../img/background.png);
