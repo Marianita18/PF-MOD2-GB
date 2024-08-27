@@ -125,7 +125,7 @@ nav {
 }
 /* --------------------------------MAIN--------------------------------------- */
 .inicio-mensaje {
-  height: 35vh;
+  height: 40vh;
   width: 60%;
 }
 .sombra-violeta {
@@ -176,11 +176,14 @@ top: 7%; */
 #brazo-violeta-1 {
   transform: rotate(-90deg) scale(1.4);
   position: relative;
-  left: 72%;
+  top: -20%;
+  margin-top: 50%;
 }
 #brazo-violeta-2 {
   transform: rotate(90deg) scale(1.4);
   position: relative;
+  top: 20%;
+  margin-bottom: 45%;
 }
 #doble-brazos {
   position: absolute;
@@ -204,8 +207,6 @@ top: 7%; */
 }
 #estrategias-personalizadas {
   color: rgb(183, 80, 234);
-  position: relative;
-  top: 250px;
 }
 #gestion-integral {
   color: rgb(71, 134, 222);
