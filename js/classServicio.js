@@ -4,16 +4,16 @@ export  default class Servicios {
     #descripcion;
     #precioServicio;
     #tiempoServicio;
-    #categoria;
+    #tipoServicio;
     #imagen;
     #reseña;
-    constructor(nombreServicio,descripcion,precioServicio,tiempoServicio,categoria,imagen,reseña){
+    constructor(nombreServicio,descripcion,precioServicio,tiempoServicio,tipoServicio,imagen,reseña){
         this.#id = crypto.randomUUID();
         this.#nombreServicio = nombreServicio;
         this.#descripcion = descripcion;
         this.#precioServicio = precioServicio;
         this.#tiempoServicio = tiempoServicio;
-        this.#categoria = categoria;
+        this.#tipoServicio = tipoServicio;
         this.#imagen = imagen;
         this.#reseña = reseña;
     }
@@ -50,11 +50,11 @@ export  default class Servicios {
     set tiempoServicio(value) {
         this.#tiempoServicio = value;
     }
-    get categoria() {
-        return this.#categoria;
+    get tipoServicio() {
+        return this.#tipoServicio;
     }
-    set categoria(value) {
-        this.#categoria = value;
+    set tipoServicio(value) {
+        this.#tipoServicio = value;
     }
     get imagen() {
         return this.#imagen;

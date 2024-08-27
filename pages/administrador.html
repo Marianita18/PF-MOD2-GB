@@ -149,6 +149,7 @@
               <td>500</td>
               <td>5 dias</td>
               <td>
+                  <button class="btn btn-primary">Leer</button>
                   <button class="btn btn-primary">Editar</button>
                   <button class="btn btn-warning">Borrar</button>
               </td>
@@ -160,8 +161,9 @@
               <td>500</td>
               <td>5 dias</td>
               <td>
-                <button class="btn btn-primary">Editar</button>
-                <button class="btn btn-warning">Borrar</button>
+                <button class="btn btn-primary">Leer</button>
+                  <button class="btn btn-primary">Editar</button>
+                  <button class="btn btn-warning">Borrar</button>
             </td>
             </tr>
             <tr>
@@ -171,6 +173,7 @@
               <td>500</td>
               <td>5 dias</td>
               <td>
+                <button class="btn btn-primary">Leer</button>
                 <button class="btn btn-primary">Editar</button>
                 <button class="btn btn-warning">Borrar</button>
             </td>
@@ -196,7 +199,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form>
+        <form id="formServicios">
           <div class="mb-3">
               <label for="nombreServicio" class="form-label">Nombre del Servicio</label>
               <input type="text" class="form-control" id="nombreServicio" placeholder="Ejemplo: Pack basico.... " required minlength="1" maxlength="30">
@@ -213,8 +216,16 @@
         <label for="tiempoServicio" class="form-label">Tiempo de Entrega</label>
         <input type="text" class="form-control" id="tiempoServicio" required minlength="1" maxlength="10">
     </div>
+    <div class="mb-3">
+      <label for="tipoServicio" class="form-label">Tipo de Servicio</label>
+      <input type="text" class="form-control" id="tipoServicio" required minlength="1" maxlength="15" aria-required="">
+  </div>
+  <div class="mb-3">
+    <label for="imagenServicio" class="form-label">URL Imagen</label>
+    <input type="text" class="form-control" id="imagenServicio" required>
+</div>
 
-    <button class="btn btn-primary">Cargar</button>
+    <button class="btn btn-primary" id="btnCargar">Cargar</button>
         </form>
       </div>
   
