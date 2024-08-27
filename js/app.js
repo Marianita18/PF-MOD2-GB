@@ -15,8 +15,8 @@ precioServicio = document.getElementById('precioServicio'),
 tiempoServicio = document.getElementById('tiempoServicio'),
 tipoServicio = document.getElementById('tipoServicio'),
 imagenServicio = document.getElementById('imagenServicio');
-
-const listaServicios = [];
+// verificar si hay datos en LocalStorage
+const listaServicios = JSON.parse (localStorage.getItem('listaServiciosKey')) || [];
 
 
 
