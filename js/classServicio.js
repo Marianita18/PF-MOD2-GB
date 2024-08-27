@@ -1,21 +1,21 @@
 export  default class Servicios {
     #id;
     #nombreServicio;
-    #descripcion;
+    #descripcionServicio;
     #precioServicio;
     #tiempoServicio;
     #tipoServicio;
-    #imagen;
-    #reseña;
-    constructor(nombreServicio,descripcion,precioServicio,tiempoServicio,tipoServicio,imagen,reseña){
+    #imagenServicio;
+    #reseñaServicio;
+    constructor(nombreServicio,descripcionServicio,precioServicio,tiempoServicio,tipoServicio,imagenServicio,reseñaServicio){
         this.#id = crypto.randomUUID();
         this.#nombreServicio = nombreServicio;
-        this.#descripcion = descripcion;
+        this.#descripcionServicio = descripcionServicio;
         this.#precioServicio = precioServicio;
         this.#tiempoServicio = tiempoServicio;
         this.#tipoServicio = tipoServicio;
-        this.#imagen = imagen;
-        this.#reseña = reseña;
+        this.#imagenServicio= imagenServicio;
+        this.#reseñaServicio = reseñaServicio;
     }
 
     //Getters y Setters
@@ -32,11 +32,11 @@ export  default class Servicios {
     set nombreServicio(value) {
         this.#nombreServicio = value;
     }
-    get descripcion() {
-        return this.#descripcion;
+    get descripcionServicio() {
+        return this.#descripcionServicio;
     }
-    set descripcion(value) {
-        this.#descripcion = value;
+    set descripcionServicio(value) {
+        this.#descripcionServicio = value;
     }
     get precioServicio() {
         return this.#precioServicio;
@@ -56,17 +56,17 @@ export  default class Servicios {
     set tipoServicio(value) {
         this.#tipoServicio = value;
     }
-    get imagen() {
-        return this.#imagen;
+    get imagenServicio() {
+        return this.#imagenServicio;
     }
-    set imagen(value) {
-        this.#imagen = value;
+    set imagenServicio(value) {
+        this.#imagenServicio = value;
     }
-    get reseña() {
-        return this.#reseña;
+    get reseñaServicio() {
+        return this.#reseñaServicio;
     }
-    set reseña(value) {
-        this.#reseña = value;
+    set reseñaServicio(value) {
+        this.#reseñaServicio = value;
     }
 
     //metodo para que funcione json
@@ -74,12 +74,12 @@ export  default class Servicios {
         return{
             id: this.id,
             nombreServicio : this.nombreServicio,
-            descripcion : this.descripcion,
+            descripcionServicio : this.descripcionServicio,
             precioServicio : this.precioServicio,
             tiempoServicio : this.tiempoServicio,
             tipoServicio : this.tipoServicio,
-            imagen : this.imagen,
-            reseña : this.reseña
+            imagenServicio : this.imagenServicio,
+            reseñaServicio : this.reseñaServicio
         }
     }
 }
