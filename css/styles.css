@@ -347,4 +347,14 @@ footer {
   box-shadow: 0 8px 16px rgba(166, 0, 249, 0.5);
   cursor: pointer;
 }
-/* ------------------------------------------------------------------------ */
+
+/* -----------------------------CONTACTO-------------------------------- */
+
+.bg1 {
+  background-image: url(../img/brazos-diferentes.png);
+  background-size: 320%;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  width: 100%;
+}
+
