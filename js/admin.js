@@ -17,7 +17,7 @@ tipoServicio = document.getElementById('tipoServicio'),
 imagenServicio = document.getElementById('imagenServicio');
 // verificar si hay datos en LocalStorage
 const listaServicios = JSON.parse (localStorage.getItem('listaServiciosKey')) || [];
-
+const tabla = document.querySelector('tbody');
 
 
 //funciones
@@ -39,6 +39,9 @@ const crearServicio = (e)=>{
     guardarEnLocalStorage()
     dibujarFila(servicios);
 }
+// const cerrarModal = ()=>{
+//     modalServicio.hide()
+// }
 
 const limpiarFormServicios = ()=>{
 formServicios.reset();
@@ -56,7 +59,7 @@ const cargaServiciosInicial =()=>{
 }
 
 const dibujarFila = (servicio)=>{
-    const tabla = document.querySelector('tbody');
+    
     tabla.innerHTML += `  <tr>
               <td>${servicio.nombreServicio}</td>
               <td>${servicio.descripcionServicio}</td>
@@ -65,12 +68,13 @@ const dibujarFila = (servicio)=>{
               <td>
                   <button class="btn btn-primary">Leer</button>
                   <button class="btn btn-warning">Editar</button>
-                  <button class="btn btn-danger" onclick="borrarServicio()">Borrar</button>
+                  <button class="btn btn-danger" onclick="borrarServicio('${servicio.id}')">Borrar</button>
               </td>
             </tr> `
+
 }
 //funcion especial para que funcionen botones desde html
-window.borrarServicio = ()=> {
+window.borrarServicio = (id)=> {
     Swal.fire({
         title: "Estas seguro de borrar el servicio?",
         text: "No podes recuperar luego de borrar",
@@ -82,9 +86,15 @@ window.borrarServicio = ()=> {
         cancelButtonText:"Cancelar"
       }).then((result) => {
         if (result.isConfirmed) {
+            //logica para borrar
+            const posicionServicioBuscado = listaServicios.findIndex((servicio)=> servicio.id === id)
+            listaServicios.splice(posicionServicioBuscado,1);
+            guardarEnLocalStorage()
+            tabla.removeChild(tabla.children[posicionServicioBuscado])
+
           Swal.fire({
             title: "Borrado",
-            text: "El servicio x fue eliminado",
+            text: "El servicio fue eliminado",
             icon: "success"
           });
         }
@@ -94,3 +104,4 @@ window.borrarServicio = ()=> {
 btnNuevo.addEventListener('click', mostrarModal);
 formServicios.addEventListener('submit', crearServicio);
 cargaServiciosInicial();
+// formServicios.addEventListener('submit', cerrarModal)
