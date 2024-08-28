@@ -5,6 +5,7 @@
   --Celeste: #c8efff;
   --Azul: #00204c;
 }
+
 body {
   min-height: 100vh;
   display: flex;
@@ -13,6 +14,7 @@ body {
   font-weight: 400;
   font-style: normal;
   background-color: var(--Celeste);
+  color: var(--Azul);
 }
 main {
   flex-grow: 1;
@@ -123,34 +125,41 @@ nav {
 }
 /* --------------------------------MAIN--------------------------------------- */
 .inicio-mensaje {
-  height: 35vh;
+  height: 40vh;
   width: 60%;
 }
 .sombra-violeta {
   border-radius: 10px;
-  box-shadow: 0px 0px 50px rgb(166, 0, 249);
+  box-shadow: 0px 0px 70px var(--Violeta);
 }
+
+#contenedor-de-inicio {
+  width: 100%;
+  height: 200vh;
+}
+
 .megafono {
-  transform: scale(0.65) rotate(60deg);
-  position: absolute;
-  left: 200px;
+  transform: scale(0.45) rotate(60deg);
+ 
 }
+
 .rueda-rosa {
-  transform: scale(0.25);
+  transform: scale(0.2);
   position: relative;
-  left: 1100px;
-  top: -900px;
+  top: -45%;
+ 
 }
+
 .mensaje-con-corazon {
-  transform: scale(0.7) rotate(-40deg);
+  transform: scale(0.5) rotate(-40deg);
   position: relative;
-  top: -250px;
-  left: 60px;
+  top: -50%;
+ 
 }
+
 .sello {
-  transform: scale(0.8) rotate(15deg);
-  position: relative;
-  left: 1400px;
+  transform: scale(0.6) rotate(15deg);
+  
 }
 .bg-imagen {
   background-attachment: fixed;
@@ -162,18 +171,24 @@ nav {
 #brazo-violeta-1 {
   transform: rotate(-90deg) scale(1.4);
   position: relative;
-  left: 72%;
+  top: -20%;
+  margin-top: 50%;
+  left: 10%;
+
 }
 #brazo-violeta-2 {
   transform: rotate(90deg) scale(1.4);
   position: relative;
+  top: 20%;
+  margin-bottom: 60%;
+  right: 10%;
 }
 #doble-brazos {
   position: absolute;
   top: 850px;
 }
 .resaltado {
-  background: rgb(166, 0, 249);
+  background: var(--Violeta);
   border-radius: 40px;
   font-size: 3rem;
 }
@@ -189,46 +204,27 @@ nav {
   font-size: 1.5rem;
 }
 #estrategias-personalizadas {
-  color: rgb(183, 80, 234);
+  color: var(--Violeta);
   position: relative;
-  top: 250px;
+  left: 180%;
 }
 #gestion-integral {
   color: rgb(71, 134, 222);
-  position: relative;
-  top: 350px;
-  left: 700px;
-}
-#marketing-multicanal {
-  color: rgb(0, 32, 76);
-  position: relative;
-  top: -250px;
-  left: 750px;
 }
 #nuestra-ventaja-competitiva {
   color: rgb(239, 184, 241);
-  position: relative;
-  top: 200px;
-  left: -750px;
 }
 #tecnologia-de-vanguardia {
   color: rgb(143, 221, 225);
-  position: relative;
-  top: -100px;
-  left: -550px;
 }
-.titulo-principal{size:100px;}
+.titulo-principal {
+  size: 100px;
+}
 #relacion-con-el-cliente {
   color: rgb(183, 80, 234);
-  position: relative;
-  top: -100px;
-  left: 125px;
 }
 #responsabilidad-social {
   color: rgb(0, 32, 76);
-  position: relative;
-  top: -350px;
-  left: -250px;
 }
 .botones-generales {
   border-radius: 20px;
@@ -236,18 +232,19 @@ nav {
   margin-bottom: 2%;
 }
 .color-texto-violeta {
-  color: rgb(166, 0, 249);
+  color: var(--Violeta);
 }
 .imagenes-de-servicios {
   border-radius: 30%;
   padding: 2%;
 }
-.color-de-titulo-servicios{
-  color: rgb(166, 0, 249);}
+.color-de-titulo-servicios {
+  color: var(--Violeta);
+}
 
-.botones-servicios{
+.botones-servicios {
   color: white;
-  background-color: rgb(166, 0, 249);
+  background-color: var(--Violeta);
 }
 
 /* DETALLES */
@@ -255,7 +252,7 @@ textarea{resize: none;}
 
 /* DISPOSITIVOS DISTINO TAMAÑO */
 
-@media (max-width: 992px) {
+@media (max-width: 576px) {
   .titulo-principal {
     size: 1rem;
   }
@@ -272,8 +269,6 @@ textarea{resize: none;}
 
   #brazo-violeta-1 {
     transform: rotate(-90deg) scale(0.5);
-    position: relative;
-    left: 12px;
   }
 
   #brazo-violeta-2 {
@@ -291,62 +286,18 @@ textarea{resize: none;}
     font-size: 1rem;
   }
 
-  #estrategias-personalizadas {
-    color: rgb(183, 80, 234);
-    position: relative;
-    top: 0px;
-  }
-
-  #gestion-integral {
-    color: rgb(71, 134, 222);
-    position: relative;
-    top: 0px;
-    left: 0px;
-  }
-
-  #marketing-multicanal {
-    color: rgb(0, 32, 76);
-    position: relative;
-    top: 0px;
-    left: 0px;
-  }
-
-  #nuestra-ventaja-competitiva {
-    color: rgb(239, 184, 241);
-    position: relative;
-    top: 0px;
-    left: 0px;
-  }
-
-  #tecnologia-de-vanguardia {
-    color: rgb(143, 221, 225);
-    position: relative;
-    top: 0px;
-    left: 0px;
-  }
-
-  #relacion-con-el-cliente {
-    color: rgb(183, 80, 234);
-    position: relative;
-    top: 0px;
-    left: 0px;
-  }
-
-  #responsabilidad-social {
-    color: rgb(0, 32, 76);
-    position: relative;
-    top: 0px;
-    left: 0px;
-  }
-
   .titulo-muy-grande {
     font-size: 2rem;
   }
   .resaltado {
     background: rgba(166, 0, 249, 0.508);
-    border-radius: 40px;
+    border-radius: 30px;
     font-size: 2rem;
     padding: 2px;
+  }
+  #contenedor-de-inicio {
+    width: auto;
+    height: auto;
   }
 }
 
@@ -359,31 +310,31 @@ footer {
   width: 100%;
 }
 @media all and (max-width: 992px) {
- footer {
-  background-image: url(../img/background.png);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  object-fit: contain;
-  width: 100%;
-}
-.fz{
-  font-size: 13px;;
-}
+  footer {
+    background-image: url(../img/background.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    width: 100%;
+  }
+  .fz {
+    font-size: 13px;
+  }
 }
 @media all and (max-width: 768px) {
-footer {
-  background-image: url(../img/background.png);
-  background-size: 320%;
-  background-repeat: no-repeat;
-  object-fit: contain;
-  width: 100%;
+  footer {
+    background-image: url(../img/background.png);
+    background-size: 320%;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    width: 100%;
+  }
+  .fz {
+    font-size: 13px;
+  }
 }
-.fz{
-  font-size: 13px;;
-}
-}
-.fz{
-  font-size: 14px;;
+.fz {
+  font-size: 14px;
 }
 /* -----------------------------NOSOTROS-------------------------------- */
 .animate-card {
@@ -396,5 +347,14 @@ footer {
   box-shadow: 0 8px 16px rgba(166, 0, 249, 0.5);
   cursor: pointer;
 }
-/* ------------------------------------------------------------------------ */
+
+/* -----------------------------CONTACTO-------------------------------- */
+
+.bg1 {
+  background-image: url(../img/brazos-diferentes.png);
+  background-size: 320%;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  width: 100%;
+}
 
