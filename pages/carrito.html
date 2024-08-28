@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Proyecto Final - Modulo 2 - Grupo B" />
+    <meta
+      name="author"
+      content="Valdivia Fernando Miguel, Mendoza Mariana Eugenia, Palazzo Lobo María Valentina,
+      Infante Ezequiel, Coniglio Mauro, Lobo Valentin José" />
+    <meta
+      name="keywords"
+      content="condicionales, variables, constantes, javascript, bucles, arrays, objetos, clases, poo, dom, bom, localstorage" />
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4 text-center">Carrito de Compras 
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                <path d="M0 1.5A.5.5 0 0 1 .5 1H2l.338 1.352L3.61 6H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 15H4a.5.5 0 0 1-.491-.408L1.01 3.607 0.61 2H.5a.5.5 0 0 1-.5-.5ZM3.102 4l1.313 7h8.17l1.313-7H3.102ZM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z"/>
+            </svg>
+        </h1>
+
+        <div id="productCarousel" class="carousel slide d-none d-md-block" data-bs-ride="false">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row justify-content-center">
+                        <div class="col-md-4">
+                            <div class="card mb-4">
+                                <img src="/img/pack-opcion-1.jpeg" class="card-img-top" alt="Pack Basico de Reels y Fotos para Redes">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Pack Basico de Reels y Fotos para Redes</h5>
+                                    <p class="card-text">Tiempo de entrega: 5 días hábiles</p>
+                                    <p class="card-text"><strong>$300 USD</strong></p>
+                                    <button class="btn btn-primary btn-add-to-cart" data-name="Pack Basico de Reels y Fotos para Redes" data-price="300">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4">
+                                <img src="/img/pack-opcion-2.webp" class="card-img-top" alt="Pack Avanzado de Reels y Fotos para Redes">
+                                <div class="card-body  text-center">
+                                    <h5 class="card-title">Pack Avanzado de Reels y Fotos para Redes</h5>
+                                    <p class="card-text">Tiempo de entrega: 7 días hábiles</p>
+                                    <p class="card-text"><strong>$600 USD</strong></p>
+                                    <button class="btn btn-primary btn-add-to-cart" data-name="Pack Avanzado de Reels y Fotos para Redes" data-price="600">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4">
+                                <img src="/img/pack-opcion-5.png" class="card-img-top" alt="Pack Premium de Reels y Fotos para Redes">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Pack Premium de Reels y Fotos para Redes</h5>
+                                    <p class="card-text">Tiempo de entrega: 10 días hábiles</p>
+                                    <p class="card-text"><strong>$1,200 USD</strong></p>
+                                    <button class="btn btn-primary btn-add-to-cart" data-name="Pack Premium de Reels y Fotos para Redes" data-price="1200">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-md-4">
+                            <div class="card mb-4">
+                                <img src="/img/pack-opcion-4.png" class="card-img-top" alt="Pack de Reels Tematicos para Redes">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Pack de Reels Tematicos para Redes</h5>
+                                    <p class="card-text">Tiempo de entrega: 6 días hábiles</p>
+                                    <p class="card-text"><strong>$500 USD</strong></p>
+                                    <button class="btn btn-primary btn-add-to-cart" data-name="Pack de Reels Tematicos para Redes" data-price="500">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4">
+                                <img src="/img/pack-opcion-11.webp" class="card-img-top" alt="Pack de Reels y Fotos Personalizados">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Pack de Reels y Fotos Personalizados</h5>
+                                    <p class="card-text">Tiempo de entrega: 10-15 días hábiles</p>
+                                    <p class="card-text"><strong>$800 USD</strong></p>
+                                    <button class="btn btn-primary btn-add-to-cart" data-name="Pack de Reels y Fotos Personalizados" data-price="800">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4">
+                                <img src="/img/pack-opcion-6.png" class="card-img-top" alt="Pack de Videos Cortos para Historias">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Pack de Videos Cortos para Historias</h5>
+                                    <p class="card-text">Tiempo de entrega: 4 días hábiles</p>
+                                    <p class="card-text"><strong>$250 USD</strong></p>
+                                    <button class="btn btn-primary btn-add-to-cart" data-name="Pack de Videos Cortos para Historias" data-price="250">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-md-4">
+                            <div class="card mb-4">
+                                <img src="/img/pack-opcion-7.jpeg" class="card-img-top" alt="Pack de Fotos y Videos de Productos">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Pack de Fotos y Videos de Productos</h5>
+                                    <p class="card-text">Tiempo de entrega: 8 días hábiles</p>
+                                    <p class="card-text"><strong>$750 USD</strong></p>
+                                    <button class="btn btn-primary btn-add-to-cart" data-name="Pack de Fotos y Videos de Productos" data-price="750">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4">
+                                <img src="/img/pack-opcion-8.webp" class="card-img-top" alt="Pack de Videos Educativos/Tutoriales">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Pack de Videos Educativos/Tutoriales</h5>
+                                    <p class="card-text">Tiempo de entrega: 10 días hábiles</p>
+                                    <p class="card-text"><strong>$900 USD</strong></p>
+                                    <button class="btn btn-primary btn-add-to-cart" data-name="Pack de Videos Educativos/Tutoriales" data-price="900">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4">
+                                <img src="/img/pack-opcion-9.jpeg" class="card-img-top" alt="Pack de Contenido Estacional en Redes">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Pack de Contenido Estacional en Redes</h5>
+                                    <p class="card-text">Tiempo de entrega: 7 días hábiles</p>
+                                    <p class="card-text"><strong>$650 USD</strong></p>
+                                    <button class="btn btn-primary btn-add-to-cart" data-name="Pack de Contenido Estacional en Redes" data-price="650">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-md-4">
+                            <div class="card mb-4">
+                                <img src="/img/pack-opcion-10.jpeg" class="card-img-top" alt="Pack de Reels y Fotos de Testimonios">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Pack de Reels y Fotos de Testimonios</h5>
+                                    <p class="card-text">Tiempo de entrega: 5 días hábiles</p>
+                                    <p class="card-text"><strong>$400 USD</strong></p>
+                                    <button class="btn btn-primary btn-add-to-cart" data-name="Pack de Reels y Fotos de Testimonios" data-price="400">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+        <div class="row d-md-none">
+            <div class="col-12">
+                <div class="card mb-4">
+                    <img src="../img/pack-opcion-1.jpeg" class="card-img-top" alt="Pack Basico de Reels y Fotos para Redes">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Pack Basico de Reels y Fotos para Redes</h5>
+                        <p class="card-text">Tiempo de entrega: 5 días hábiles</p>
+                        <p class="card-text"><strong>$300 USD</strong></p>
+                        <button class="btn btn-primary btn-add-to-cart" data-name="Pack Basico de Reels y Fotos para Redes" data-price="300">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card mb-4">
+                    <img src="../img/pack-opcion-2.webp" class="card-img-top" alt="Pack Avanzado de Reels y Fotos para Redes">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Pack Avanzado de Reels y Fotos para Redes</h5>
+                        <p class="card-text">Tiempo de entrega: 7 días hábiles</p>
+                        <p class="card-text"><strong>600 USD</strong></p>
+                        <button class="btn btn-primary btn-add-to-cart" data-name="Pack Avanzado de Reels y Fotos para Redes" data-price="600">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card mb-4">
+                    <img src="../img/pack-opcion-3.jpeg" class="card-img-top" alt="Pack Premium de Reels y Fotos para Redes">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Pack Premium de Reels y Fotos para Redes</h5>
+                        <p class="card-text">Tiempo de entrega: 10 días hábiles</p>
+                        <p class="card-text"><strong>$1200 USD</strong></p>
+                        <button class="btn btn-primary btn-add-to-cart" data-name="Pack Premium de Reels y Fotos para Redes" data-price="1200">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card mb-4">
+                    <img src="../img/pack-opcion-4.png" class="card-img-top" alt="Pack de Reels Tematicos para Redes">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Pack de Reels Tematicos para Redes</h5>
+                        <p class="card-text">Tiempo de entrega: 6 días hábiles</p>
+                        <p class="card-text"><strong>$500 USD</strong></p>
+                        <button class="btn btn-primary btn-add-to-cart" data-name="Pack de Reels Tematicos para Redes" data-price="500">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card mb-4">
+                    <img src="../img/pack-opcion-11.webp" class="card-img-top" alt="Pack de Reels y Fotos Personalizados">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Pack de Reels y Fotos Personalizados</h5>
+                        <p class="card-text">Tiempo de entrega: 10-15 días hábiles</p>
+                        <p class="card-text"><strong>$800 USD</strong></p>
+                        <button class="btn btn-primary btn-add-to-cart" data-name="Pack de Reels y Fotos Personalizados" data-price="18.00">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card mb-4">
+                    <img src="../img/pack-opcion-6.png" class="card-img-top" alt="Pack de Videos Cortos para Historias">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Pack de Videos Cortos para Historias</h5>
+                        <p class="card-text">Tiempo de entrega: 4 días hábiles</p>
+                        <p class="card-text"><strong>$250</strong></p>
+                        <button class="btn btn-primary btn-add-to-cart" data-name="Pack de Videos Cortos para Historias" data-price="250">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card mb-4">
+                    <img src="/img/pack-opcion-7.jpeg" class="card-img-top" alt="Pack de Fotos y Videos de Productos">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Pack de Fotos y Videos de Productos</h5>
+                        <p class="card-text">Tiempo de entrega: 8 días hábiles</p>
+                        <p class="card-text"><strong>$750 USD</strong></p>
+                        <button class="btn btn-primary btn-add-to-cart" data-name="Pack de Fotos y Videos de Productos" data-price="750">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card mb-4">
+                    <img src="../img/pack-opcion-8.webp" class="card-img-top" alt="Pack de Videos Educativos/Tutoriales">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Pack de Videos Educativos/Tutoriales</h5>
+                        <p class="card-text">Tiempo de entrega: 10 días hábiles</p>
+                        <p class="card-text"><strong>$900 USD</strong></p>
+                        <button class="btn btn-primary btn-add-to-cart" data-name="Pack de Videos Educativos/Tutoriales" data-price="900">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card mb-4">
+                    <img src="../img/pack-opcion-9.jpeg" class="card-img-top" alt="Pack de Contenido Estacional en Redes">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Pack de Contenido Estacional en Redes</h5>
+                        <p class="card-text">Tiempo de entrega: 7 días hábiles</p>
+                        <p class="card-text"><strong>$650 USD</strong></p>
+                        <button class="btn btn-primary btn-add-to-cart" data-name="Pack de Contenido Estacional en Redes" data-price="650">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card mb-4">
+                    <img src="../img/pack-opcion-10.jpeg" class="card-img-top" alt="Pack de Reels y Fotos de Testimonios">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Pack de Reels y Fotos de Testimonios</h5>
+                        <p class="card-text">Tiempo de entrega: 5 días hábiles</p>
+                        <p class="card-text"><strong>$400 USD</strong></p>
+                        <button class="btn btn-primary btn-add-to-cart" data-name="Pack de Reels y Fotos de Testimonios" data-price="400">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2 class="mt-5">Carrito de Compras</h2>
+        <div class="table-responsive">
+            <table class="table table-striped-columns" id="cart-table">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Subtotal</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <div class="d-flex justify-content-between align-items-center">
+            <h4>Total: $<span id="cart-total">0.00</span></h4>
+            <button class="btn btn-success" id="checkout-btn">Comprar</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/carrito.js"></script>
+</body>
+</html>
