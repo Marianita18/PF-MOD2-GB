@@ -252,10 +252,9 @@ textarea{resize: none;}
 
 /* DISPOSITIVOS DISTINO TAMAÑO */
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
 
 
-  
 
   .titulo-principal {
     size: 1rem;
@@ -311,7 +310,7 @@ textarea{resize: none;}
 }
 
 /* -----------------------FOOTER----------------------------- */
-footer {
+footer{
   background-image: url(../img/background.png);
   background-size: 100%;
   background-repeat: no-repeat;
@@ -344,7 +343,7 @@ footer {
 }
 .fz {
   font-size: 14px;
-}
+}}
 /* -----------------------------NOSOTROS-------------------------------- */
 .animate-card {
   box-shadow: 0 4px 8px rgba(166, 0, 249, 0.3);
