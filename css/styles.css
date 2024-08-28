@@ -39,7 +39,7 @@ nav {
 @media all and (max-width: 768px) {
   nav {
     background-image: url(../img/background.png);
-    background-size: 250%;
+    background-size: 280%;
     background-repeat: no-repeat;
     object-fit: cover;
     width: 100%;
@@ -247,13 +247,12 @@ nav {
   background-color: var(--Violeta);
 }
 
-.contenedor-de-inicio {
-  width: 100vw;
-  box-sizing: border-box;
-}
-/* DISPOSITIVOS PEQUEÑOS */
+/* DETALLES */
+textarea{resize: none;}
 
-@media (max-width: 992px) {
+/* DISPOSITIVOS DISTINO TAMAÑO */
+
+@media (max-width: 576px) {
   .titulo-principal {
     size: 1rem;
   }
