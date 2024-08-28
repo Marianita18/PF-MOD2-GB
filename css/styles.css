@@ -203,27 +203,27 @@ nav {
   font-weight: bolder;
   font-size: 1.5rem;
 }
-#estrategias-personalizadas {
+.estrategias-personalizadas {
   color: var(--Violeta);
   position: relative;
   left: 180%;
 }
-#gestion-integral {
+.gestion-integral {
   color: rgb(71, 134, 222);
 }
-#nuestra-ventaja-competitiva {
+.nuestra-ventaja-competitiva {
   color: rgb(239, 184, 241);
 }
-#tecnologia-de-vanguardia {
+.tecnologia-de-vanguardia {
   color: rgb(143, 221, 225);
 }
 .titulo-principal {
   size: 100px;
 }
-#relacion-con-el-cliente {
+.relacion-con-el-cliente {
   color: rgb(183, 80, 234);
 }
-#responsabilidad-social {
+.responsabilidad-social {
   color: rgb(0, 32, 76);
 }
 .botones-generales {
