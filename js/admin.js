@@ -65,11 +65,31 @@ const dibujarFila = (servicio)=>{
               <td>
                   <button class="btn btn-primary">Leer</button>
                   <button class="btn btn-warning">Editar</button>
-                  <button class="btn btn-danger">Borrar</button>
+                  <button class="btn btn-danger" onclick="borrarServicio()">Borrar</button>
               </td>
             </tr> `
 }
-
+//funcion especial para que funcionen botones desde html
+window.borrarServicio = ()=> {
+    Swal.fire({
+        title: "Estas seguro de borrar el servicio?",
+        text: "No podes recuperar luego de borrar",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Borrar",
+        cancelButtonText:"Cancelar"
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire({
+            title: "Borrado",
+            text: "El servicio x fue eliminado",
+            icon: "success"
+          });
+        }
+      });
+}
 //aqui agrego la logica del CRUD
 btnNuevo.addEventListener('click', mostrarModal);
 formServicios.addEventListener('submit', crearServicio);
