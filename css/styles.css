@@ -407,3 +407,8 @@ footer {
   transition-property: transform;
   transition-duration: 1s;
 }
+
+.tabContainer .tabPanel{
+  transition: all .5s ease-in;
+  display: none;
+}
