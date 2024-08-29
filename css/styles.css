@@ -76,10 +76,10 @@ nav {
   background-color: white;
   color: var(--Violeta);
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 768px){
   .btnColorLogin {
     background-color: white;
-    color: var(--Azul); q
+    color: var(--Azul); 
     margin-top: 10px;
   }
   .btnColorLogin:hover {
