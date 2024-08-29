@@ -16,6 +16,8 @@ imagenServicio = document.getElementById('imagenServicio');
 // verificacion de datos Storage
 const listaServicios = JSON.parse (localStorage.getItem('listaServiciosKey')) || [];
 const tabla = document.querySelector('tbody');
+let estoyCreando = true;
+let servicioAEditar;
 
 
 //funciones
@@ -23,10 +25,9 @@ const mostrarModal = ()=>{
     modalServicio.show()
 }
 
-const crearServicio = (e)=>{
-    e.preventDefault();
+const crearServicio = ()=>{
     //debo validar los datos, lo vere despues
-    //crear el objeto
+    estoyCreando = true;
     const servicios = new Servicios(nombreServicio.value,descripcionServicio.value,precioServicio.value,tiempoServicio.value,tipoServicio.value,imagenServicio.value);
     console.log(servicios)
     //quiero guardar el objeto en la lista de servicio
@@ -57,20 +58,35 @@ const cargaServiciosInicial =()=>{
 }
 
 const dibujarFila = (servicio)=>{
-    
-    tabla.innerHTML += `  <tr>
-              <td>${servicio.nombreServicio}</td>
+  console.log(tabla)
+  console.log(servicio)
+    const fila = document.createElement('tr')
+    const contenidoFila = `<td>${servicio.nombreServicio}</td>
               <td>${servicio.descripcionServicio}</td>
               <td>${servicio.precioServicio}</td>
               <td>${servicio.tiempoServicio}</td>
               <td>
                   <button class="btn btn-primary">Leer</button>
-                  <button class="btn btn-warning">Editar</button>
-                  <button class="btn btn-danger" onclick="borrarServicio('${servicio.id}')">Borrar</button>
-              </td>
-            </tr> `
+                 <button class="btn btn-warning" onclick="prepararServicio('${servicio.id}')">Editar</button>
+                   <button class="btn btn-danger" onclick="borrarServicio('${servicio.id}')">Borrar</button>
+              </td>`
+            fila.innerHTML = contenidoFila
+            tabla.append(fila)
+    
+    // tabla.innerHTML += `  <tr>
+    //           <td>${servicio.nombreServicio}</td>
+    //           <td>${servicio.descripcionServicio}</td>
+    //           <td>${servicio.precioServicio}</td>
+    //           <td>${servicio.tiempoServicio}</td>
+    //           <td>
+    //               <button class="btn btn-primary">Leer</button>
+    //               <button class="btn btn-warning" onclick="prepararServicio('${servicio.id}')">Editar</button>
+    //               <button class="btn btn-danger" onclick="borrarServicio('${servicio.id}')">Borrar</button>
+    //           </td>
+    //         </tr> `
 
 }
+
 //funcion especial para que funcionen botones desde html
 window.borrarServicio = (id)=> {
     Swal.fire({
@@ -98,8 +114,52 @@ window.borrarServicio = (id)=> {
         }
       });
 }
+
+window.prepararServicio = (id)=>{
+  estoyCreando = false;
+  mostrarModal();
+  //buscar el contacto con find y luego agregar los valores en el formulario
+  servicioAEditar = listaServicios.find((servicio)=> servicio.id === id)
+  if(servicioAEditar){
+    nombreServicio.value = servicioAEditar.nombreServicio
+    descripcionServicio.value = servicioAEditar.descripcionServicio
+    precioServicio.value = servicioAEditar.precioServicio
+    tiempoServicio.value = servicioAEditar.tiempoServicio
+    tipoServicio.value = servicioAEditar.tipoServicio
+    imagenServicio.value = servicioAEditar.imagenServicio
+
+  }
+}
+
+const administrarServicio = (e)=>{
+e.preventDefault()
+console.log('e', e)
+if (estoyCreando === true){
+  crearServicio()
+} else {
+    modificarServicio();
+  }
+}
+
+const modificarServicio = ()=>{
+//buscar la posicion del contacto a modificar
+const obtenerServicio = listaServicios.findIndex(res => res.id === servicioAEditar.id)
+console.log('aqui obtengo el dato', obtenerServicio)
+//actualizar datos del array
+listaServicios[obtenerServicio].nombreServicio = nombreServicio.value
+listaServicios[obtenerServicio].descripcionServicioServicio = descripcionServicio.value
+listaServicios[obtenerServicio].precioServicio = precioServicio.value
+listaServicios[obtenerServicio].tiempoServicio = tiempoServicio.value
+listaServicios[obtenerServicio].tipoServicio = tipoServicio.value
+listaServicios[obtenerServicio].imagenServicio = imagenServicio.value
+console.log(listaServicios)
+guardarEnLocalStorage();
+
+
+// actualizar el local storage
+}
 //Logica del CRUD
 btnNuevo.addEventListener('click', mostrarModal);
-formServicios.addEventListener('submit', crearServicio);
+formServicios.addEventListener('submit', administrarServicio);
 cargaServiciosInicial();
 // formServicios.addEventListener('submit', cerrarModal)
