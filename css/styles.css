@@ -203,27 +203,27 @@ nav {
   font-weight: bolder;
   font-size: 1.5rem;
 }
-#estrategias-personalizadas {
+.estrategias-personalizadas {
   color: var(--Violeta);
   position: relative;
   left: 180%;
 }
-#gestion-integral {
+.gestion-integral {
   color: rgb(71, 134, 222);
 }
-#nuestra-ventaja-competitiva {
+.nuestra-ventaja-competitiva {
   color: rgb(239, 184, 241);
 }
-#tecnologia-de-vanguardia {
+.tecnologia-de-vanguardia {
   color: rgb(143, 221, 225);
 }
 .titulo-principal {
   size: 100px;
 }
-#relacion-con-el-cliente {
+.relacion-con-el-cliente {
   color: rgb(183, 80, 234);
 }
-#responsabilidad-social {
+.responsabilidad-social {
   color: rgb(0, 32, 76);
 }
 .botones-generales {
@@ -252,7 +252,10 @@ textarea{resize: none;}
 
 /* DISPOSITIVOS DISTINO TAMAÑO */
 
-@media (max-width: 576px) {
+@media (max-width: 991px) {
+
+
+
   .titulo-principal {
     size: 1rem;
   }
@@ -263,7 +266,7 @@ textarea{resize: none;}
 
   .inicio-mensaje {
     height: 30vh;
-    width: 80%;
+    width: 100%;
     padding: 20px;
   }
 
@@ -299,10 +302,15 @@ textarea{resize: none;}
     width: auto;
     height: auto;
   }
+
+  .estrategias-personalizadas {
+    color: var(--Violeta);
+    position: relative;
+    left: 0%;
 }
 
 /* -----------------------FOOTER----------------------------- */
-footer {
+footer{
   background-image: url(../img/background.png);
   background-size: 100%;
   background-repeat: no-repeat;
@@ -335,7 +343,7 @@ footer {
 }
 .fz {
   font-size: 14px;
-}
+}}
 /* -----------------------------NOSOTROS-------------------------------- */
 .animate-card {
   box-shadow: 0 4px 8px rgba(166, 0, 249, 0.3);
