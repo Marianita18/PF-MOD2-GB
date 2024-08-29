@@ -29,10 +29,8 @@ const crearServicio = ()=>{
     //debo validar los datos, lo vere despues
     estoyCreando = true;
     const servicios = new Servicios(nombreServicio.value,descripcionServicio.value,precioServicio.value,tiempoServicio.value,tipoServicio.value,imagenServicio.value);
-    console.log(servicios)
     //quiero guardar el objeto en la lista de servicio
     listaServicios.push(servicios)
-    console.log(listaServicios)
     limpiarFormServicios()
     //guardar en JSON
     guardarEnLocalStorage()
@@ -58,15 +56,13 @@ const cargaServiciosInicial =()=>{
 }
 
 const dibujarFila = (servicio)=>{
-  console.log(tabla)
-  console.log(servicio)
     const fila = document.createElement('tr')
     const contenidoFila = `<td>${servicio.nombreServicio}</td>
               <td>${servicio.descripcionServicio}</td>
               <td>${servicio.precioServicio}</td>
               <td>${servicio.tiempoServicio}</td>
               <td>
-                  <button class="btn btn-primary">Leer</button>
+                  <button class="btn btn-primary" onclick="verServicio('${servicio.id}')">Leer</button>
                  <button class="btn btn-warning" onclick="prepararServicio('${servicio.id}')">Editar</button>
                    <button class="btn btn-danger" onclick="borrarServicio('${servicio.id}')">Borrar</button>
               </td>`
@@ -131,9 +127,12 @@ window.prepararServicio = (id)=>{
   }
 }
 
+window.verServicio = (id)=>{
+  window.location.href = "/pages/detalleServicio.html?id=" + id
+}
+
 const administrarServicio = (e)=>{
 e.preventDefault()
-console.log('e', e)
 if (estoyCreando === true){
   crearServicio()
 } else {
@@ -142,21 +141,18 @@ if (estoyCreando === true){
 }
 
 const modificarServicio = ()=>{
-//buscar la posicion del contacto a modificar
+//Posicion
 const obtenerServicio = listaServicios.findIndex(res => res.id === servicioAEditar.id)
-console.log('aqui obtengo el dato', obtenerServicio)
 //actualizar datos del array
 listaServicios[obtenerServicio].nombreServicio = nombreServicio.value
-listaServicios[obtenerServicio].descripcionServicioServicio = descripcionServicio.value
+listaServicios[obtenerServicio].descripcionServicio = descripcionServicio.value
 listaServicios[obtenerServicio].precioServicio = precioServicio.value
 listaServicios[obtenerServicio].tiempoServicio = tiempoServicio.value
 listaServicios[obtenerServicio].tipoServicio = tipoServicio.value
 listaServicios[obtenerServicio].imagenServicio = imagenServicio.value
-console.log(listaServicios)
 guardarEnLocalStorage();
 
 
-// actualizar el local storage
 }
 //Logica del CRUD
 btnNuevo.addEventListener('click', mostrarModal);
