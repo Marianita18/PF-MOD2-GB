@@ -1,21 +1,19 @@
 import Servicios from "./classServicio.js";
 
- //aqui agregare la logica del CRUD
-
- //declaro las variables
+ //Variables
 
 const modalServicio = new bootstrap.Modal (document.getElementById('modalAdminServicios'));
 const btnNuevo = document.getElementById('btnNuevo');
 const btnCargar = document.getElementById('btnCargar');
 const formServicios = document.getElementById('formServicios');
-//traigo los imputs
+//Imputs
 const nombreServicio = document.getElementById('nombreServicio'),
 descripcionServicio = document.getElementById('descripcionServicio'),
 precioServicio = document.getElementById('precioServicio'),
 tiempoServicio = document.getElementById('tiempoServicio'),
 tipoServicio = document.getElementById('tipoServicio'),
 imagenServicio = document.getElementById('imagenServicio');
-// verificar si hay datos en LocalStorage
+// verificacion de datos Storage
 const listaServicios = JSON.parse (localStorage.getItem('listaServiciosKey')) || [];
 const tabla = document.querySelector('tbody');
 
@@ -100,7 +98,7 @@ window.borrarServicio = (id)=> {
         }
       });
 }
-//aqui agrego la logica del CRUD
+//Logica del CRUD
 btnNuevo.addEventListener('click', mostrarModal);
 formServicios.addEventListener('submit', crearServicio);
 cargaServiciosInicial();
