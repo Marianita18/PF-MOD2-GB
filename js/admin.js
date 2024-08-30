@@ -1,4 +1,5 @@
 import Servicios from "./classServicio.js";
+import { validarCantidadCaracteres } from "./validaciones.js";
 
  //Variables
 
@@ -28,13 +29,25 @@ const mostrarModal = ()=>{
 const crearServicio = ()=>{
     //debo validar los datos, lo vere despues
     estoyCreando = true;
-    const servicios = new Servicios(nombreServicio.value,descripcionServicio.value,precioServicio.value,tiempoServicio.value,tipoServicio.value,imagenServicio.value);
-    //quiero guardar el objeto en la lista de servicio
-    listaServicios.push(servicios)
-    limpiarFormServicios()
-    //guardar en JSON
-    guardarEnLocalStorage()
-    dibujarFila(servicios);
+    if(validarCantidadCaracteres(nombreServicio,3,30) === true && validarCantidadCaracteres(descripcionServicio,10,100)){
+      const servicios = new Servicios(nombreServicio.value,descripcionServicio.value,precioServicio.value,tiempoServicio.value,tipoServicio.value,imagenServicio.value);
+      //quiero guardar el objeto en la lista de servicio
+      listaServicios.push(servicios)
+      limpiarFormServicios()
+      //guardar en JSON
+      guardarEnLocalStorage()
+      dibujarFila(servicios);
+
+    } else {
+      console.log('hay errores en la carga')
+    }
+    // const servicios = new Servicios(nombreServicio.value,descripcionServicio.value,precioServicio.value,tiempoServicio.value,tipoServicio.value,imagenServicio.value);
+    // //quiero guardar el objeto en la lista de servicio
+    // listaServicios.push(servicios)
+    // limpiarFormServicios()
+    // //guardar en JSON
+    // guardarEnLocalStorage()
+    // dibujarFila(servicios);
 }
 // const cerrarModal = ()=>{
 //     modalServicio.hide()
