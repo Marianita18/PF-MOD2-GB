@@ -18,3 +18,14 @@ export function validarEmail(input){
         return false
     }
 }
+
+export function validarUrl(input){
+    const regExp = /^https?:\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/
+    if (regExp.test(input.value)){
+        input.className= 'form-control is-valid'
+        return true
+    } else {
+        input.className= 'form-control is-invalid'
+        return false
+    }
+}

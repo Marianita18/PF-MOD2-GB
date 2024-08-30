@@ -1,6 +1,7 @@
 import Servicios from "./classServicio.js";
-import { validarCantidadCaracteres } from "./validaciones.js";
+import { validarCantidadCaracteres, validarUrl } from "./validaciones.js";
 // import { validarEmail } from "./validaciones.js";
+import { validarEmail } from "./validaciones.js";
 
  //Variables
 
@@ -24,77 +25,53 @@ let servicioAEditar;
 
 //funciones
 const mostrarModal = ()=>{
-    modalServicio.show()
+    modalServicio.show();
 }
 
 const crearServicio = ()=>{
-    //debo validar los datos, lo vere despues
     estoyCreando = true;
-    if(validarCantidadCaracteres(nombreServicio,3,30) === true && validarCantidadCaracteres(descripcionServicio,10,100)){
+    if(validarCantidadCaracteres(nombreServicio,3,30) === true && validarCantidadCaracteres(descripcionServicio,10,100) && validarUrl(imagenServicio)){
       const servicios = new Servicios(nombreServicio.value,descripcionServicio.value,precioServicio.value,tiempoServicio.value,tipoServicio.value,imagenServicio.value);
       //quiero guardar el objeto en la lista de servicio
-      listaServicios.push(servicios)
-      limpiarFormServicios()
+      listaServicios.push(servicios);
+      limpiarFormServicios();
       //guardar en JSON
-      guardarEnLocalStorage()
+      guardarEnLocalStorage();
       dibujarFila(servicios);
 
     } else {
-      console.log('hay errores en la carga')
+      console.log('hay errores en la carga');
     }
-    // const servicios = new Servicios(nombreServicio.value,descripcionServicio.value,precioServicio.value,tiempoServicio.value,tipoServicio.value,imagenServicio.value);
-    // //quiero guardar el objeto en la lista de servicio
-    // listaServicios.push(servicios)
-    // limpiarFormServicios()
-    // //guardar en JSON
-    // guardarEnLocalStorage()
-    // dibujarFila(servicios);
 }
-// const cerrarModal = ()=>{
-//     modalServicio.hide()
-// }
 
 const limpiarFormServicios = ()=>{
-formServicios.reset();
+  formServicios.reset();
 }
+
 const guardarEnLocalStorage =()=>{
-    localStorage.setItem('listaServiciosKey' , JSON.stringify(listaServicios))
+  localStorage.setItem('listaServiciosKey' , JSON.stringify(listaServicios));
 }
 
 const cargaServiciosInicial =()=>{
     //Pregunta si hay contenido en local
-    if(listaServicios.length != 0){
-        //Tabla
-        listaServicios.map((servicio)=> dibujarFila(servicio))
+  if(listaServicios.length != 0){
+      listaServicios.map((servicio)=> dibujarFila(servicio));
     }
 }
 
 const dibujarFila = (servicio)=>{
-    const fila = document.createElement('tr')
-    const contenidoFila = `<td>${servicio.nombreServicio}</td>
+  const fila = document.createElement('tr');
+  const contenidoFila = `<td>${servicio.nombreServicio}</td>
               <td>${servicio.descripcionServicio}</td>
               <td>${servicio.precioServicio}</td>
               <td>${servicio.tiempoServicio}</td>
               <td>
-                  <button class="btn btn-primary" onclick="verServicio('${servicio.id}')">Leer</button>
-                 <button class="btn btn-warning" onclick="prepararServicio('${servicio.id}')">Editar</button>
-                   <button class="btn btn-danger" onclick="borrarServicio('${servicio.id}')">Borrar</button>
+                <button class="btn btn-primary" onclick="verServicio('${servicio.id}')">Leer</button>
+                <button class="btn btn-warning" onclick="prepararServicio('${servicio.id}')">Editar</button>
+                <button class="btn btn-danger" onclick="borrarServicio('${servicio.id}')">Borrar</button>
               </td>`
-            fila.innerHTML = contenidoFila
-            tabla.append(fila)
-    
-    // tabla.innerHTML += `  <tr>
-    //           <td>${servicio.nombreServicio}</td>
-    //           <td>${servicio.descripcionServicio}</td>
-    //           <td>${servicio.precioServicio}</td>
-    //           <td>${servicio.tiempoServicio}</td>
-    //           <td>
-    //               <button class="btn btn-primary">Leer</button>
-    //               <button class="btn btn-warning" onclick="prepararServicio('${servicio.id}')">Editar</button>
-    //               <button class="btn btn-danger" onclick="borrarServicio('${servicio.id}')">Borrar</button>
-    //           </td>
-    //         </tr> `
-
+  fila.innerHTML = contenidoFila;
+  tabla.append(fila);
 }
 
 //funcion especial para que funcionen botones desde html
@@ -121,7 +98,7 @@ window.borrarServicio = (id)=> {
             text: "El servicio fue eliminado",
             icon: "success"
           });
-        }
+        };
       });
 }
 
@@ -137,37 +114,54 @@ window.prepararServicio = (id)=>{
     tiempoServicio.value = servicioAEditar.tiempoServicio
     tipoServicio.value = servicioAEditar.tipoServicio
     imagenServicio.value = servicioAEditar.imagenServicio
-
-  }
+  };
 }
 
 window.verServicio = (id)=>{
-  window.location.href = "/pages/detalleServicio.html?id=" + id
+  window.location.href = "/pages/detalleServicio.html?id=" + id;
 }
 
 const administrarServicio = (e)=>{
-e.preventDefault()
-if (estoyCreando === true){
-  crearServicio()
-} else {
+  e.preventDefault()
+  if (estoyCreando === true){
+    crearServicio();
+  } else {
     modificarServicio();
   }
 }
 
 const modificarServicio = ()=>{
 //Posicion
-const obtenerServicio = listaServicios.findIndex(res => res.id === servicioAEditar.id)
+  const obtenerServicio = listaServicios.findIndex(res => res.id === servicioAEditar.id);
 //actualizar datos del array
-listaServicios[obtenerServicio].nombreServicio = nombreServicio.value
-listaServicios[obtenerServicio].descripcionServicio = descripcionServicio.value
-listaServicios[obtenerServicio].precioServicio = precioServicio.value
-listaServicios[obtenerServicio].tiempoServicio = tiempoServicio.value
-listaServicios[obtenerServicio].tipoServicio = tipoServicio.value
-listaServicios[obtenerServicio].imagenServicio = imagenServicio.value
-guardarEnLocalStorage();
-
-
+  listaServicios[obtenerServicio].nombreServicio = nombreServicio.value;
+  listaServicios[obtenerServicio].descripcionServicio = descripcionServicio.value;
+  listaServicios[obtenerServicio].precioServicio = precioServicio.value;
+  listaServicios[obtenerServicio].tiempoServicio = tiempoServicio.value;
+  listaServicios[obtenerServicio].tipoServicio = tipoServicio.value;
+  listaServicios[obtenerServicio].imagenServicio = imagenServicio.value;
+  guardarEnLocalStorage();
+  actualizarFilaEnTabla(obtenerServicio);
+  limpiarFormServicios();
+  modalServicio.hide();
 }
+
+const actualizarFilaEnTabla = (index) => {
+    // Obtener la fila correspondiente
+  const fila = tabla.children[index];
+   // Actualizar el contenido de la fila
+  fila.innerHTML = `
+        <td>${listaServicios[index].nombreServicio}</td>
+        <td>${listaServicios[index].descripcionServicio}</td>
+        <td>${listaServicios[index].precioServicio}</td>
+        <td>${listaServicios[index].tiempoServicio}</td>
+        <td>
+            <button class="btn btn-primary" onclick="verServicio('${listaServicios[index].id}')">Leer</button>
+            <button class="btn btn-warning" onclick="prepararServicio('${listaServicios[index].id}')">Editar</button>
+            <button class="btn btn-danger" onclick="borrarServicio('${listaServicios[index].id}')">Borrar</button>
+        </td>`;
+}
+
 //Logica del CRUD
 btnNuevo.addEventListener('click', mostrarModal);
 formServicios.addEventListener('submit', administrarServicio);
