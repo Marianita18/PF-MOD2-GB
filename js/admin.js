@@ -1,5 +1,6 @@
 import Servicios from "./classServicio.js";
 import { validarCantidadCaracteres } from "./validaciones.js";
+// import { validarEmail } from "./validaciones.js";
 
  //Variables
 
