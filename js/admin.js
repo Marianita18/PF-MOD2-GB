@@ -143,13 +143,15 @@ const modificarServicio = ()=>{
   guardarEnLocalStorage();
   actualizarFilaEnTabla(obtenerServicio);
   limpiarFormServicios();
+  estoyCreando = true;
   modalServicio.hide();
 }
 
 const actualizarFilaEnTabla = (index) => {
     // Obtener la fila correspondiente
   const fila = tabla.children[index];
-   // Actualizar el contenido de la fila
+
+ // Actualizar el contenido de la fila
   fila.innerHTML = `
         <td>${listaServicios[index].nombreServicio}</td>
         <td>${listaServicios[index].descripcionServicio}</td>
