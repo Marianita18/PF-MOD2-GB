@@ -79,7 +79,7 @@ nav {
 @media all and (max-width: 768px) {
   .btnColorLogin {
     background-color: white;
-    color: var(--Azul);
+    color: var(--Azul); 
     margin-top: 10px;
   }
   .btnColorLogin:hover {
@@ -308,9 +308,10 @@ textarea{resize: none;}
     position: relative;
     left: 0%;
 }
-
+}
 /* -----------------------FOOTER----------------------------- */
-footer{
+
+footer {
   background-image: url(../img/background.png);
   background-size: 100%;
   background-repeat: no-repeat;
@@ -318,32 +319,32 @@ footer{
   width: 100%;
 }
 @media all and (max-width: 992px) {
-  footer {
-    background-image: url(../img/background.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    object-fit: contain;
-    width: 100%;
-  }
-  .fz {
-    font-size: 13px;
-  }
+ footer {
+  background-image: url(../img/background.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  width: 100%;
+}
+.fz{
+  font-size: 13px;;
+}
 }
 @media all and (max-width: 768px) {
-  footer {
-    background-image: url(../img/background.png);
-    background-size: 320%;
-    background-repeat: no-repeat;
-    object-fit: contain;
-    width: 100%;
-  }
-  .fz {
-    font-size: 13px;
-  }
+footer {
+  background-image: url(../img/background.png);
+  background-size: 320%;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  width: 100%;
 }
-.fz {
-  font-size: 14px;
-}}
+.fz{
+  font-size: 13px;;
+}
+}
+.fz{
+  font-size: 14px;;
+}
 /* -----------------------------NOSOTROS-------------------------------- */
 .animate-card {
   box-shadow: 0 4px 8px rgba(166, 0, 249, 0.3);
