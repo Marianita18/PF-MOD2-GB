@@ -121,6 +121,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
     </header>
 
     <main class="container my-5">
+
       <h1 class="text-center">Pagina de administrador</h1>
       <section class="mt-4">
         <div class="d-flex flex-direction-row justify-content-between mt-3">
@@ -130,7 +131,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
         <div  class="table-responsive">
           <table class="table table-striped">
              <thead>
-              <tr>
+              <tr id="fila">
                 <th>Nombre</th>
                 <th>Descripcion</th>
                 <th>Precio</th>
@@ -146,10 +147,6 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
 
       </section>
 
-      
-
-
-
     </main>
 
     <!-- Modal servicios -->
@@ -164,27 +161,45 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
         <form id="formServicios">
           <div class="mb-3">
               <label for="nombreServicio" class="form-label">Nombre del Servicio</label>
-              <input type="text" class="form-control" id="nombreServicio" placeholder="Ejemplo: Pack basico.... " required minlength="1" maxlength="30">
+              <input type="text" class="form-control" id="nombreServicio" placeholder="Ejemplo: Pack basico.... ">
+              <div class="invalid-feedback">
+                Please choose a username.
+              </div>
           </div>
           <div class="mb-3">
             <label for="descripcionServicio" class="form-label">Descripcion</label>
-            <input type="text" class="form-control" id="descripcionServicio" minlength="1" maxlength="100" required>
+            <input type="text" class="form-control" id="descripcionServicio">
+            <div class="invalid-feedback">
+              Please choose a username.
+            </div>
         </div>
         <div class="mb-3">
           <label for="precioServicio" class="form-label">Precio del Servicio</label>
-          <input type="text" class="form-control" id="precioServicio" required minlength="1" maxlength="10" >
+          <input type="text" class="form-control" id="precioServicio" >
+          <div class="invalid-feedback">
+            Please choose a username.
+          </div>
       </div>
       <div class="mb-3">
         <label for="tiempoServicio" class="form-label">Tiempo de Entrega</label>
-        <input type="text" class="form-control" id="tiempoServicio" required minlength="1" maxlength="10">
+        <input type="text" class="form-control" id="tiempoServicio">
+        <div class="invalid-feedback">
+          Please choose a username.
+        </div>
     </div>
     <div class="mb-3">
       <label for="tipoServicio" class="form-label">Tipo de Servicio</label>
-      <input type="text" class="form-control" id="tipoServicio" required minlength="1" maxlength="15" aria-required="">
+      <input type="text" class="form-control" id="tipoServicio">
+      <div class="invalid-feedback">
+        Please choose a username.
+      </div>
   </div>
   <div class="mb-3">
     <label for="imagenServicio" class="form-label">URL Imagen</label>
-    <input type="text" class="form-control" id="imagenServicio" required>
+    <input type="text" class="form-control" id="imagenServicio">
+    <div class="invalid-feedback">
+      Please choose a username.
+    </div>
 </div>
 
     <button class="btn btn-primary" id="btnCargar">Cargar</button>
@@ -195,7 +210,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
   </div>
 </div>
 
-    <footer class="mt-5">
+<footer class="mt-5 bg-imagen">
       <section class="container-fluid text-center">
         <article class="row py-5">
           <div
@@ -323,14 +338,10 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
           </div>
         </article>
       </section>
-    </footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"></script>
-      <script src="
-https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.all.min.js
-"></script>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.all.min.js"></script>
       <script src="../js/admin.js" type="module"></script>
+      <script src="../js/validaciones.js"></script>
   </body>
 </html>
