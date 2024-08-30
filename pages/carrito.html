@@ -12,13 +12,14 @@
       name="keywords"
       content="condicionales, variables, constantes, javascript, bucles, arrays, objetos, clases, poo, dom, bom, localstorage" />
     <title>Carrito de Compras</title>
+    <link rel="shortcut icon" href="/img/mageneto.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 </head>
 <body class="bodyCarrito">
     <div class="container mt-5">
-        <h1 class="mb-4 text-center">Carrito de Compras 
+        <h1 class="mb-4 text-center">Packs Más Vendidos 
             <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
                 <path d="M0 1.5A.5.5 0 0 1 .5 1H2l.338 1.352L3.61 6H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 15H4a.5.5 0 0 1-.491-.408L1.01 3.607 0.61 2H.5a.5.5 0 0 1-.5-.5ZM3.102 4l1.313 7h8.17l1.313-7H3.102ZM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z"/>
             </svg>
@@ -214,7 +215,7 @@
                         <h5 class="card-title">Pack de Reels y Fotos Personalizados</h5>
                         <p class="card-text">Tiempo de entrega: 10-15 días hábiles</p>
                         <p class="card-text"><strong>$800 USD</strong></p>
-                        <button class="btn btn-primary btn-add-to-cart" data-name="Pack de Reels y Fotos Personalizados" data-price="18.00">Agregar al carrito</button>
+                        <button class="btn btn-primary btn-add-to-cart" data-name="Pack de Reels y Fotos Personalizados" data-price="800">Agregar al carrito</button>
                     </div>
                 </div>
             </div>
@@ -293,8 +294,10 @@
         <div class="d-flex justify-content-between align-items-center">
             <h4>Total: $<span id="cart-total">0.00</span></h4>
             <button class="btn btn-success" id="checkout-btn">Comprar</button>
+            <a href="/index.html"><button class="btn btn-danger">Volver al Inicio</button></a>
         </div>
     </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
