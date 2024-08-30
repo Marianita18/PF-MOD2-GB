@@ -79,7 +79,7 @@ nav {
 @media all and (max-width: 768px) {
   .btnColorLogin {
     background-color: white;
-    color: var(--Azul); 
+    color: var(--Azul);
     margin-top: 10px;
   }
   .btnColorLogin:hover {
@@ -140,26 +140,22 @@ nav {
 
 .megafono {
   transform: scale(0.45) rotate(60deg);
- 
 }
 
 .rueda-rosa {
   transform: scale(0.2);
   position: relative;
   top: -45%;
- 
 }
 
 .mensaje-con-corazon {
   transform: scale(0.5) rotate(-40deg);
   position: relative;
   top: -50%;
- 
 }
 
 .sello {
   transform: scale(0.6) rotate(15deg);
-  
 }
 .bg-imagen {
   background-attachment: fixed;
@@ -173,15 +169,12 @@ nav {
   position: relative;
   top: -20%;
   margin-top: 50%;
-  left: 10%;
-
 }
 #brazo-violeta-2 {
   transform: rotate(90deg) scale(1.4);
   position: relative;
   top: 20%;
   margin-bottom: 60%;
-  right: 10%;
 }
 #doble-brazos {
   position: absolute;
@@ -248,14 +241,13 @@ nav {
 }
 
 /* DETALLES */
-textarea{resize: none;}
+textarea {
+  resize: none;
+}
 
 /* DISPOSITIVOS DISTINO TAMAÑO */
 
 @media (max-width: 991px) {
-
-
-
   .titulo-principal {
     size: 1rem;
   }
@@ -307,7 +299,7 @@ textarea{resize: none;}
     color: var(--Violeta);
     position: relative;
     left: 0%;
-}
+  }
 }
 /* -----------------------FOOTER----------------------------- */
 
@@ -342,9 +334,10 @@ footer {
   font-size: 13px;;
 }
 }
-.fz{
-  font-size: 14px;;
-}
+  .fz {
+    font-size: 14px;
+  }
+
 /* -----------------------------NOSOTROS-------------------------------- */
 .animate-card {
   box-shadow: 0 4px 8px rgba(166, 0, 249, 0.3);
@@ -358,7 +351,6 @@ footer {
 }
 
 /* -----------------------------CONTACTO-------------------------------- */
-
 .bg1 {
   background-image: url(../img/brazos-diferentes.png);
   background-size: 320%;
@@ -366,4 +358,3 @@ footer {
   object-fit: contain;
   width: 100%;
 }
-
