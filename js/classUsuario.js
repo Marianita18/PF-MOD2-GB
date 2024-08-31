@@ -8,7 +8,18 @@ export default class Usuario {
   #email;
   #password;
   #tipo;
-  constructor(usuario, nombre, apellido, fechaNacimiento, telefono, email, password, tipo) {
+  #img;
+  constructor(
+    usuario,
+    nombre,
+    apellido,
+    fechaNacimiento,
+    telefono,
+    email,
+    password,
+    tipo,
+    img
+  ) {
     this.#id = crypto.randomUUID();
     this.#usuario = usuario;
     this.#nombre = nombre;
@@ -18,6 +29,7 @@ export default class Usuario {
     this.#email = email;
     this.#password = password;
     this.#tipo = tipo;
+    this.#img = img;
   }
   //GET Y SET
   get id() {
@@ -74,6 +86,12 @@ export default class Usuario {
   set tipo(value) {
     this.#tipo = value;
   }
+  get img() {
+    return this.#img;
+  }
+  set img(value) {
+    this.#img = value;
+  }
 
   //metodo para que funcione del JSON.stringify de js
   toJSON() {
@@ -87,6 +105,7 @@ export default class Usuario {
       email: this.email,
       password: this.password,
       tipo: this.tipo,
+      img: this.img,
     };
   }
 }

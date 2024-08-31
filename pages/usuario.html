@@ -131,60 +131,94 @@
         <article class="row">
           <!-- card user -->
           <div class="col-12 col-md-3 col-lg-3">
-            <div class="card">
+            <div class="card" id="contenedorUsuario">
               <img
                 src="../img/user5.png"
                 class="img-fluid cardUser rounded-circle mx-auto d-block bg-body-tertiary mt-3"
                 width="200"
                 alt="Usuario" />
-              <div class="card-body">
-                <h5 class="card-title">MARIANA MENDOZA</h5>
-                <p class="card-text">Usuario General</p>
-              </div>
+              <div id="cardUsuario"></div>
             </div>
             <div class="tabContainer">
               <div class="buttonContainer">
                 <ul class="list-group list-group-flush buttonContainer">
                   <li class="list-group-item">
-                    <button onclick="showPanel(0,'#a600f9')" class="btn w-100">Configuración de Cuenta</button>
+                    <button onclick="showPanel(0,'#a600f9')" class="btn w-100">
+                      Configuración de Cuenta
+                    </button>
                   </li>
                   <li class="list-group-item">
-                    <button onclick="showPanel(1,'#a600f9')" class="btn w-100">Contraseña</button>
+                    <button onclick="showPanel(1,'#a600f9')" class="btn w-100">
+                      Contraseña
+                    </button>
                   </li>
                   <li class="list-group-item">
-                    <button onclick="showPanel(2,'#a600f9')" class="btn w-100">Intereses</button>
+                    <button onclick="showPanel(2,'#a600f9')" class="btn w-100">
+                      Intereses
+                    </button>
                   </li>
                   <li class="list-group-item">
-                    <button onclick="showPanel(3,'#a600f9')" class="btn w-100">Lista de Favoritos</button>
+                    <button onclick="showPanel(3,'#a600f9')" class="btn w-100">
+                      Lista de Favoritos
+                    </button>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
-          <div class="tabContainer col-12 col-md-9 col-lg-9 ">
+          <div class="tabContainer col-12 col-md-9 col-lg-9">
             <div class="tabPanel">
               <div class="card" id="card1">
-                <div class="card-header color-texto-violeta fw-bold">Configuración Cuenta</div>
-                <div class="card-body">
+                <div class="card-header color-texto-violeta fw-bold">
+                  Configuración Cuenta
+                </div>
+                <div class="card-body" id="contenedorForm">
                   <form class="form-control mb-5">
                     <div class="mb-3">
-                      <label for="nombreApellido" class="form-label">Nombre y Apellido*</label>
-                      <input type="text" class="form-control" id="nombreApellido" maxlength="50" minlength="8"
-                        placeholder="Ej: Juan Perez" required />
+                      <label for="nombreApellido" class="form-label"
+                        >Nombre y Apellido*</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="nombreApellido"
+                        maxlength="50"
+                        minlength="8"
+                        placeholder="Ej: Juan Perez"
+                        required />
                     </div>
                     <div class="mb-3">
-                      <label for="fnacimiento" class="form-label">Fecha de Nacimiento</label>
-                      <input type="date" class="form-control" id="fnacimiento" maxlength="10" minlength="10" placeholder="Ej: 12/12/2012"
+                      <label for="fnacimiento" class="form-label"
+                        >Fecha de Nacimiento</label
+                      >
+                      <input
+                        type="date"
+                        class="form-control"
+                        id="fnacimiento"
+                        maxlength="10"
+                        minlength="10"
+                        placeholder="Ej: 12/12/2012"
                         required />
                     </div>
                     <div class="mb-3">
                       <label for="telefono" class="form-label">Teléfono*</label>
-                      <input type="tel" class="form-control" id="telefono" maxlength="10" minlength="10" placeholder="Ej: 3814961577"
+                      <input
+                        type="tel"
+                        class="form-control"
+                        id="telefono"
+                        maxlength="10"
+                        minlength="10"
+                        placeholder="Ej: 3814961577"
                         required />
                     </div>
                     <div class="mb-3">
                       <label for="email" class="form-label">Email*</label>
-                      <input type="email" class="form-control" id="email" placeholder="Ej: juanperez@gmail.com" required />
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        placeholder="Ej: juanperez@gmail.com"
+                        required />
                     </div>
                     <!-- <div>
                       <label for="imagenUsuario" class="form-label">Cambiar imagen</label>
@@ -196,39 +230,68 @@
                         Subir
                       </button>
                     </div> -->
-                    <button type="submit" class="btn btnColor">Guardar Cambios</button>
+                    <button type="submit" class="btn btnColor">
+                      Guardar Cambios
+                    </button>
                   </form>
                 </div>
               </div>
             </div>
             <div class="tabPanel">
               <div class="card" id="card2">
-                <div class="card-header color-texto-violeta fw-bold">Contraseña</div>
+                <div class="card-header color-texto-violeta fw-bold">
+                  Contraseña
+                </div>
                 <div class="card-body">
                   <form class="form-control mb-5">
                     <div class="mb-3">
-                      <label for="actualContrasenia" class="form-label">Actual Contraseña*</label>
-                      <input type="password" class="form-control" id="actualContrasenia" maxlength="20" minlength="8"
+                      <label for="actualContrasenia" class="form-label"
+                        >Actual Contraseña*</label
+                      >
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="actualContrasenia"
+                        maxlength="20"
+                        minlength="8"
                         required />
                     </div>
                     <div class="mb-3">
-                      <label for="nuevaContrasenia" class="form-label">Nueva Contraseña*</label>
-                      <input type="password" class="form-control" id="nuevaContrasenia" maxlength=" 20" minlength="8"
+                      <label for="nuevaContrasenia" class="form-label"
+                        >Nueva Contraseña*</label
+                      >
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="nuevaContrasenia"
+                        maxlength=" 20"
+                        minlength="8"
                         required />
                     </div>
                     <div class="mb-3">
-                      <label for="repetirContrasenia" class="form-label">Repetir Contraseña*</label>
-                      <input type="password" class="form-control" id="repetirContrasenia" maxlength="20" minlength="8"
+                      <label for="repetirContrasenia" class="form-label"
+                        >Repetir Contraseña*</label
+                      >
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="repetirContrasenia"
+                        maxlength="20"
+                        minlength="8"
                         required />
                     </div>
-                    <button type="submit" class="btn btnColor">Restablecer</button>
+                    <button type="submit" class="btn btnColor">
+                      Restablecer
+                    </button>
                   </form>
                 </div>
-               </div>
+              </div>
             </div>
             <div class="tabPanel">
               <div class="card" id="card2">
-                <div class="card-header color-texto-violeta fw-bold">Intereses</div>
+                <div class="card-header color-texto-violeta fw-bold">
+                  Intereses
+                </div>
                 <div class="card-body">
                   <p class="card-text"></p>
                   <div class="container text-center mt-5">
@@ -238,7 +301,12 @@
                         <div class="card h-60">
                           <div class="card-body d-flex">
                             <h6 class="card-title">Contenido Inicial</h6>
-                              <a href="#" class="ms-auto"> <i class="bi bi-plus-circle-fill"></i><i onclick="changeIcon(this)" class="bi bi-plus-circle align-content-center fs-5"></i></a>
+                            <a href="#" class="ms-auto">
+                              <i class="bi bi-plus-circle-fill"></i
+                              ><i
+                                onclick="changeIcon(this)"
+                                class="bi bi-plus-circle align-content-center fs-5"></i
+                            ></a>
                           </div>
                         </div>
                       </div>
@@ -246,7 +314,11 @@
                         <div class="card h-60">
                           <div class="card-body d-flex">
                             <h6 class="card-title">Redes Sociales</h6>
-                            <a href="#" class="ms-auto"><i onclick="changeIcon(this)" class="bi bi-plus-circle align-content-center fs-5"></i></a>
+                            <a href="#" class="ms-auto"
+                              ><i
+                                onclick="changeIcon(this)"
+                                class="bi bi-plus-circle align-content-center fs-5"></i
+                            ></a>
                           </div>
                         </div>
                       </div>
@@ -254,7 +326,10 @@
                         <div class="card h-60">
                           <div class="card-body d-flex">
                             <h6 class="card-title">Contenido Estacional</h6>
-                            <a href="#" class="ms-auto"><i class="icon bi bi-plus-circle align-content-center fs-5"></i></a>
+                            <a href="#" class="ms-auto"
+                              ><i
+                                class="icon bi bi-plus-circle align-content-center fs-5"></i
+                            ></a>
                           </div>
                         </div>
                       </div>
@@ -262,7 +337,10 @@
                         <div class="card h-60">
                           <div class="card-body d-flex">
                             <h6 class="card-title">Contenido Inicial</h6>
-                            <a href="#" class="ms-auto"><i class="bi bi-plus-circle align-content-center fs-5"></i></a>
+                            <a href="#" class="ms-auto"
+                              ><i
+                                class="bi bi-plus-circle align-content-center fs-5"></i
+                            ></a>
                           </div>
                         </div>
                       </div>
@@ -270,7 +348,10 @@
                         <div class="card h-60">
                           <div class="card-body d-flex">
                             <h6 class="card-title">Redes Sociales</h6>
-                            <a href="#" class="ms-auto"><i class="bi bi-plus-circle align-content-center fs-5"></i></a>
+                            <a href="#" class="ms-auto"
+                              ><i
+                                class="bi bi-plus-circle align-content-center fs-5"></i
+                            ></a>
                           </div>
                         </div>
                       </div>
@@ -278,7 +359,10 @@
                         <div class="card h-60">
                           <div class="card-body d-flex">
                             <h6 class="card-title">Contenido Estacional</h6>
-                            <a href="#" class="ms-auto"><i class="bi bi-plus-circle align-content-center fs-5"></i></a>
+                            <a href="#" class="ms-auto"
+                              ><i
+                                class="bi bi-plus-circle align-content-center fs-5"></i
+                            ></a>
                           </div>
                         </div>
                       </div>
@@ -286,26 +370,34 @@
                         <div class="card h-60">
                           <div class="card-body d-flex">
                             <h6 class="card-title">Contenido Estacional</h6>
-                            <a href="#" class="ms-auto"><i class="bi bi-plus-circle align-content-center fs-5"></i></a>
+                            <a href="#" class="ms-auto"
+                              ><i
+                                class="bi bi-plus-circle align-content-center fs-5"></i
+                            ></a>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-               </div>
+              </div>
             </div>
             <div class="tabPanel">
               <div class="card" id="card2">
-                <div class="card-header color-texto-violeta fw-bold">Lista de Favoritos</div>
+                <div class="card-header color-texto-violeta fw-bold">
+                  Lista de Favoritos
+                </div>
                 <div class="card-body">
                   <p class="card-text"></p>
                 </div>
                 <!-- cards servicios -->
-                <div class="row d-flex  mx-5 my-4 justify-content-between">
+                <div class="row d-flex mx-5 my-4 justify-content-between">
                   <div class="col-12 col-md-3">
                     <div class="card mt-3">
-                      <img src="../img/pack-opcion-1.jpeg" class="card-img-top" alt="..." />
+                      <img
+                        src="../img/pack-opcion-1.jpeg"
+                        class="card-img-top"
+                        alt="..." />
                       <div class="card-body">
                         <h5 class="card-title">Pack Básico de Reels y Fotos</h5>
                         <a href="#" class="btn btn-primary">Ver más</a>
@@ -314,7 +406,10 @@
                   </div>
                   <div class="col-12 col-md-3">
                     <div class="card mt-3">
-                      <img src="../img/pack-opcion-2.webp" class="card-img-top" alt="..." />
+                      <img
+                        src="../img/pack-opcion-2.webp"
+                        class="card-img-top"
+                        alt="..." />
                       <div class="card-body">
                         <h5 class="card-title">Pack Básico de Reels y Fotos</h5>
                         <a href="#" class="btn btn-primary">Ver más</a>
@@ -323,7 +418,10 @@
                   </div>
                   <div class="col-12 col-md-3">
                     <div class="card mt-3">
-                      <img src="../img/pack-opcion-3.jpeg" class="card-img-top" alt="..." />
+                      <img
+                        src="../img/pack-opcion-3.jpeg"
+                        class="card-img-top"
+                        alt="..." />
                       <div class="card-body">
                         <h5 class="card-title">Pack Básico de Reels y Fotos</h5>
                         <a href="#" class="btn btn-primary">Ver más</a>
@@ -332,7 +430,10 @@
                   </div>
                   <div class="col-12 col-md-3">
                     <div class="card mt-3">
-                      <img src="../img/pack-opcion-4.png" class="card-img-top" alt="..." />
+                      <img
+                        src="../img/pack-opcion-4.png"
+                        class="card-img-top"
+                        alt="..." />
                       <div class="card-body">
                         <h5 class="card-title">Pack Básico de Reels y Fotos</h5>
                         <a href="#" class="btn btn-primary">Ver más</a>
@@ -341,7 +442,10 @@
                   </div>
                   <div class="col-12 col-md-3">
                     <div class="card mt-3">
-                      <img src="../img/pack-opcion-5.png" class="card-img-top" alt="..." />
+                      <img
+                        src="../img/pack-opcion-5.png"
+                        class="card-img-top"
+                        alt="..." />
                       <div class="card-body">
                         <h5 class="card-title">Pack Básico de Reels y Fotos</h5>
                         <a href="#" class="btn btn-primary">Ver más</a>

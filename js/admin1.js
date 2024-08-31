@@ -14,6 +14,7 @@ const telefono = document.getElementById("telefono");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
 const tipo = document.getElementById("tipo");
+const img = document.getElementById("img");
 let encontrarUsuario;
 
 //verificar si hay datos en el localstorage
@@ -38,7 +39,8 @@ const crearUsuario = () => {
       telefono.value,
       email.value,
       password.value,
-      tipo.value
+      tipo.value,
+      img.value
     );
     console.log(nuevoUsuario);
     listaUsuarios.push(nuevoUsuario);
@@ -68,6 +70,7 @@ const dibujarFila = (usuario) => {
                             <td>${usuario.email}</td>
                             <td>${usuario.password}</td>
                             <td>${usuario.tipo}</td>
+                            
                             <td>
                                 <button class="btn btn-primary" onclick="verDetalle('${usuario.id}')">Ver</button>
                                 <button class="btn btn-warning" onclick="editarUsuario('${usuario.id}')">Editar</button>
@@ -113,12 +116,13 @@ const modificarUsuario = () => {
   listaUsuarios[obtenerUsuario].email = email.value;
   listaUsuarios[obtenerUsuario].password = password.value;
   listaUsuarios[obtenerUsuario].tipo = tipo.value;
+
   //3 - actualizar el localstorage.
-    guardarLocalStorage();
-    actualizarFila(obtenerUsuario);
-    limpiarFormulario();
-    crear = true;
-    mostrarModal.hide();
+  guardarLocalStorage();
+  actualizarFila(obtenerUsuario);
+  limpiarFormulario();
+  crear = true;
+  mostrarModal.hide();
 };
 
 window.editarUsuario = (id) => {
