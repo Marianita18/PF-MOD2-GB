@@ -30,7 +30,7 @@ const mostrarModal = ()=>{
 
 const crearServicio = ()=>{
     estoyCreando = true;
-    if(validarCantidadCaracteres(nombreServicio,3,30) === true && validarCantidadCaracteres(descripcionServicio,10,100) && validarUrl(imagenServicio)){
+    if(validarCantidadCaracteres(nombreServicio,3,30) === true && validarCantidadCaracteres(descripcionServicio,10,1000) && validarUrl(imagenServicio)){
       const servicios = new Servicios(nombreServicio.value,descripcionServicio.value,precioServicio.value,tiempoServicio.value,tipoServicio.value,imagenServicio.value);
       //quiero guardar el objeto en la lista de servicio
       listaServicios.push(servicios);
@@ -66,6 +66,7 @@ const dibujarFila = (servicio)=>{
               <td>${servicio.precioServicio}</td>
               <td>${servicio.tiempoServicio}</td>
               <td>
+
                 <button class="btn btn-primary" onclick="verServicio('${servicio.id}')">Leer</button>
                 <button class="btn btn-warning" onclick="prepararServicio('${servicio.id}')">Editar</button>
                 <button class="btn btn-danger" onclick="borrarServicio('${servicio.id}')">Borrar</button>

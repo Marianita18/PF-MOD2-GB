@@ -46,3 +46,7 @@ seccionDeInformacion.innerHTML = `
       </div>
     </div>
   </div>` 
+
+  /////////////////////////////////////////////////////
+
+  
