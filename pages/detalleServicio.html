@@ -11,7 +11,8 @@
     />
     <meta
       name="keywords"
-      content="condicionales, variables, constantes, javascript, bucles, arrays, objetos, clases, poo, dom, bom, localstorage" />
+      content="condicionales, variables, constantes, javascript, bucles, arrays, objetos, clases, poo, dom, bom, localstorage"
+    />
     <link rel="icon" type="image/jpg" href="../img/mageneto.ico" />
     <link
       rel="stylesheet"
@@ -23,6 +24,12 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+    />
+
     <link rel="stylesheet" href="../css/styles.css" />
     <title>MAGNETO</title>
   </head>
@@ -30,7 +37,12 @@
     <header>
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid d-flex">
-          <img src="../img/logomagnetohome.png" class="img-fluid ms-5" width="75" alt="Logo Magneto">
+          <img
+            src="../img/logomagnetohome.png"
+            class="img-fluid ms-5"
+            width="75"
+            alt="Logo Magneto"
+          />
           <a class="navbar-brand text-white titulo" href="../index.html"
             >Magneto</a
           >
@@ -112,31 +124,63 @@
               />
               <button class="btn btnColor" type="submit">Buscar</button>
             </form>
-            <div class="ms-sm-0 ms-md-4 ms-lg-4"">
-              <a href="http://"><img src="../img/login.png" class="img-fluid" width="80" alt="Carrito de Compras" /></a>
-              <a href="./carrito.html"><img src="../img/carrito.png" class="img-fluid" width="90" alt="Carrito de Compras" /></a>
+            <div class="ms-sm-0 ms-md-4 ms-lg-4">
+              <a href="http://"
+                ><img
+                  src="../img/login.png"
+                  class="img-fluid"
+                  width="80"
+                  alt="Carrito de Compras"
+              /></a>
+              <a href="./carrito.html"
+                ><img
+                  src="../img/carrito.png"
+                  class="img-fluid"
+                  width="90"
+                  alt="Carrito de Compras"
+              /></a>
             </div>
           </div>
         </div>
       </nav>
     </header>
     <main class="py-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mb-4">
-            <div class="service-card">
+      <section class="container">
+        <article >
+          <div class="row">
+            <div id="padre">
+
+            </div class="col-lg-6">
+            <!-- Columna de Imagen -->
+            <!-- <div >
               <img
                 src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/252446108272239.5fba5cbcaf715.png"
-                class="card-img-top sombra-violeta"
+                class="img-fluid sombra-violeta"
                 alt="Imagen del Pack Básico"
               />
+            </div>
+            <div class="col-lg-6">
               <div class="service-card-body mt-5">
-                <h2 class="service-title resaltado p-2">Pack Básico de Reels y Fotos</h2>
+                <h2 class="service-title resaltado p-2">
+                  Pack Básico de Reels y Fotos
+                </h2>
                 <div class="highlight">
-                  <p><strong class="text-decoration-underline">Precio:</strong> $300 USD</p>
-                  <p><strong class="text-decoration-underline">Tiempo de entrega:</strong> 5 días hábiles</p>
+                  <p>
+                    <strong class="text-decoration-underline">Precio:</strong>
+                    $300 USD
+                  </p>
+                  <p>
+                    <strong class="text-decoration-underline"
+                      >Tiempo de entrega:</strong
+                    >
+                    5 días hábiles
+                  </p>
                 </div>
-                <p><strong class="text-decoration-underline">Descripción:</strong></p>
+                <p>
+                  <strong class="text-decoration-underline"
+                    >Descripción:</strong
+                  >
+                </p>
                 <p>
                   Ideal para quienes están comenzando en el mundo del marketing
                   digital. Este pack incluye una serie de Reels y fotos
@@ -145,109 +189,96 @@
                   con un presupuesto ajustado.
                 </p>
 
-                <button class="btn btn-secondary botones-servicios mb-3">Agregar al Carrito</button>
+                <button class="btn btn-secondary botones-servicios mb-3">
+                  Agregar al Carrito
+                </button> -->
 
-                <div class="steps-section mt-4">
-                  <h3 class="section-title">Pasos a Seguir</h3>
-                  <ol class="steps-list">
-                    <li>
-                      <strong class="text-decoration-underline">Compra y Confirmación:</strong> Añade el pack al
-                      carrito y realiza la compra. Recibirás un correo de
-                      confirmación con los detalles de la compra y el inicio del
-                      proceso.
-                    </li>
-                    <li>
-                      <strong class="text-decoration-underline">Contacto Inicial:</strong> Después de la compra,
-                      nos pondremos en contacto contigo para discutir tus
-                      necesidades específicas y objetivos para el pack
-                      adquirido.
-                    </li>
-                    <li>
-                      <strong class="text-decoration-underline">Desarrollo del Contenido:</strong> Nuestro equipo
-                      comenzará a crear los Reels y fotos basados en las
-                      indicaciones proporcionadas, con revisiones intermedias
-                      para asegurar tu satisfacción.
-                    </li>
-                    <li>
-                      <strong class="text-decoration-underline">Entrega Final:</strong> Entregaremos el contenido
-                      final en el formato acordado dentro del plazo establecido.
-                    </li>
-                    <li>
-                      <strong class="text-decoration-underline">Soporte Post-Entrega:</strong> Ofrecemos soporte
-                      adicional para asegurar que el contenido funcione
-                      perfectamente en tus plataformas.
-                    </li>
-                  </ol>
-                </div>
+                <div class="row">
+                  <!-- Columna de Pasos a Seguir -->
+                  <div class="col-md-6">
+                    <div class="steps-section mt-4">
+                      <h3 class="section-title">Pasos a Seguir</h3>
+                      <button class="btn btn-secondary botones-servicios mb-3">
+                        Ver más
+                      </button>
+                    </div>
+                  </div>
 
-                <div class="terms-section mt-4">
-                  <h4>Términos y Condiciones</h4>
-                  <button class="btn btn-secondary botones-servicios mb-3">
-                    Ver más
-                  </button>
+                  <!-- Columna de Términos y Condiciones -->
+                  <div class="col-md-6">
+                    <div class="terms-section mt-4">
+                      <h3>Términos y Condiciones</h3>
+                      <button class="btn btn-secondary botones-servicios mb-3">
+                        Ver más
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-
+        </article>
+        <article>
           <!-- Reseñas -->
-          <div class="col-lg-4">
-            <h3 class="section-title">Reseñas</h3>
-            <div class="review-list">
-              <div class="review-card mb-3">
-                <div class="review-card-body">
-                  <p>
-                    <strong>Juan Pérez:</strong> "Excelente opción para
-                    iniciarse en marketing digital. Muy buen trabajo."
-                  </p>
+          <div class="row mt-5">
+            <div class="col-12">
+              <h3 class="section-title">
+                <hr />
+                Reseñas
+              </h3>
+              <div class="review-list">
+                <div class="review-card mb-3">
+                  <div class="review-card-body">
+                    <p>
+                      <strong>Juan Pérez:</strong> "Excelente opción para
+                      iniciarse en marketing digital. Muy buen trabajo."
+                    </p>
+                  </div>
+                </div>
+                <div class="review-card mb-3">
+                  <div class="review-card-body">
+                    <p>
+                      <strong>Ana Martínez:</strong> "Perfecto para darle un
+                      empuje a nuestra presencia en redes sociales."
+                    </p>
+                  </div>
                 </div>
               </div>
-              <div class="review-card mb-3">
-                <div class="review-card-body">
-                  <p>
-                    <strong>Ana Martínez:</strong> "Perfecto para darle un
-                    empuje a nuestra presencia en redes sociales."
-                  </p>
-                </div>
+              <div class="add-review mt-4">
+                <h4>Agregar Reseña</h4>
+                <form>
+                  <div class="mb-3">
+                    <label for="reviewer-name" class="form-label">Nombre</label>
+                    <input
+                      maxlength="70"
+                      minlength="3"
+                      type="text"
+                      class="form-control"
+                      id="reviewer-name"
+                      placeholder="Tu nombre"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="reviewer-comment" class="form-label"
+                      >Comentario</label
+                    >
+                    <textarea
+                      class="form-control"
+                      id="reviewer-comment"
+                      rows="3"
+                      placeholder="Tu comentario"
+                    ></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-secondary">
+                    Enviar Reseña
+                  </button>
+                </form>
               </div>
-            </div>
-            <div class="add-review mt-4">
-              <h4>Agregar Reseña</h4>
-              <form>
-                <div class="mb-3">
-                  <label for="reviewer-name" class="form-label">Nombre</label>
-                  <input maxlength="70" minlength="3"
-                    type="text"
-                    class="form-control"
-                    id="reviewer-name"
-                    placeholder="Tu nombre"
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="reviewer-comment" class="form-label"
-                    >Comentario</label
-                  >
-                  <textarea
-                    class="form-control"
-                    id="reviewer-comment"
-                    rows="3"
-                    maxlength="400"
-                    minlength="3"
-                    placeholder="Escribe tu reseña aquí"
-                  ></textarea>
-                </div>
-                <button type="submit" class="btn btn-secondary botones-servicios mb-3">
-                  Enviar Reseña
-                </button>
-              </form>
             </div>
           </div>
-        </div>
-      </div>
+        </article>
+      </section>
     </main>
-
-
-    
     <footer class="mt-5 bg-imagen">
       <section class="container-fluid text-center">
         <article class="row py-5">
@@ -279,10 +310,7 @@
               target="_blank"
               ><i class="bi bi-facebook fs-5"></i
             ></a>
-            <a
-              class="fz itemActive"
-              href="https://www.x.com/"
-              target="_blank"
+            <a class="fz itemActive" href="https://www.x.com/" target="_blank"
               ><i class="bi bi-twitter-x fs-5"></i
             ></a>
             <a
@@ -297,10 +325,7 @@
               target="_blank"
               ><i class="bi bi-linkedin fs-5"></i
             ></a>
-            <a
-              class="fz itemActive"
-              href="https://discord.com/"
-              target="_blank"
+            <a class="fz itemActive" href="https://discord.com/" target="_blank"
               ><i class="bi bi-discord fs-5"></i
             ></a>
           </div>
@@ -389,6 +414,8 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+
     <script src="../js/desarrolloServicio.js"></script>
   </body>
 </html>
