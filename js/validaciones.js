@@ -1,3 +1,4 @@
+
 export function validarCantidadCaracteres(input,min,max){
 if (input.value.trim().length >= min && input.value.trim().length <= max){
     input.className= 'form-control is-valid'
@@ -29,3 +30,4 @@ export function validarUrl(input){
         return false
     }
 }
+
