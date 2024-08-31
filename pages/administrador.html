@@ -124,9 +124,9 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
 
       <h1 class="text-center">Pagina de administrador</h1>
       <section class="mt-4">
-        <div class="d-flex flex-direction-row justify-content-between mt-3">
+        <div class="d-flex flex-direction-row justify-content-between m-3">
           <h2>Tabla de Servicios</h2>
-          <button class="btn btn-primary" id="btnNuevo">Nuevo</button>
+          <button class="btn btnColor" id="btnNuevo">Nuevo</button>
         </div>
         <div  class="table-responsive">
           <table class="table table-striped">
@@ -163,46 +163,46 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
               <label for="nombreServicio" class="form-label">Nombre del Servicio</label>
               <input type="text" class="form-control" id="nombreServicio" placeholder="Ejemplo: Pack basico.... ">
               <div class="invalid-feedback">
-                Please choose a username.
+                Dato obligatorio, debe contener entre 3 y 30 caracteres inclusive.
               </div>
           </div>
           <div class="mb-3">
             <label for="descripcionServicio" class="form-label">Descripcion</label>
-            <input type="text" class="form-control" id="descripcionServicio">
+            <input type="text" class="form-control" id="descripcionServicio" placeholder="El pack contiene...">
             <div class="invalid-feedback">
-              Please choose a username.
+              Dato obligatorio, debe contener entre 4 y 300 caracteres inclusive.
             </div>
         </div>
         <div class="mb-3">
           <label for="precioServicio" class="form-label">Precio del Servicio</label>
-          <input type="text" class="form-control" id="precioServicio" >
+          <input type="text" class="form-control" id="precioServicio" placeholder="100 U$D ">
           <div class="invalid-feedback">
-            Please choose a username.
+            Dato obligatorio en U$D.
           </div>
       </div>
       <div class="mb-3">
         <label for="tiempoServicio" class="form-label">Tiempo de Entrega</label>
-        <input type="text" class="form-control" id="tiempoServicio">
+        <input type="text" class="form-control" id="tiempoServicio" placeholder="5 Dias ">
         <div class="invalid-feedback">
-          Please choose a username.
+          Dato obligatorio.
         </div>
     </div>
     <div class="mb-3">
       <label for="tipoServicio" class="form-label">Tipo de Servicio</label>
       <input type="text" class="form-control" id="tipoServicio">
       <div class="invalid-feedback">
-        Please choose a username.
+        Debe obligatorio.
       </div>
   </div>
   <div class="mb-3">
     <label for="imagenServicio" class="form-label">URL Imagen</label>
     <input type="text" class="form-control" id="imagenServicio">
     <div class="invalid-feedback">
-      Please choose a username.
+      Debe colocar una direccion URL.
     </div>
 </div>
 
-    <button class="btn btn-primary" id="btnCargar">Cargar</button>
+    <button class="btn btnColor" id="btnCargar">Cargar</button>
         </form>
       </div>
   
