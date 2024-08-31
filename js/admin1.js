@@ -14,7 +14,7 @@ const telefono = document.getElementById("telefono");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
 const tipo = document.getElementById("tipo");
-
+let encontrarUsuario;
 
 //verificar si hay datos en el localstorage
 const listaUsuarios =
@@ -30,13 +30,23 @@ const mostrarModal = () => {
 const crearUsuario = () => {
   crear = true;
   if (validarCantidadCaracteres(usuario, 5, 30)) {
-    const nuevoUsuario = new Usuario(usuario.value, nombre.value, apellido.value, fechaNacimiento.value, telefono.value, email.value, password.value, tipo.value);
+    const nuevoUsuario = new Usuario(
+      usuario.value,
+      nombre.value,
+      apellido.value,
+      fechaNacimiento.value,
+      telefono.value,
+      email.value,
+      password.value,
+      tipo.value
+    );
     console.log(nuevoUsuario);
     listaUsuarios.push(nuevoUsuario);
     console.log(listaUsuarios);
     limpiarFormulario();
     guardarLocalStorage();
     dibujarFila(nuevoUsuario);
+    mostrarModal.hide();
   } else {
     console.log("hay errores en la carga del formulario");
   }
@@ -48,11 +58,16 @@ const guardarLocalStorage = () => {
   localStorage.setItem("listaUsuariosKey", JSON.stringify(listaUsuarios));
 };
 const dibujarFila = (usuario) => {
-  tabla.innerHTML += ` <tr>
-                            <td>${usuario.id}</td>
+  tabla.innerHTML += ` <tr> 
+                           
                             <td>${usuario.usuario}</td>
-                            <td>${usuario.tipo}</td>
+                            <td>${usuario.nombre}</td>
+                            <td>${usuario.apellido}</td>
+                            <td>${usuario.fechaNacimiento}</td>
+                            <td>${usuario.telefono}</td>
+                            <td>${usuario.email}</td>
                             <td>${usuario.password}</td>
+                            <td>${usuario.tipo}</td>
                             <td>
                                 <button class="btn btn-primary" onclick="verDetalle('${usuario.id}')">Ver</button>
                                 <button class="btn btn-warning" onclick="editarUsuario('${usuario.id}')">Editar</button>
@@ -62,7 +77,7 @@ const dibujarFila = (usuario) => {
 };
 
 window.verDetalle = (id) => {
-  window.location.href = "/pages/registro.html?id=" + id;
+  window.location.href = "/pages/usuario.html?id=" + id;
 };
 
 const cargaInicial = () => {
@@ -71,31 +86,39 @@ const cargaInicial = () => {
   }
 };
 
-// const administrarUsuario = (e) => {
-//   e.preventDefault();
-//   console.log("estamos en administrar usuario");
-//   if (crear) {
-//     crearUsuario();
-//   } else {
-//     modificarUsuario();
-//   }
-// };
+const administrarUsuario = (e) => {
+  e.preventDefault();
+  console.log("estamos en administrar usuario");
+  if (crear) {
+    crearUsuario();
+  } else {
+    modificarUsuario();
+  }
+};
 
 const modificarUsuario = () => {
   console.log(
     "aqui guardo los datos del usuario modificado en el array y en el localstorage"
   );
   //1 buscar la posicion del usuario a modificar
+  const obtenerUsuario = listaUsuarios.findIndex(
+    (res) => res.id === encontrarUsuario.id
+  );
   //2- actualizar los datos del array
-  listaUsuarios[0].usuario = usuario.value;
-  listaUsuarios[0].nombre = nombre.value;
-  listaUsuarios[0].apellido = apellido.value;
-  listaUsuarios[0].fechaNacimiento = fechaNacimiento.value;
-  listaUsuarios[0].telefono = telefono.value;
-  listaUsuarios[0].email = email.value;
-  listaUsuarios[0].password = password.value;
-  listaUsuarios[0].tipo = tipo.value;
+  listaUsuarios[obtenerUsuario].usuario = usuario.value;
+  listaUsuarios[obtenerUsuario].nombre = nombre.value;
+  listaUsuarios[obtenerUsuario].apellido = apellido.value;
+  listaUsuarios[obtenerUsuario].fechaNacimiento = fechaNacimiento.value;
+  listaUsuarios[obtenerUsuario].telefono = telefono.value;
+  listaUsuarios[obtenerUsuario].email = email.value;
+  listaUsuarios[obtenerUsuario].password = password.value;
+  listaUsuarios[obtenerUsuario].tipo = tipo.value;
   //3 - actualizar el localstorage.
+    guardarLocalStorage();
+    actualizarFila(obtenerUsuario);
+    limpiarFormulario();
+    crear = true;
+    mostrarModal.hide();
 };
 
 window.editarUsuario = (id) => {
@@ -103,7 +126,7 @@ window.editarUsuario = (id) => {
   crear = false;
   mostrarModal();
   //aqui tengo que buscar el usuario y agregar sus valores en el formulario
-  const encontrarUsuario = listaUsuarios.find((usuario) => usuario.id === id);
+  encontrarUsuario = listaUsuarios.find((usuario) => usuario.id === id);
   console.log(encontrarUsuario);
   if (encontrarUsuario) {
     usuario.value = encontrarUsuario.usuario;
@@ -115,9 +138,27 @@ window.editarUsuario = (id) => {
     password.value = encontrarUsuario.password;
     tipo.value = encontrarUsuario.tipo;
   }
-  guardarLocalStorage();
 };
 
+const actualizarFila = (index) => {
+  // Obtener la fila correspondiente
+  const fila = tabla.children[index];
+  // Actualizar el contenido de la fila
+  fila.innerHTML = `
+        <td>${listaUsuarios[index].usuario}</td>
+        <td>${listaUsuarios[index].nombre}</td>
+        <td>${listaUsuarios[index].apellido}</td>
+        <td>${listaUsuarios[index].fechaNacimiento}</td>
+        <td>${listaUsuarios[index].telefono}</td>
+        <td>${listaUsuarios[index].email}</td>
+        <td>${listaUsuarios[index].password}</td>
+        <td>${listaUsuarios[index].tipo}</td>
+        <td>
+            <button class="btn btn-primary" onclick="verDetalle('${listaUsuarios[index].id}')">Leer</button>
+            <button class="btn btn-warning" onclick="editarUsuario('${listaUsuarios[index].id}')">Editar</button>
+            <button class="btn btn-danger" onclick="borrarUsuario('${listaUsuarios[index].id}')">Borrar</button>
+                    </td> `;
+};
 window.borrarUsuario = (id) => {
   console.log(id);
   Swal.fire({
@@ -154,5 +195,5 @@ window.borrarUsuario = (id) => {
 
 //LÓGICA DEL CRUD
 btnNuevo.addEventListener("click", mostrarModal);
-formularioRegistro.addEventListener("submit", crearUsuario);
+formularioRegistro.addEventListener("submit", administrarUsuario);
 cargaInicial();
