@@ -360,3 +360,29 @@ footer {
   object-fit: contain;
   width: 100%;
 }
+
+/* ------------------------------PÁGINA USUARIO------------------------------------------ */
+.cardUser {
+  transform: scale(1);
+  transition-property: transform;
+  transition-duration: 1s;
+}
+.cardUser:hover {
+  transform: scale(1.1);
+  transition-property: transform;
+  transition-duration: 1s;
+}
+
+.tabContainer .tabPanel{
+  transition: all .5s ease-in;
+  display: none;
+}
+
+/* -----------------------------CONTACTO-------------------------------- */
+.bg1 {
+  background-image: url(../img/brazos-diferentes.png);
+  background-size: 320%;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  width: 100%;
+}
