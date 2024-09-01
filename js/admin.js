@@ -164,7 +164,7 @@ const actualizarFilaEnTabla = (index) => {
         <td>${listaServicios[index].precioServicio}</td>
         <td>${listaServicios[index].tiempoServicio}</td>
         <td>
-            <button class="btn btn-primary" onclick="verServicio('${listaServicios[index].id}')">Leer</button>
+            <button class="btn btn-color" onclick="verServicio('${listaServicios[index].id}')">Leer</button>
             <button class="btn btn-warning" onclick="prepararServicio('${listaServicios[index].id}')">Editar</button>
             <button class="btn btn-danger" onclick="borrarServicio('${listaServicios[index].id}')">Borrar</button>
         </td>`;

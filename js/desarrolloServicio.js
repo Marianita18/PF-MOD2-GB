@@ -14,7 +14,7 @@ const seccionDeInformacion = document.querySelector("#padre");
 seccionDeInformacion.innerHTML = ` 
 <div class="container mt-5">
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-6 mt-lg-4">
       <img
         src="${servicioBuscado.imagenServicio}"
         class="img-fluid sombra-violeta"
@@ -23,7 +23,7 @@ seccionDeInformacion.innerHTML = `
     </div>
     <div class="col-md-6">
       <div class="service-card-body">
-        <h2 class="service-title resaltado p-2 mb-4">
+        <h2 class="service-title resaltado p-2 mb-4 mt-4">
           ${servicioBuscado.nombreServicio}
         </h2>
         <div class="highlight">
@@ -50,11 +50,6 @@ seccionDeInformacion.innerHTML = `
   /////////////////////////////////////////////////////
 
 
-
-
-  // Obtener el parámetro de ID de la URL
-
-// Función para cargar reseñas desde localStorage
 function cargarResenas() {
   const resenas = JSON.parse(localStorage.getItem('resenasKey')) || {};
   const resenasServicio = resenas[parametroId] || [];
@@ -72,7 +67,6 @@ function cargarResenas() {
       resenasDiv.appendChild(resenaDiv);
   });
 
-  // Añadir listeners para los botones de edición y eliminación
   document.querySelectorAll('.btn-editar').forEach(button => {
       button.addEventListener('click', editarResena);
   });
@@ -82,7 +76,6 @@ function cargarResenas() {
   });
 }
 
-// Función para agregar o actualizar una reseña
 function agregarResena(event) {
   event.preventDefault();
   const nombre = document.querySelector('#nombreResena').value;
@@ -91,12 +84,12 @@ function agregarResena(event) {
   const index = document.querySelector('#formResena').getAttribute('data-index');
 
   if (index !== null) {
-      // Actualizar la reseña existente
+     
       resenas[parametroId][index] = { nombre, texto };
       document.querySelector('#formResena').removeAttribute('data-index');
       document.querySelector('#formResena button[type="submit"]').textContent = 'Agregar Reseña';
   } else {
-      // Agregar una nueva reseña
+     
       if (!resenas[parametroId]) {
           resenas[parametroId] = [];
       }
@@ -108,7 +101,6 @@ function agregarResena(event) {
   cargarResenas();
 }
 
-// Función para eliminar una reseña
 function eliminarResena(event) {
   const index = event.target.getAttribute('data-index');
   const resenas = JSON.parse(localStorage.getItem('resenasKey')) || {};
@@ -119,7 +111,6 @@ function eliminarResena(event) {
   }
 }
 
-// Función para editar una reseña
 function editarResena(event) {
   const index = event.target.getAttribute('data-index');
   const resenas = JSON.parse(localStorage.getItem('resenasKey')) || {};
@@ -128,17 +119,15 @@ function editarResena(event) {
       document.querySelector('#nombreResena').value = resena.nombre;
       document.querySelector('#textoResena').value = resena.texto;
 
-      // Cambia el texto del botón para indicar la edición
+     
       const submitButton = document.querySelector('#formResena button[type="submit"]');
       submitButton.textContent = 'Actualizar Reseña';
 
-      // Guardar el índice para actualizar después
+     
       document.querySelector('#formResena').setAttribute('data-index', index);
   }
 }
 
-// Event listener para el formulario de reseñas
 document.querySelector('#formResena').addEventListener('submit', agregarResena);
 
-// Cargar reseñas al cargar la página
 document.addEventListener('DOMContentLoaded', cargarResenas);
