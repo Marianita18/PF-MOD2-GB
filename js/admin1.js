@@ -14,7 +14,6 @@ const telefono = document.getElementById("telefono");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
 const tipo = document.getElementById("tipo");
-const img = document.getElementById("img");
 let encontrarUsuario;
 
 //verificar si hay datos en el localstorage
@@ -39,8 +38,8 @@ const crearUsuario = () => {
       telefono.value,
       email.value,
       password.value,
-      tipo.value,
-      img.value
+      tipo.value
+    
     );
     console.log(nuevoUsuario);
     listaUsuarios.push(nuevoUsuario);
@@ -48,8 +47,7 @@ const crearUsuario = () => {
     limpiarFormulario();
     guardarLocalStorage();
     dibujarFila(nuevoUsuario);
-    mostrarModal.hide();
-  } else {
+    } else {
     console.log("hay errores en la carga del formulario");
   }
 };
@@ -70,7 +68,6 @@ const dibujarFila = (usuario) => {
                             <td>${usuario.email}</td>
                             <td>${usuario.password}</td>
                             <td>${usuario.tipo}</td>
-                            
                             <td>
                                 <button class="btn btn-primary" onclick="verDetalle('${usuario.id}')">Ver</button>
                                 <button class="btn btn-warning" onclick="editarUsuario('${usuario.id}')">Editar</button>
@@ -122,7 +119,7 @@ const modificarUsuario = () => {
   actualizarFila(obtenerUsuario);
   limpiarFormulario();
   crear = true;
-  mostrarModal.hide();
+
 };
 
 window.editarUsuario = (id) => {

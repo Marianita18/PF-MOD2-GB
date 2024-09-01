@@ -46,6 +46,12 @@ const crearServicio = ()=>{
 
 const limpiarFormServicios = ()=>{
   formServicios.reset();
+
+  const formControls = formServicios.querySelectorAll('.form-control');
+   formControls.forEach(control => {
+     control.classList.remove('is-valid'); 
+     control.classList.remove('is-invalid'); 
+   });
 }
 
 const guardarEnLocalStorage =()=>{
@@ -66,8 +72,12 @@ const dibujarFila = (servicio)=>{
               <td>${servicio.precioServicio}</td>
               <td>${servicio.tiempoServicio}</td>
               <td>
+<<<<<<< HEAD
 
                 <button class="btn btn-primary" onclick="verServicio('${servicio.id}')">Leer</button>
+=======
+                <button class="btn btnColor" onclick="verServicio('${servicio.id}')">Leer</button>
+>>>>>>> e42063423c450bea0b84e7d22a6831866f7ea59d
                 <button class="btn btn-warning" onclick="prepararServicio('${servicio.id}')">Editar</button>
                 <button class="btn btn-danger" onclick="borrarServicio('${servicio.id}')">Borrar</button>
               </td>`
@@ -82,7 +92,7 @@ window.borrarServicio = (id)=> {
         text: "No podes recuperar luego de borrar",
         icon: "warning",
         showCancelButton: true,
-        confirmButtonColor: "#3085",
+        confirmButtonColor: "#a600f9",
         cancelButtonColor: "#d33",
         confirmButtonText: "Borrar",
         cancelButtonText:"Cancelar"
