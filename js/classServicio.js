@@ -84,12 +84,5 @@ export  default class Servicios {
     }
 }
 
-// #id;
-// #nombreServicio;
-// #descripcion;
-// #precioServicio;
-// #tiempoServicio;
-// #tipoServicio;
-// #imagen;
-// #reseña;
+
 

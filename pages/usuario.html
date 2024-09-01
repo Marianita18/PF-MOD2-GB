@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Proyecto Final - Modulo 2 - Grupo B" />
+    <meta
+      name="author"
+      content="Valdivia Fernando Miguel, Mendoza Mariana Eugenia, Palazzo Lobo María Valentina,
+    Infante Ezequiel, Coniglio Mauro, Lobo Valentin José." />
+    <meta
+      name="keywords"
+      content="condicionales, variables, constantes, javascript, bucles, arrays, objetos, clases, poo, dom, bom, localstorage" />
+    <link rel="icon" type="image/jpg" href="../img/mageneto.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <title>MAGNETO</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid d-flex">
+          <img
+            src="../img/logomagnetohome.png"
+            class="img-fluid ms-5"
+            width="75"
+            alt="Logo Magneto" />
+          <a class="navbar-brand text-white titulo" href="../index.html"
+            >Magneto</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#opcionesNavbar"
+            aria-controls="opcionesNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="opcionesNavbar">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-bold">
+              <li class="nav-item">
+                <a
+                  class="nav-link text-white"
+                  aria-current="page"
+                  href="../index.html"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./nosotros.html"
+                  >Nosotros</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle text-white"
+                  href="./detalleServicio.html"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Servicios
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="./detalleServicio.html"
+                      >Redes Sociales</a
+                    >
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./detalleServicio.html"
+                      >Email</a
+                    >
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./detalleServicio.html"
+                      >Páginas Web</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./contacto.html"
+                  >Contacto</a
+                >
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Buscar"
+                aria-label="Search" />
+              <button class="btn btnColor" type="submit">Buscar</button>
+            </form>
+            <div class="ms-sm-0 ms-md-4 ms-lg-4"">
+            <a href=" http://"
+              ><img
+                src="../img/login.png"
+                class="img-fluid"
+                width="80"
+                alt="Carrito de Compras"
+            /></a>
+            <a href="./carrito.html"
+              ><img
+                src="../img/carrito.png"
+                class="img-fluid"
+                width="90"
+                alt="Carrito de Compras"
+            /></a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="container-fluid my-5">
+        <article class="row">
+          <!-- card user -->
+          <div class="col-12 col-md-3 col-lg-3">
+            <div class="card" id="contenedorUsuario">
+              <img
+                src="../img/user5.png"
+                class="img-fluid cardUser rounded-circle mx-auto d-block bg-body-tertiary mt-3"
+                width="200"
+                alt="Usuario" />
+              <div id="cardUsuario"></div>
+            </div>
+            <div class="tabContainer">
+              <div class="buttonContainer">
+                <ul class="list-group list-group-flush buttonContainer">
+                  <li class="list-group-item">
+                    <button onclick="showPanel(0,'#a600f9')" class="btn w-100">
+                      Configuración de Cuenta
+                    </button>
+                  </li>
+                  <li class="list-group-item">
+                    <button onclick="showPanel(1,'#a600f9')" class="btn w-100">
+                      Contraseña
+                    </button>
+                  </li>
+                  <li class="list-group-item">
+                    <button onclick="showPanel(2,'#a600f9')" class="btn w-100">
+                      Intereses
+                    </button>
+                  </li>
+                  <li class="list-group-item">
+                    <button onclick="showPanel(3,'#a600f9')" class="btn w-100">
+                      Lista de Favoritos
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="tabContainer col-12 col-md-9 col-lg-9">
+            <div class="tabPanel">
+              <div class="card" id="card1">
+                <div class="card-header color-texto-violeta fw-bold">
+                  Configuración Cuenta
+                </div>
+                <div class="card-body" id="contenedorForm">
+                  <form class="form-control mb-5">
+                    <div class="mb-3">
+                      <label for="nombreApellido" class="form-label"
+                        >Nombre y Apellido*</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="nombreApellido"
+                        maxlength="50"
+                        minlength="8"
+                        placeholder="Ej: Juan Perez"
+                        required />
+                    </div>
+                    <div class="mb-3">
+                      <label for="fnacimiento" class="form-label"
+                        >Fecha de Nacimiento</label
+                      >
+                      <input
+                        type="date"
+                        class="form-control"
+                        id="fnacimiento"
+                        maxlength="10"
+                        minlength="10"
+                        placeholder="Ej: 12/12/2012"
+                        required />
+                    </div>
+                    <div class="mb-3">
+                      <label for="telefono" class="form-label">Teléfono*</label>
+                      <input
+                        type="tel"
+                        class="form-control"
+                        id="telefono"
+                        maxlength="10"
+                        minlength="10"
+                        placeholder="Ej: 3814961577"
+                        required />
+                    </div>
+                    <div class="mb-3">
+                      <label for="email" class="form-label">Email*</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        placeholder="Ej: juanperez@gmail.com"
+                        required />
+                    </div>
+                    <!-- <div>
+                      <label for="imagenUsuario" class="form-label">Cambiar imagen</label>
+                    </div>
+                    <div class="input-group mb-3">
+                      <input type="file" class="form-control" id="imagenUsuario" aria-describedby="imagenUsuario"
+                        aria-label="Upload" />
+                      <button class="btn btnColor" type="button" id="imagenUsuario">
+                        Subir
+                      </button>
+                    </div> -->
+                    <button type="submit" class="btn btnColor">
+                      Guardar Cambios
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="tabPanel">
+              <div class="card" id="card2">
+                <div class="card-header color-texto-violeta fw-bold">
+                  Contraseña
+                </div>
+                <div class="card-body">
+                  <form class="form-control mb-5">
+                    <div class="mb-3">
+                      <label for="actualContrasenia" class="form-label"
+                        >Actual Contraseña*</label
+                      >
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="actualContrasenia"
+                        maxlength="20"
+                        minlength="8"
+                        required />
+                    </div>
+                    <div class="mb-3">
+                      <label for="nuevaContrasenia" class="form-label"
+                        >Nueva Contraseña*</label
+                      >
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="nuevaContrasenia"
+                        maxlength=" 20"
+                        minlength="8"
+                        required />
+                    </div>
+                    <div class="mb-3">
+                      <label for="repetirContrasenia" class="form-label"
+                        >Repetir Contraseña*</label
+                      >
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="repetirContrasenia"
+                        maxlength="20"
+                        minlength="8"
+                        required />
+                    </div>
+                    <button type="submit" class="btn btnColor">
+                      Restablecer
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="tabPanel">
+              <div class="card" id="card2">
+                <div class="card-header color-texto-violeta fw-bold">
+                  Intereses
+                </div>
+                <div class="card-body">
+                  <p class="card-text"></p>
+                  <div class="container text-center mt-5">
+                    <!-- cards categorias  -->
+                    <div class="row mb-3">
+                      <div class="col-12 col-md-4 mb-5">
+                        <div class="card h-60">
+                          <div class="card-body d-flex">
+                            <h6 class="card-title">Contenido Inicial</h6>
+                            <a href="#" class="ms-auto">
+                              <i class="bi bi-plus-circle-fill"></i
+                              ><i
+                                onclick="changeIcon(this)"
+                                class="bi bi-plus-circle align-content-center fs-5"></i
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-4 mb-5">
+                        <div class="card h-60">
+                          <div class="card-body d-flex">
+                            <h6 class="card-title">Redes Sociales</h6>
+                            <a href="#" class="ms-auto"
+                              ><i
+                                onclick="changeIcon(this)"
+                                class="bi bi-plus-circle align-content-center fs-5"></i
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-4 mb-5">
+                        <div class="card h-60">
+                          <div class="card-body d-flex">
+                            <h6 class="card-title">Contenido Estacional</h6>
+                            <a href="#" class="ms-auto"
+                              ><i
+                                class="icon bi bi-plus-circle align-content-center fs-5"></i
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-4 mb-5">
+                        <div class="card h-60">
+                          <div class="card-body d-flex">
+                            <h6 class="card-title">Contenido Inicial</h6>
+                            <a href="#" class="ms-auto"
+                              ><i
+                                class="bi bi-plus-circle align-content-center fs-5"></i
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-4 mb-5">
+                        <div class="card h-60">
+                          <div class="card-body d-flex">
+                            <h6 class="card-title">Redes Sociales</h6>
+                            <a href="#" class="ms-auto"
+                              ><i
+                                class="bi bi-plus-circle align-content-center fs-5"></i
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-4 mb-5">
+                        <div class="card h-60">
+                          <div class="card-body d-flex">
+                            <h6 class="card-title">Contenido Estacional</h6>
+                            <a href="#" class="ms-auto"
+                              ><i
+                                class="bi bi-plus-circle align-content-center fs-5"></i
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-4">
+                        <div class="card h-60">
+                          <div class="card-body d-flex">
+                            <h6 class="card-title">Contenido Estacional</h6>
+                            <a href="#" class="ms-auto"
+                              ><i
+                                class="bi bi-plus-circle align-content-center fs-5"></i
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tabPanel">
+              <div class="card" id="card2">
+                <div class="card-header color-texto-violeta fw-bold">
+                  Lista de Favoritos
+                </div>
+                <div class="card-body">
+                  <p class="card-text"></p>
+                </div>
+                <!-- cards servicios -->
+                <div class="row d-flex mx-5 my-4 justify-content-between">
+                  <div class="col-12 col-md-3">
+                    <div class="card mt-3">
+                      <img
+                        src="../img/pack-opcion-1.jpeg"
+                        class="card-img-top"
+                        alt="..." />
+                      <div class="card-body">
+                        <h5 class="card-title">Pack Básico de Reels y Fotos</h5>
+                        <a href="#" class="btn btn-primary">Ver más</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-3">
+                    <div class="card mt-3">
+                      <img
+                        src="../img/pack-opcion-2.webp"
+                        class="card-img-top"
+                        alt="..." />
+                      <div class="card-body">
+                        <h5 class="card-title">Pack Básico de Reels y Fotos</h5>
+                        <a href="#" class="btn btn-primary">Ver más</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-3">
+                    <div class="card mt-3">
+                      <img
+                        src="../img/pack-opcion-3.jpeg"
+                        class="card-img-top"
+                        alt="..." />
+                      <div class="card-body">
+                        <h5 class="card-title">Pack Básico de Reels y Fotos</h5>
+                        <a href="#" class="btn btn-primary">Ver más</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-3">
+                    <div class="card mt-3">
+                      <img
+                        src="../img/pack-opcion-4.png"
+                        class="card-img-top"
+                        alt="..." />
+                      <div class="card-body">
+                        <h5 class="card-title">Pack Básico de Reels y Fotos</h5>
+                        <a href="#" class="btn btn-primary">Ver más</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-3">
+                    <div class="card mt-3">
+                      <img
+                        src="../img/pack-opcion-5.png"
+                        class="card-img-top"
+                        alt="..." />
+                      <div class="card-body">
+                        <h5 class="card-title">Pack Básico de Reels y Fotos</h5>
+                        <a href="#" class="btn btn-primary">Ver más</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+    <footer class="mt-5">
+      <section class="container-fluid text-center">
+        <article class="row py-5">
+          <div
+            class="col-12 col-sm-3 col-md-3 col-lg-3 py-2 py-sm-2 py-md-0 py-lg-0">
+            <img
+              src="../img/logomagnetohome.png"
+              class="img-fluid"
+              width="110"
+              alt="Logo Magneto" />
+            <h6>
+              <a
+                class="text-decoration-none titulo text-white"
+                href="../index.html"
+                >Magneto</a
+              >
+            </h6>
+            <a
+              class="fz itemActive"
+              href="https://www.instagram.com/"
+              target="_blank"
+              ><i class="bi bi-instagram fs-5"></i
+            ></a>
+            <a
+              class="fz itemActive"
+              href="https://www.facebook.com/"
+              target="_blank"
+              ><i class="bi bi-facebook fs-5"></i
+            ></a>
+            <a class="fz itemActive" href="https://www.x.com/" target="_blank"
+              ><i class="bi bi-twitter-x fs-5"></i
+            ></a>
+            <a
+              class="fz itemActive"
+              href="https://www.youtube.com/"
+              target="_blank"
+              ><i class="bi bi-youtube fs-5"></i
+            ></a>
+            <a
+              class="fz itemActive"
+              href="https://www.linkedin.com/"
+              target="_blank"
+              ><i class="bi bi-linkedin fs-5"></i
+            ></a>
+            <a class="fz itemActive" href="https://discord.com/" target="_blank"
+              ><i class="bi bi-discord fs-5"></i
+            ></a>
+          </div>
+          <div
+            class="col-12 col-sm-3 col-md-3 col-lg-3 text-center text-sm-center text-md-start text-lg-start py-2">
+            <h6 class="itemActive fw-bold">Contacto</h6>
+            <ul class="list-unstyled fz">
+              <li>
+                <a
+                  href="./error404.html"
+                  class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                  >Email: info@magneto.com</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./error404.html"
+                  class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                  >Teléfono: +123 456 7890</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./error404.html"
+                  class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                  >Dirección: Calle Ficticia 123, Ciudad, País</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div
+            class="col-12 col-sm-3 col-md-3 col-lg-3 text-center text-sm-center text-md-start text-lg-start py-2">
+            <h6 class="itemActive fw-bold">Políticas</h6>
+            <ul class="list-unstyled fz">
+              <li>
+                <a
+                  href="./error404.html"
+                  class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">
+                  Terminos y condiciones</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./error404.html"
+                  class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                  >Privacidad</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./error404.html"
+                  class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                  >Configuración de cookies</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./error404.html"
+                  class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                  >Terminos y condiciones</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div
+            class="col-12 col-sm-3 col-md-3 col-lg-3 text-sm-center text-md-start text-lg-start py-2">
+            <h6 class="itemActive fw-bold">Suscríbete y recibe noticias</h6>
+            <form class="d-flex ms-sm-0 me-md-0 me-lg-5">
+              <input
+                class="form-control me-2 fz"
+                type="email"
+                placeholder="Escribe tu email aqui" />
+              <button class="btn btnColor fz" type="submit">Unirse</button>
+            </form>
+          </div>
+        </article>
+      </section>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+    <script src="../js/app.js"></script>
+  </body>
+</html>

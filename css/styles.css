@@ -140,26 +140,22 @@ nav {
 
 .megafono {
   transform: scale(0.45) rotate(60deg);
- 
 }
 
 .rueda-rosa {
   transform: scale(0.2);
   position: relative;
   top: -45%;
- 
 }
 
 .mensaje-con-corazon {
   transform: scale(0.5) rotate(-40deg);
   position: relative;
   top: -50%;
- 
 }
 
 .sello {
   transform: scale(0.6) rotate(15deg);
-  
 }
 .bg-imagen {
   background-attachment: fixed;
@@ -173,15 +169,12 @@ nav {
   position: relative;
   top: -20%;
   margin-top: 50%;
-  left: 10%;
-
 }
 #brazo-violeta-2 {
   transform: rotate(90deg) scale(1.4);
   position: relative;
   top: 20%;
   margin-bottom: 60%;
-  right: 10%;
 }
 #doble-brazos {
   position: absolute;
@@ -203,27 +196,27 @@ nav {
   font-weight: bolder;
   font-size: 1.5rem;
 }
-#estrategias-personalizadas {
+.estrategias-personalizadas {
   color: var(--Violeta);
   position: relative;
   left: 180%;
 }
-#gestion-integral {
+.gestion-integral {
   color: rgb(71, 134, 222);
 }
-#nuestra-ventaja-competitiva {
+.nuestra-ventaja-competitiva {
   color: rgb(239, 184, 241);
 }
-#tecnologia-de-vanguardia {
+.tecnologia-de-vanguardia {
   color: rgb(143, 221, 225);
 }
 .titulo-principal {
   size: 100px;
 }
-#relacion-con-el-cliente {
+.relacion-con-el-cliente {
   color: rgb(183, 80, 234);
 }
-#responsabilidad-social {
+.responsabilidad-social {
   color: rgb(0, 32, 76);
 }
 .botones-generales {
@@ -248,11 +241,13 @@ nav {
 }
 
 /* DETALLES */
-textarea{resize: none;}
+textarea {
+  resize: none;
+}
 
 /* DISPOSITIVOS DISTINO TAMAÑO */
 
-@media (max-width: 576px) {
+@media (max-width: 991px) {
   .titulo-principal {
     size: 1rem;
   }
@@ -263,7 +258,7 @@ textarea{resize: none;}
 
   .inicio-mensaje {
     height: 30vh;
-    width: 80%;
+    width: 100%;
     padding: 20px;
   }
 
@@ -299,9 +294,15 @@ textarea{resize: none;}
     width: auto;
     height: auto;
   }
-}
 
+  .estrategias-personalizadas {
+    color: var(--Violeta);
+    position: relative;
+    left: 0%;
+  }
+}
 /* -----------------------FOOTER----------------------------- */
+
 footer {
   background-image: url(../img/background.png);
   background-size: 100%;
@@ -310,32 +311,33 @@ footer {
   width: 100%;
 }
 @media all and (max-width: 992px) {
-  footer {
-    background-image: url(../img/background.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    object-fit: contain;
-    width: 100%;
-  }
-  .fz {
-    font-size: 13px;
-  }
+ footer {
+  background-image: url(../img/background.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  width: 100%;
+}
+.fz{
+  font-size: 13px;;
+}
 }
 @media all and (max-width: 768px) {
-  footer {
-    background-image: url(../img/background.png);
-    background-size: 320%;
-    background-repeat: no-repeat;
-    object-fit: contain;
-    width: 100%;
-  }
+footer {
+  background-image: url(../img/background.png);
+  background-size: 320%;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  width: 100%;
+}
+.fz{
+  font-size: 13px;;
+}
+}
   .fz {
-    font-size: 13px;
+    font-size: 14px;
   }
-}
-.fz {
-  font-size: 14px;
-}
+
 /* -----------------------------NOSOTROS-------------------------------- */
 .animate-card {
   box-shadow: 0 4px 8px rgba(166, 0, 249, 0.3);
@@ -349,7 +351,6 @@ footer {
 }
 
 /* -----------------------------CONTACTO-------------------------------- */
-
 .bg1 {
   background-image: url(../img/brazos-diferentes.png);
   background-size: 320%;
@@ -358,6 +359,31 @@ footer {
   width: 100%;
 }
 
+/* ------------------------------PÁGINA USUARIO------------------------------------------ */
+.cardUser {
+  transform: scale(1);
+  transition-property: transform;
+  transition-duration: 1s;
+}
+.cardUser:hover {
+  transform: scale(1.1);
+  transition-property: transform;
+  transition-duration: 1s;
+}
+
+.tabContainer .tabPanel{
+  transition: all .5s ease-in;
+  display: none;
+}
+
+/* -----------------------------CONTACTO-------------------------------- */
+.bg1 {
+  background-image: url(../img/brazos-diferentes.png);
+  background-size: 320%;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  width: 100%;
+}
 /*-------------------REGISTRO-------------------------------------------*/
 .registro{display: flex;
   flex-direction: column;
