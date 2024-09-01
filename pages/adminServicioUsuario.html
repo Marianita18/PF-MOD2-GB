@@ -11,6 +11,7 @@
     <meta
       name="keywords"
       content="condicionales, variables, constantes, javascript, bucles, arrays, objetos, clases, poo, dom, bom, localstorage" />
+    <link rel="icon" type="image/jpg" href="../img/mageneto.ico" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
@@ -21,13 +22,12 @@
       crossorigin="anonymous" />
     <link
       href="
-            https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
-            "
+https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
+"
       rel="stylesheet" />
     <link rel="stylesheet" href="../css/styles.css" />
-    <title>PF-MOD2-GB</title>
+    <title>MAGNETO</title>
   </head>
-
   <body>
     <header>
       <nav class="navbar navbar-expand-lg">
@@ -137,40 +137,206 @@
         </div>
       </nav>
     </header>
-    <main class="container my-5">
-      <h1 class="text-center">Pagina REGISTROS</h1>
-      <section class="mt-4">
-        <div class="d-flex justify-content-between">
-          <h2>Tabla de Registros</h2>
-          <button class="btn btn-primary" id="btnNuevoUsuario">Nuevo Registro</button>
-        </div>
-        <div class="table-responsive">
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <!-- <th>cod</th> -->
-                <th>Usuario</th>
-                <th>Nombre</th>
-                <th>Apellido</th>
-                <th>Fecha Nacimiento</th>
-                <th>Teléfono</th>
-                <th>Email</th>
-                <th>Constraseña</th>
-                <th>Tipo</th>
-                <th>Acciones</th>
-              </tr>
-            </thead>
-            <tbody id="tbodyUsuario"></tbody>
-          </table>
-        </div>
+    <main>
+      <section>
+        <article class="mt-5">
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active"
+                id="servicio-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#servicio-tab-pane"
+                type="button"
+                role="tab"
+                aria-controls="servicio-tab-pane"
+                aria-selected="true">
+                Servicios
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="usuario-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#usuario-tab-pane"
+                type="button"
+                role="tab"
+                aria-controls="usuario-tab-pane"
+                aria-selected="false">
+                Usuarios
+              </button>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div
+              class="tab-pane fade show active"
+              id="servicio-tab-pane"
+              role="tabpanel"
+              aria-labelledby="servicio-tab"
+              tabindex="0">
+              <h1 class="text-center">Página de administrador</h1>
+              <section class="mt-4">
+                <div
+                  class="d-flex flex-direction-row justify-content-between m-3">
+                  <h2>Tabla de Servicios</h2>
+                  <button class="btn btnColor" id="btnNuevo">Nuevo</button>
+                </div>
+                <div class="table-responsive" id="tablaServicio">
+                  <table class="table table-striped">
+                    <thead>
+                      <tr id="fila">
+                        <th>Nombre</th>
+                        <th>Descripcion</th>
+                        <th>Precio</th>
+                        <th>Tiempo de Entrega</th>
+                        <th>Acciones</th>
+                      </tr>
+                    </thead>
+                    <tbody></tbody>
+                  </table>
+                </div>
+              </section>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="usuario-tab-pane"
+              role="tabpanel"
+              aria-labelledby="usuario-tab"
+              tabindex="">
+              <h1 class="text-center">Página Registro de Usuarios</h1>
+              <section class="mt-4">
+                <div class="d-flex justify-content-between mb-3">
+                  <h2>Tabla de Registros</h2>
+                  <button class="btn btnColor" id="btnNuevoUsuario">
+                    Nuevo Usuario
+                  </button>
+                </div>
+                <div class="table-responsive" id="tablaUsuario">
+                  <table class="table table-striped">
+                    <thead>
+                      <tr id="filaUsuario">
+                        <th>Usuario</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Fecha Nacimiento</th>
+                        <th>Teléfono</th>
+                        <th>Email</th>
+                        <th>Constraseña</th>
+                        <th>Tipo</th>
+                        <th>Acciones</th>
+                      </tr>
+                    </thead>
+                    <tbody id="tbodyUsuario"></tbody>
+                  </table>
+                </div>
+              </section>
+            </div>
+          </div>
+        </article>
       </section>
     </main>
+    <!-- Modal servicios -->
+    <div
+      class="modal fade"
+      id="modalAdminServicios"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5" id="modalAdminServicios">
+              Administrar Servicios
+            </h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="formServicios">
+              <div class="mb-3">
+                <label for="nombreServicio" class="form-label"
+                  >Nombre del Servicio</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nombreServicio"
+                  placeholder="Ejemplo: Pack basico.... " />
+                <div class="invalid-feedback">
+                  Dato obligatorio, debe contener entre 3 y 30 caracteres
+                  inclusive.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="descripcionServicio" class="form-label"
+                  >Descripcion</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="descripcionServicio"
+                  placeholder="El pack contiene..." />
+                <div class="invalid-feedback">
+                  Dato obligatorio, debe contener entre 4 y 300 caracteres
+                  inclusive.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="precioServicio" class="form-label"
+                  >Precio del Servicio</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="precioServicio"
+                  placeholder="100 U$D " />
+                <div class="invalid-feedback">Dato obligatorio en U$D.</div>
+              </div>
+              <div class="mb-3">
+                <label for="tiempoServicio" class="form-label"
+                  >Tiempo de Entrega</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="tiempoServicio"
+                  placeholder="5 Dias " />
+                <div class="invalid-feedback">Dato obligatorio.</div>
+              </div>
+              <div class="mb-3">
+                <label for="tipoServicio" class="form-label"
+                  >Tipo de Servicio</label
+                >
+                <input type="text" class="form-control" id="tipoServicio" />
+                <div class="invalid-feedback">Debe obligatorio.</div>
+              </div>
+              <div class="mb-3">
+                <label for="imagenServicio" class="form-label"
+                  >URL Imagen</label
+                >
+                <input type="text" class="form-control" id="imagenServicio" />
+                <div class="invalid-feedback">
+                  Debe colocar una direccion URL.
+                </div>
+              </div>
+
+              <button class="btn btnColor" id="btnCargar">Cargar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Usuarios -->
     <section id="modal">
       <div class="modal" tabindex="-1" id="modalLogin">
         <div class="modal-dialog">
           <div class="modal-content bg-celeste">
             <div class="modal-header">
-              <h5 class="modal-title">Login Usuario</h5>
+              <h5 class="modal-title">Nuevo Usuario</h5>
               <button
                 type="button"
                 class="btn-close"
@@ -353,8 +519,8 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.all.min.js"></script>
-
-    <script type="module" src="../js/app.js"></script>
     <script src="../js/admin1.js" type="module"></script>
+    <script src="../js/admin.js" type="module"></script>
+    <script src="../js/validaciones.js" type="module"></script>
   </body>
 </html>
