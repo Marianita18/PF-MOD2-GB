@@ -70,7 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
       filtroSelect.appendChild(option);
   });
 
-  // Añadir evento al filtro
   filtroSelect.addEventListener('change', () => {
       const tipoSeleccionado = filtroSelect.value;
       cargarServicios(tipoSeleccionado); 

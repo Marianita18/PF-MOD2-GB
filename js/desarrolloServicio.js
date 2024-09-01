@@ -14,7 +14,7 @@ const seccionDeInformacion = document.querySelector("#padre");
 seccionDeInformacion.innerHTML = ` 
 <div class="container mt-5">
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-6 mt-lg-4">
       <img
         src="${servicioBuscado.imagenServicio}"
         class="img-fluid sombra-violeta"
@@ -23,7 +23,7 @@ seccionDeInformacion.innerHTML = `
     </div>
     <div class="col-md-6">
       <div class="service-card-body">
-        <h2 class="service-title resaltado p-2 mb-4">
+        <h2 class="service-title resaltado p-2 mb-4 mt-4">
           ${servicioBuscado.nombreServicio}
         </h2>
         <div class="highlight">

@@ -124,6 +124,8 @@ nav {
   border-color: none;
 }
 /* --------------------------------MAIN--------------------------------------- */
+.h{height: 10%;}
+
 .inicio-mensaje {
   height: 40vh;
   width: 60%;
