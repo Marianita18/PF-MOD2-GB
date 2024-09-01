@@ -240,7 +240,8 @@ nav {
   background-color: var(--Violeta);
 }
 mark{background-color: rgba(188, 100, 231, 0.301) ;
- border-radius: 20px;}
+ border-radius: 20px; 
+}
 
 /* DETALLES */
 textarea {

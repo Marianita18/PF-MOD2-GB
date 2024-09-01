@@ -199,36 +199,27 @@
                   </div>
                 </div>
               </div>
-              <div class="add-review mt-4">
-                <h4>Agregar Reseña</h4>
-                <form>
-                  <div class="mb-3">
-                    <label for="reviewer-name" class="form-label">Nombre</label>
-                    <input
-                      maxlength="70"
-                      minlength="3"
-                      type="text"
-                      class="form-control"
-                      id="reviewer-name"
-                      placeholder="Tu nombre"
-                    />
-                  </div>
-                  <div class="mb-3">
-                    <label for="reviewer-comment" class="form-label"
-                      >Comentario</label
-                    >
-                    <textarea
-                      class="form-control"
-                      id="reviewer-comment"
-                      rows="3"
-                      placeholder="Tu comentario"
-                    ></textarea>
-                  </div>
-                  <button type="submit" class="btn btn-secondary">
-                    Enviar Reseña
-                  </button>
-                </form>
+            
+          <h4>Deja una reseña</h4>
+          <form id="formResena" class="mb-3">
+              <div class="mb-3">
+                  <label for="nombreResena" class="form-label">Tu nombre</label>
+                  <input type="text" class="form-control" id="nombreResena" required>
               </div>
+              <div class="mb-3">
+                  <label for="textoResena" class="form-label">Reseña</label>
+                  <textarea class="form-control" id="textoResena" rows="3" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-secondary botones-generales botones-servicios">Enviar Reseña</button>
+          </form>
+          
+          <!-- Sección para mostrar reseñas -->
+          <h3 class="mt-5">Reseñas</h3>
+          <div id="resenas" class="mb-3">
+              <!-- Las reseñas se cargarán aquí -->
+          </div>
+
+
             </div>
           </div>
         </article>
@@ -361,7 +352,9 @@
               <button class="btn btnColor fz" type="submit">Unirse</button>
             </form>
           </div>
+
         </article>
+
       </section>
     </footer>
     <script
