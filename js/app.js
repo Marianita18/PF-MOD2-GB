@@ -26,7 +26,7 @@ const buscarUsuario = listaUsuarios.find(
 );
 console.log(buscarUsuario);
 
-const carUsuario = document.querySelector("#cardUsuario");
+const cardUsuario = document.querySelector("#cardUsuario");
 cardUsuario.innerHTML = ` 
               <div class="card-body">
                 <h5 class="card-title">${buscarUsuario.apellido}, ${buscarUsuario.nombre}</h5>
