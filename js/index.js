@@ -5,14 +5,15 @@ window.addEventListener('storage', (event) => {
     }
 });
 
+function verServicio(id) {
+  // Redirige a la página de detalles con el parámetro id en la URL
+  window.location.href = `/pages/detalleServicio.html?id=${id}`;}
+
 function cargarServicios() {
     const listaServicios = JSON.parse(localStorage.getItem('listaServiciosKey')) || [];
     const tabla = document.querySelector('#padre1');
     
-    if (!tabla) {
-        console.error('Elemento con ID #padre1 no encontrado.');
-        return;
-    }
+  
 
     tabla.innerHTML = ''; 
 
@@ -42,9 +43,6 @@ function cargarServicios() {
                    <mark>Tiempo de entrega: </mark> ${servicio.tiempoServicio}
                 </p>
                 <button class="btn btn-secondary botones-generales btn botones-servicios " onclick="verServicio('${servicio.id}')">Ver más...</button>
-                <button class="botones-generales btn btn-secondary botones-servicios">
-                  Comprar
-                </button>
               </div>
             </div>
           </div>
