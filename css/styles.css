@@ -376,3 +376,11 @@ footer {
   display: none;
 }
 
+/* -----------------------------CONTACTO-------------------------------- */
+.bg1 {
+  background-image: url(../img/brazos-diferentes.png);
+  background-size: 320%;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  width: 100%;
+}
