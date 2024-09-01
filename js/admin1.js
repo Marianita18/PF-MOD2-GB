@@ -122,7 +122,7 @@ const modificarUsuario = () => {
   actualizarFila(obtenerUsuario);
   limpiarFormulario();
   crear = true;
-  mostrarModal.hide();
+
 };
 
 window.editarUsuario = (id) => {
