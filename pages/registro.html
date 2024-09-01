@@ -50,11 +50,9 @@
                 >Inicio</a
               >
             </li>
-            <!-- <li class="nav-item">
-                          <a class="nav-link text-white" href="./administrador.html">Administrador</a>
-                      </li> -->
-            <li class="nav-item itemActive">
-              <a class="nav-link" href="./nosotros.html"
+          
+            <li class="nav-item">
+              <a class="nav-link text-white" href="./nosotros.html"
                 >Nosotros</a
               >
             </li>
@@ -91,11 +89,8 @@
                 </li>
               </ul>
             </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="./contacto.html">Contacto</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="./registro.html">Cargar Usuario</a>
+            <li class="nav-item itemActive">
+              <a class="nav-link" href="./contacto.html">Contacto</a>
             </li>
           </ul>
           <form class="d-flex" role="search">
@@ -106,10 +101,10 @@
               aria-label="Search" />
             <button class="btn btnColor" type="submit">Buscar</button>
           </form>
-        <div class="ms-sm-0 ms-md-4 ms-lg-4"">
-          <a href="http://"><img src="../img/login.png" class="img-fluid" width="80" alt="Carrito de Compras" /></a>
-          <a href="../pages/carrito.html"><img src="../img/carrito.png" class="img-fluid" width="90" alt="Carrito de Compras" /></a>
-        </div>
+          <div class="ms-sm-0 ms-md-4 ms-lg-4"">
+            <a href="http://"><img src="../img/login.png" class="img-fluid" width="80" alt="Carrito de Compras" /></a>
+            <a href="./carrito.html"><img src="../img/carrito.png" class="img-fluid" width="90" alt="Carrito de Compras" /></a>
+          </div>
         </div>
       </div>
     </nav>
@@ -117,26 +112,21 @@
         <h1 >Cargar Usario</h1>
         <form class="registro container"  >
           <label for="">nombre</label>
-          <input  type="text" placeholder="juan" min="3" max="40" required>
+          <input id="nombre1" type="text" placeholder="juan" min="3" max="40" required>
           <label for="">apellido</label>
-          <input  type="text" placeholder="rodriguez" min="3" max="40" required>
+          <input id="apellido1" type="text" placeholder="rodriguez" min="3" max="40" required>
           <label for="">email</label>
-          <input  type="email" placeholder="juan@gmial.com" min="10" max="40" required>
-          <label for="">fecha de nacimento</label>
-          <input  type="date" placeholder="30/11/202" required>
-          <label for="">numero de telefono</label>
-          <input  type="number" placeholder="3816070148" min="1111111111" max="9999999999" required>
+          <input id="email1" type="email" placeholder="juan@gmial.com" min="10" max="40" required>
           <label for="">contraseña</label>
-          <input  type="password" min="2" max="20" required>
-          <label for="">metodo de pago</label>
-          <input class="form-control" type="number"  required>
+          <input id="contraseña" type="password" min="2" max="20" required>
+
 
             <button id="btncargar" type="submit" class="btn morado ">cargar Usario</button>
             <h2>no tiene usuario</h2>
             <p>creelo aqui</p>
             
-            <button class="btn morado ms-" id="btn-nuevousario"> nuevo usario </button>
           </form>
+          <button class="btn morado " id="btn-nuevousario"> nuevo usario </button>
         </main>
         <div class="modal fade" id="modalnuevousario" tabindex="-1" aria-labelledby="modalAdminContactoLabel" aria-hidden="true">
           <div class="modal-dialog">
@@ -147,7 +137,7 @@
               </div>
               <div class="modal-body">
                 <form id="form-nuevousario" >
-                  <div class="mb-3">
+                 
                       <label for="apellido" class="form-label">nombre</label>
                       <input type="text" class="form-control" id="nombre"placeholder="juan" min="3" max="40" required>
                       <div class="invalid-feedback">
@@ -158,28 +148,32 @@
                       <input type="text" class="form-control" id="apellido" placeholder="juan" min="3" max="40" required>
                   </div>
                   <div class="mb-3">
-                      <label for="email" class="form-label">Email</label>
-                      <input type="email" class="form-control" id="email"  placeholder="juan@gmial.com" min="10" max="40" required>
+                      <label for="github" class="form-label">Fecha de nacimiento</label>
+                      <input class="form-control" id="fechaNacimiento" type="date" placeholder="30/11/202" required>
                   </div>
                   <div class="mb-3">
                       <label for="telefono" class="form-label">Teléfono</label>
                       <input type="number" class="form-control" id="telefono" placeholder="3816070148" min="1111111111" max="9999999999" required>
                   </div>
                   <div class="mb-3">
-                      <label for="github" class="form-label">Fecha de nacimiento</label>
-                      <input class="form-control" id="nacimiento" type="date" placeholder="30/11/202" required>
+                      <label for="email" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="email"  placeholder="juan@gmial.com" min="10" max="40" required>
                   </div>
                   <div class="mb-3">
                       <label for="direccion" class="form-label">contraseña</label>
-                      <input type="password" class="form-control" id="contraseña" min="2" max="20" required>
+                      <input type="password" class="form-control" id="password" min="2" max="20" required>
                   </div>
                   <div class="mb-3">
                       <label for="direccion" class="form-label">repetir contraseña</label>
-                      <input type="password" class="form-control" id="contraseña2" min="2" max="20" required>
+                      <input type="password" class="form-control" min="2" max="20" required>
                   </div>
                   <div class="mb-3">
                       <label for="direccion" class="form-label">metodo de pago</label>
-                      <input type="number" class="form-control" id="pago" required>
+                      <input type="number" class="form-control" id="tipo" required>
+                  </div>
+                  <div class="mb-3">
+                      <label for="direccion" class="form-label">foto</label>
+                      <input type="text" class="form-control" id="img" required>
                   </div>
                   <button class="btn morado" type="submit">Registrarce</button>
                 </form>
@@ -264,6 +258,7 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"></script>
-      <script src="../js/registro.js"></script>
+      <script src="../js/registro.js" type="module"></script>
+
   </body>
 </html>
