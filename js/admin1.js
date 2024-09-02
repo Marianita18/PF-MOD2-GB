@@ -52,6 +52,12 @@ const crearUsuario = () => {
 };
 const limpiarFormularioUsuario = () => {
   formularioRegistro.reset();
+
+  const formControls = formularioRegistro.querySelectorAll('.form-control');
+   formControls.forEach(control => {
+     control.classList.remove('is-valid'); 
+     control.classList.remove('is-invalid'); 
+   });
 };
 const guardarLocalStorageUsuario = () => {
   localStorage.setItem("listaUsuariosKey", JSON.stringify(listaUsuarios));
@@ -68,7 +74,7 @@ const dibujarFilaUsuario = (usuario) => {
                             <td>${usuario.password}</td>
                             <td>${usuario.tipo}</td>
                             <td>
-                                <button class="btn btn-primary" onclick="verDetalleUsuario('${usuario.id}')">Ver</button>
+                                <button class="btn btnColor" onclick="verDetalleUsuario('${usuario.id}')">Ver</button>
                                 <button class="btn btn-warning" onclick="editarUsuario('${usuario.id}')">Editar</button>
                                 <button class="btn btn-danger" onclick="borrarUsuario('${usuario.id}')">Borrar</button>
                             </td>  
