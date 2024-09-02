@@ -169,35 +169,35 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
         <form id="formServicios">
           <div class="mb-3">
               <label for="nombreServicio" class="form-label">Nombre del Servicio</label>
-              <input type="text" class="form-control" id="nombreServicio" placeholder="Ejemplo: Pack basico.... ">
+              <input type="text"  minlength="3" maxlength="30" class="form-control" id="nombreServicio" placeholder="Ejemplo: Pack basico.... ">
               <div class="invalid-feedback">
                 Dato obligatorio, debe contener entre 3 y 30 caracteres inclusive.
               </div>
           </div>
           <div class="mb-3">
             <label for="descripcionServicio" class="form-label">Descripcion</label>
-            <input type="text" class="form-control" id="descripcionServicio" placeholder="El pack contiene...">
+            <input type="text" minlength="4" maxlength="300" class="form-control" id="descripcionServicio" placeholder="El pack contiene...">
             <div class="invalid-feedback">
               Dato obligatorio, debe contener entre 4 y 300 caracteres inclusive.
             </div>
         </div>
         <div class="mb-3">
           <label for="precioServicio" class="form-label">Precio del Servicio</label>
-          <input type="text" class="form-control" id="precioServicio" placeholder="100 U$D ">
+          <input type="text" minlength="1" maxlength="15" class="form-control" id="precioServicio" placeholder="100 U$D ">
           <div class="invalid-feedback">
             Dato obligatorio en U$D.
           </div>
       </div>
       <div class="mb-3">
         <label for="tiempoServicio" class="form-label">Tiempo de Entrega</label>
-        <input type="text" class="form-control" id="tiempoServicio" placeholder="5 Dias ">
+        <input type="text" minlength="1" maxlength="5" class="form-control" id="tiempoServicio" placeholder="5 Dias ">
         <div class="invalid-feedback">
           Dato obligatorio.
         </div>
     </div>
     <div class="mb-3">
       <label for="tipoServicio" class="form-label">Tipo de Servicio</label>
-      <input type="text" class="form-control" id="tipoServicio">
+      <input type="text" minlength="3" maxlength="15" class="form-control" id="tipoServicio">
       <div class="invalid-feedback">
         Debe obligatorio.
       </div>
