@@ -164,14 +164,14 @@ const actualizarFilaEnTabla = (index) => {
 
  // Actualizar el contenido de la fila
   fila.innerHTML = `
-        <td>${listaServicios[index].nombreServicio}</td>
-        <td>${listaServicios[index].descripcionServicio}</td>
-        <td>${listaServicios[index].precioServicio}</td>
-        <td>${listaServicios[index].tiempoServicio}</td>
+        <td>${listaServicios.nombreServicio}</td>
+        <td>${listaServicios.descripcionServicio}</td>
+        <td>${listaServicios.precioServicio}</td>
+        <td>${listaServicios.tiempoServicio}</td>
         <td>
-            <button class="btn btn-color" onclick="verServicio('${listaServicios[index].id}')">Leer</button>
-            <button class="btn btn-warning" onclick="prepararServicio('${listaServicios[index].id}')">Editar</button>
-            <button class="btn btn-danger" onclick="borrarServicio('${listaServicios[index].id}')">Borrar</button>
+            <button class="btn btn-color" onclick="verServicio('${listaServicios.id}')">Leer</button>
+            <button class="btn btn-warning" onclick="prepararServicio('${listaServicios.id}')">Editar</button>
+            <button class="btn btn-danger" onclick="borrarServicio('${listaServicios.id}')">Borrar</button>
         </td>`;
 }
 
