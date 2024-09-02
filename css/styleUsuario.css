@@ -1,0 +1,16 @@
+.cardUser {
+    transform: scale(1);
+    transition-property: transform;
+    transition-duration: 1s;
+  }
+  .cardUser:hover {
+    transform: scale(1.1);
+    transition-property: transform;
+    transition-duration: 1s;
+  }
+  
+  .tabContainer .tabPanel{
+    transition: all .5s ease-in;
+    display: none;
+  }
+  
