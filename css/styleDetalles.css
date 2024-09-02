@@ -1,0 +1,11 @@
+textarea {
+    resize: none;
+  }
+  .caja-de-reseñas{border-radius: 20px;
+                   background:rgba(255, 255, 255, 0.571);
+                   box-shadow:0px 0px 2px 2px rgba(152, 18, 219, 0.642);}
+  
+  .caja-de-reseñas:hover {background:rgba(166, 0, 249, 0.237);
+                    cursor: pointer;
+                  }                 
+  
