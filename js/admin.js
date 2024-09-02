@@ -140,6 +140,7 @@ const modificarServicio = ()=>{
 //Posicion
   const obtenerServicio = listaServicios.findIndex(res => res.id === servicioAEditar.id);
 //actualizar datos del array
+if(validarCantidadCaracteres(nombreServicio,3,30) === true && validarCantidadCaracteres(descripcionServicio,10,1000) && validarUrl(imagenServicio)){
   listaServicios[obtenerServicio].nombreServicio = nombreServicio.value;
   listaServicios[obtenerServicio].descripcionServicio = descripcionServicio.value;
   listaServicios[obtenerServicio].precioServicio = precioServicio.value;
@@ -151,6 +152,10 @@ const modificarServicio = ()=>{
   limpiarFormServicios();
   estoyCreando = true;
   modalServicio.hide();
+
+} else {
+  console.log('hay errores en la carga');
+}
 }
 
 const actualizarFilaEnTabla = (index) => {

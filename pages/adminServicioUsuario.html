@@ -139,24 +139,25 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
     </header>
     <main>
       <section>
-        <article class="mt-5">
-          <ul class="nav nav-tabs" id="myTab" role="tablist">
-            <li class="nav-item" role="presentation">
+        <article class="p-5 mt-5">
+          <ul class="nav nav-tabs d-flex justify-content-center" id="myTab" role="tablist">
+            <li class="nav-item mx-2" role="presentation">
               <button
-                class="nav-link active"
+                class="nav-link active btnColor"
                 id="servicio-tab"
                 data-bs-toggle="tab"
                 data-bs-target="#servicio-tab-pane"
                 type="button"
                 role="tab"
                 aria-controls="servicio-tab-pane"
-                aria-selected="true">
+                aria-selected="true"
+                >
                 Servicios
               </button>
             </li>
             <li class="nav-item" role="presentation">
               <button
-                class="nav-link"
+                class="nav-link btnColor"
                 id="usuario-tab"
                 data-bs-toggle="tab"
                 data-bs-target="#usuario-tab-pane"
@@ -175,12 +176,12 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
               role="tabpanel"
               aria-labelledby="servicio-tab"
               tabindex="0">
-              <h1 class="text-center">Página de administrador</h1>
+              <h1 class="text-center mt-2">Página de administrador</h1>
               <section class="mt-4">
                 <div
-                  class="d-flex flex-direction-row justify-content-between m-3">
+                  class="d-flex flex-direction-row justify-content-between mb-3">
                   <h2>Tabla de Servicios</h2>
-                  <button class="btn btnColor" id="btnNuevo">Nuevo</button>
+                  <button class="btn btnColor" id="btnNuevo">Nuevo Servicio</button>
                 </div>
                 <div class="table-responsive" id="tablaServicio">
                   <table class="table table-striped">
@@ -189,7 +190,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
                         <th>Nombre</th>
                         <th>Descripcion</th>
                         <th>Precio</th>
-                        <th>Tiempo de Entrega</th>
+                        <th>Tiempo entrega</th>
                         <th>Acciones</th>
                       </tr>
                     </thead>
@@ -204,7 +205,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
               role="tabpanel"
               aria-labelledby="usuario-tab"
               tabindex="">
-              <h1 class="text-center">Página Registro de Usuarios</h1>
+              <h1 class="text-center mt-2">Página Registro de Usuarios</h1>
               <section class="mt-4">
                 <div class="d-flex justify-content-between mb-3">
                   <h2>Tabla de Registros</h2>
@@ -382,7 +383,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
                   <label for="password" class="form-label">Password</label>
                   <input type="password" class="form-control" id="password" />
                 </div>
-                <button class="btn btn-primary" type="submit" id="btnEnviar">
+                <button class="btn btnColor" type="submit" id="btnEnviar">
                   Enviar
                 </button>
               </form>
