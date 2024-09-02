@@ -140,10 +140,10 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
     <main>
       <section>
         <article class="p-5 mt-5">
-          <ul class="nav nav-tabs" id="myTab" role="tablist">
-            <li class="nav-item" role="presentation">
+          <ul class="nav nav-tabs d-flex justify-content-center" id="myTab" role="tablist">
+            <li class="nav-item mx-2" role="presentation">
               <button
-                class="nav-link active"
+                class="nav-link active btnColor"
                 id="servicio-tab"
                 data-bs-toggle="tab"
                 data-bs-target="#servicio-tab-pane"
@@ -157,7 +157,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
             </li>
             <li class="nav-item" role="presentation">
               <button
-                class="nav-link"
+                class="nav-link btnColor"
                 id="usuario-tab"
                 data-bs-toggle="tab"
                 data-bs-target="#usuario-tab-pane"
@@ -169,17 +169,17 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
               </button>
             </li>
           </ul>
-          <div class="tab-content p-5" id="myTabContent">
+          <div class="tab-content" id="myTabContent">
             <div
               class="tab-pane fade show active"
               id="servicio-tab-pane"
               role="tabpanel"
               aria-labelledby="servicio-tab"
               tabindex="0">
-              <h1 class="text-center">Página de administrador</h1>
+              <h1 class="text-center mt-2">Página de administrador</h1>
               <section class="mt-4">
                 <div
-                  class="d-flex flex-direction-row justify-content-between m-3">
+                  class="d-flex flex-direction-row justify-content-between mb-3">
                   <h2>Tabla de Servicios</h2>
                   <button class="btn btnColor" id="btnNuevo">Nuevo Servicio</button>
                 </div>
@@ -190,7 +190,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
                         <th>Nombre</th>
                         <th>Descripcion</th>
                         <th>Precio</th>
-                        <th>Tiempo de Entrega</th>
+                        <th>Tiempo entrega</th>
                         <th>Acciones</th>
                       </tr>
                     </thead>
@@ -205,7 +205,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
               role="tabpanel"
               aria-labelledby="usuario-tab"
               tabindex="">
-              <h1 class="text-center">Página Registro de Usuarios</h1>
+              <h1 class="text-center mt-2">Página Registro de Usuarios</h1>
               <section class="mt-4">
                 <div class="d-flex justify-content-between mb-3">
                   <h2>Tabla de Registros</h2>
