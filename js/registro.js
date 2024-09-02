@@ -1,16 +1,36 @@
 import Usuario from "./classUsuario.js";
-
+const usuario = document.getElementById("usuario")
+const nombre = document.getElementById("nombre")
+const apellido = document.getElementById("apellido")
+const fechaNacimiento = document.getElementById("fechaNacimiento")
+const telefono = document.getElementById("telefono")
+const email = document.getElementById("email")
+const password = document.getElementById("password")
+const tipo = document.getElementById("tipo")
 const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
 const btncargar = document.getElementById("btncargar");
 
 const Admin = (usuario) => {
   return (
+
     usuario.nombre === "admin" &&
     usuario.apellido === "admin" &&
-    usuario.email === "admin@gmail.com"
+    usuario.email === "admin@gmail.com" 
+   
+   
   );
 };
-
+const limpiarFormulario = () => {
+  document.getElementById("usuario").value = "";
+  document.getElementById("nombre").value = "";
+  document.getElementById("apellido").value = "";
+  document.getElementById("fechaNacimiento").value = "";
+  document.getElementById("telefono").value = "";
+  document.getElementById("email").value = "";
+  document.getElementById("password").value = "";
+  document.getElementById("tipo").value = "";
+  document.getElementById("img").value = "";
+};
 document.getElementById("btn-nuevousario").addEventListener("click", function () {
   const modalUsuario = new bootstrap.Modal(document.getElementById("modalnuevousario"));
   modalUsuario.show();
@@ -20,14 +40,12 @@ const obtenerUsuario = () => {
   const nombre = document.getElementById("nombre1").value;
   const apellido = document.getElementById("apellido1").value;
   const email = document.getElementById("email1").value;
-  const password = document.getElementById("contraseña").value;
+  const password = document.getElementById("contrasena").value;
 
   return { nombre, apellido, email, password };
 };
 
-const crearUsuario = (e) => {
-  e.preventDefault();
-
+const crearUsuario = () => {
   const nusuario = new Usuario(
     usuario.value,
     nombre.value,
@@ -40,6 +58,7 @@ const crearUsuario = (e) => {
     img.value
   );
   guardarEnLocalStorage(nusuario);
+  limpiarFormulario()
 };
 
 const guardarEnLocalStorage = (nusuario) => {
