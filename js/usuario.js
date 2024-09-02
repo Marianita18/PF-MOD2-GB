@@ -19,7 +19,7 @@ cardUsuario.innerHTML = `
 const contenedorFormUsuario = document.querySelector("#contenedorFormUsuario");
 contenedorFormUsuario.innerHTML = `
           <div class="card-header color-texto-violeta fw-bold py-3 fs-5">
-              DETALLE DE USUARIO
+              DETALLE USUARIO
             </div>
           <div class="card-body py-4 mt-1">
           <ul class= "list-unstyled fs-5">

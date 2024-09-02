@@ -40,7 +40,7 @@ seccionDeInformacion.innerHTML = `
           <mark class="text-decoration-underline">Descripción:</mark>
           ${servicioBuscado.descripcionServicio}
         </p>
-        <button class="btn btn-secondary botones-servicios mb-3">
+        <button class="btn btn-light botones-servicios mb-3">
           Agregar al Carrito
         </button>
       </div>
@@ -49,85 +49,60 @@ seccionDeInformacion.innerHTML = `
 
   /////////////////////////////////////////////////////
 
+  const claveResena = 'resenaUsuario';
 
-function cargarResenas() {
-  const resenas = JSON.parse(localStorage.getItem('resenasKey')) || {};
-  const resenasServicio = resenas[parametroId] || [];
-  const resenasDiv = document.querySelector('#resenas');
-  resenasDiv.innerHTML = '';
-  resenasServicio.forEach((resena, index) => {
-      const resenaDiv = document.createElement('div');
-      resenaDiv.classList.add('resena');
-      resenaDiv.innerHTML = `
-          <h5>${resena.nombre}</h5>
-          <p>${resena.texto}</p>
-          <button class="btn btn-primary btn-editar" data-index="${index}">Editar</button>
-          <button class="btn btn-danger btn-eliminar" data-index="${index}">Eliminar</button>
-      `;
-      resenasDiv.appendChild(resenaDiv);
-  });
-
-  document.querySelectorAll('.btn-editar').forEach(button => {
-      button.addEventListener('click', editarResena);
-  });
-
-  document.querySelectorAll('.btn-eliminar').forEach(button => {
-      button.addEventListener('click', eliminarResena);
-  });
-}
-
-function agregarResena(event) {
-  event.preventDefault();
-  const nombre = document.querySelector('#nombreResena').value;
-  const texto = document.querySelector('#textoResena').value;
-  const resenas = JSON.parse(localStorage.getItem('resenasKey')) || {};
-  const index = document.querySelector('#formResena').getAttribute('data-index');
-
-  if (index !== null) {
-     
-      resenas[parametroId][index] = { nombre, texto };
-      document.querySelector('#formResena').removeAttribute('data-index');
-      document.querySelector('#formResena button[type="submit"]').textContent = 'Agregar Reseña';
-  } else {
-     
-      if (!resenas[parametroId]) {
-          resenas[parametroId] = [];
-      }
-      resenas[parametroId].push({ nombre, texto });
+  function cargarResenas() {
+    const resena = JSON.parse(localStorage.getItem(claveResena)) || null;
+    const resenasDiv = document.querySelector('#resenas');
+    resenasDiv.innerHTML = '';
+  
+    if (resena) {
+        const resenaDiv = document.createElement('div');
+        resenaDiv.classList.add('resena');
+        resenaDiv.innerHTML = `
+        <div class="caja-de-reseñas p-5">
+            <h5>${resena.nombre}</h5>
+            <p> <hr> ${resena.texto}</p>
+          
+            <button class="btn btn-danger btn-eliminar">Eliminar</button>
+        </div>
+        `;
+        resenasDiv.appendChild(resenaDiv);
+  
+       
+        document.querySelector('.btn-eliminar').addEventListener('click', eliminarResena);
+    }
   }
-
-  localStorage.setItem('resenasKey', JSON.stringify(resenas));
-  document.querySelector('#formResena').reset();
-  cargarResenas();
-}
-
-function eliminarResena(event) {
-  const index = event.target.getAttribute('data-index');
-  const resenas = JSON.parse(localStorage.getItem('resenasKey')) || {};
-  if (resenas[parametroId]) {
-      resenas[parametroId].splice(index, 1);
-      localStorage.setItem('resenasKey', JSON.stringify(resenas));
+  
+  function agregarResena(event) {
+    event.preventDefault();
+    const nombre = document.querySelector('#nombreResena').value;
+    const texto = document.querySelector('#textoResena').value;
+    const resenaExistente = JSON.parse(localStorage.getItem(claveResena));
+  
+    if (resenaExistente) {
+      
+      Swal.fire({
+        title: '¡Comentario ya enviado!',
+        text: 'Ya has hecho un comentario. No puedes enviar otro.',
+        icon: 'warning',
+        confirmButtonText: 'Aceptar'
+      });
+    } else {
+     
+      localStorage.setItem(claveResena, JSON.stringify({ nombre, texto }));
+      document.querySelector('#formResena').reset();
       cargarResenas();
+    }
   }
-}
-
-function editarResena(event) {
-  const index = event.target.getAttribute('data-index');
-  const resenas = JSON.parse(localStorage.getItem('resenasKey')) || {};
-  const resena = resenas[parametroId][index];
-  if (resena) {
-      document.querySelector('#nombreResena').value = resena.nombre;
-      document.querySelector('#textoResena').value = resena.texto;
-
-     
-      const submitButton = document.querySelector('#formResena button[type="submit"]');
-      submitButton.textContent = 'Actualizar Reseña';
-
-     
-      document.querySelector('#formResena').setAttribute('data-index', index);
+  
+  function eliminarResena(event) {
+    localStorage.removeItem(claveResena); 
+    cargarResenas();
   }
-}
-
-document.querySelector('#formResena').addEventListener('submit', agregarResena);
-
-document.addEventListener('DOMContentLoaded', cargarResenas);
+  
+  
+  document.querySelector('#formResena').addEventListener('submit', agregarResena);
+  
+  document.addEventListener('DOMContentLoaded', cargarResenas);
+  
