@@ -1,8 +1,8 @@
-import { validarEmail, validarCantidadCaracteres } from "./validaciones.js";
+import { validarCantidadCaracteres } from "./validaciones.js";
 import Usuario from "./classUsuario.js";
 //declaro variables de modalLogin
 const modalLogin = new bootstrap.Modal(document.getElementById("modalLogin"));
-const btnNuevo = document.getElementById("btnNuevo");
+const btnNuevoUsuario = document.getElementById("btnNuevoUsuario");
 const formularioRegistro = document.getElementById("formRegistro");
 
 //input de formLogin
@@ -14,17 +14,16 @@ const telefono = document.getElementById("telefono");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
 const tipo = document.getElementById("tipo");
-const img = document.getElementById("img");
 let encontrarUsuario;
 
 //verificar si hay datos en el localstorage
 const listaUsuarios =
   JSON.parse(localStorage.getItem("listaUsuariosKey")) || [];
-const tabla = document.querySelector("tbody");
+const tablaUsuario = document.getElementById("tbodyUsuario");
 let crear = true;
 
 //funciones Login
-const mostrarModal = () => {
+const mostrarModalUsuario = () => {
   modalLogin.show();
 };
 
@@ -39,28 +38,26 @@ const crearUsuario = () => {
       telefono.value,
       email.value,
       password.value,
-      tipo.value,
-      img.value
+      tipo.value
     );
     console.log(nuevoUsuario);
     listaUsuarios.push(nuevoUsuario);
     console.log(listaUsuarios);
-    limpiarFormulario();
-    guardarLocalStorage();
-    dibujarFila(nuevoUsuario);
-    mostrarModal.hide();
+    limpiarFormularioUsuario();
+    guardarLocalStorageUsuario();
+    dibujarFilaUsuario(nuevoUsuario);
   } else {
     console.log("hay errores en la carga del formulario");
   }
 };
-const limpiarFormulario = () => {
+const limpiarFormularioUsuario = () => {
   formularioRegistro.reset();
 };
-const guardarLocalStorage = () => {
+const guardarLocalStorageUsuario = () => {
   localStorage.setItem("listaUsuariosKey", JSON.stringify(listaUsuarios));
 };
-const dibujarFila = (usuario) => {
-  tabla.innerHTML += ` <tr> 
+const dibujarFilaUsuario = (usuario) => {
+  tablaUsuario.innerHTML += ` <tr> 
                            
                             <td>${usuario.usuario}</td>
                             <td>${usuario.nombre}</td>
@@ -70,28 +67,26 @@ const dibujarFila = (usuario) => {
                             <td>${usuario.email}</td>
                             <td>${usuario.password}</td>
                             <td>${usuario.tipo}</td>
-                            
                             <td>
-                                <button class="btn btn-primary" onclick="verDetalle('${usuario.id}')">Ver</button>
+                                <button class="btn btn-primary" onclick="verDetalleUsuario('${usuario.id}')">Ver</button>
                                 <button class="btn btn-warning" onclick="editarUsuario('${usuario.id}')">Editar</button>
                                 <button class="btn btn-danger" onclick="borrarUsuario('${usuario.id}')">Borrar</button>
                             </td>  
                         </tr>`;
 };
 
-window.verDetalle = (id) => {
+window.verDetalleUsuario = (id) => {
   window.location.href = "/pages/usuario.html?id=" + id;
 };
 
-const cargaInicial = () => {
+const cargaInicialUsuario = () => {
   if (listaUsuarios.length !== 0) {
-    listaUsuarios.map((usuario) => dibujarFila(usuario));
+    listaUsuarios.map((usuario) => dibujarFilaUsuario(usuario));
   }
 };
 
 const administrarUsuario = (e) => {
   e.preventDefault();
-  console.log("estamos en administrar usuario");
   if (crear) {
     crearUsuario();
   } else {
@@ -100,10 +95,7 @@ const administrarUsuario = (e) => {
 };
 
 const modificarUsuario = () => {
-  console.log(
-    "aqui guardo los datos del usuario modificado en el array y en el localstorage"
-  );
-  //1 buscar la posicion del usuario a modificar
+ //1 buscar la posicion del usuario a modificar
   const obtenerUsuario = listaUsuarios.findIndex(
     (res) => res.id === encontrarUsuario.id
   );
@@ -118,20 +110,18 @@ const modificarUsuario = () => {
   listaUsuarios[obtenerUsuario].tipo = tipo.value;
 
   //3 - actualizar el localstorage.
-  guardarLocalStorage();
-  actualizarFila(obtenerUsuario);
-  limpiarFormulario();
+  guardarLocalStorageUsuario();
+  actualizarFilaUsuario(obtenerUsuario);
+  limpiarFormularioUsuario();
   crear = true;
-  mostrarModal.hide();
+
 };
 
 window.editarUsuario = (id) => {
-  console.log("aqui agrego la logica para edición de usuario");
   crear = false;
-  mostrarModal();
+  mostrarModalUsuario();
   //aqui tengo que buscar el usuario y agregar sus valores en el formulario
   encontrarUsuario = listaUsuarios.find((usuario) => usuario.id === id);
-  console.log(encontrarUsuario);
   if (encontrarUsuario) {
     usuario.value = encontrarUsuario.usuario;
     nombre.value = encontrarUsuario.nombre;
@@ -143,12 +133,11 @@ window.editarUsuario = (id) => {
     tipo.value = encontrarUsuario.tipo;
   }
 };
-
-const actualizarFila = (index) => {
+const actualizarFilaUsuario = (index) => {
   // Obtener la fila correspondiente
-  const fila = tabla.children[index];
+  const filaUsuario = tablaUsuario.children[index];
   // Actualizar el contenido de la fila
-  fila.innerHTML = `
+  filaUsuario.innerHTML = `
         <td>${listaUsuarios[index].usuario}</td>
         <td>${listaUsuarios[index].nombre}</td>
         <td>${listaUsuarios[index].apellido}</td>
@@ -158,7 +147,7 @@ const actualizarFila = (index) => {
         <td>${listaUsuarios[index].password}</td>
         <td>${listaUsuarios[index].tipo}</td>
         <td>
-            <button class="btn btn-primary" onclick="verDetalle('${listaUsuarios[index].id}')">Leer</button>
+            <button class="btn btn-primary" onclick="verDetalleUsuario('${listaUsuarios[index].id}')">Leer</button>
             <button class="btn btn-warning" onclick="editarUsuario('${listaUsuarios[index].id}')">Editar</button>
             <button class="btn btn-danger" onclick="borrarUsuario('${listaUsuarios[index].id}')">Borrar</button>
                     </td> `;
@@ -185,9 +174,9 @@ window.borrarUsuario = (id) => {
       //2- borrar un usuario del array splice, la posicion del elemento a borrar
       listaUsuarios.splice(posicionUsuarioBuscado, 1);
       //3- actualizar el localstorage
-      guardarLocalStorage();
-      //4- actualizar la tabla
-      tabla.removeChild(tabla.children[posicionUsuarioBuscado]);
+      guardarLocalStorageUsuario();
+      //4- actualizar la tablaUsuario
+      tablaUsuario.removeChild(tablaUsuario.children[posicionUsuarioBuscado]);
       Swal.fire({
         title: "usuario eliminado",
         text: "El usuario fue eliminado correctamente",
@@ -198,6 +187,8 @@ window.borrarUsuario = (id) => {
 };
 
 //LÓGICA DEL CRUD
-btnNuevo.addEventListener("click", mostrarModal);
+btnNuevoUsuario.addEventListener("click", mostrarModalUsuario);
 formularioRegistro.addEventListener("submit", administrarUsuario);
-cargaInicial();
+cargaInicialUsuario();
+
+

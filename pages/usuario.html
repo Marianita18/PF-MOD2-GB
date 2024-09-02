@@ -107,7 +107,7 @@
                 aria-label="Search" />
               <button class="btn btnColor" type="submit">Buscar</button>
             </form>
-            <div class="ms-sm-0 ms-md-4 ms-lg-4"">
+            <div class="ms-sm-0 ms-md-4 ms-lg-4">
             <a href=" http://"
               ><img
                 src="../img/login.png"
@@ -172,68 +172,8 @@
                 <div class="card-header color-texto-violeta fw-bold">
                   Configuración Cuenta
                 </div>
-                <div class="card-body" id="contenedorForm">
-                  <form class="form-control mb-5">
-                    <div class="mb-3">
-                      <label for="nombreApellido" class="form-label"
-                        >Nombre y Apellido*</label
-                      >
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="nombreApellido"
-                        maxlength="50"
-                        minlength="8"
-                        placeholder="Ej: Juan Perez"
-                        required />
-                    </div>
-                    <div class="mb-3">
-                      <label for="fnacimiento" class="form-label"
-                        >Fecha de Nacimiento</label
-                      >
-                      <input
-                        type="date"
-                        class="form-control"
-                        id="fnacimiento"
-                        maxlength="10"
-                        minlength="10"
-                        placeholder="Ej: 12/12/2012"
-                        required />
-                    </div>
-                    <div class="mb-3">
-                      <label for="telefono" class="form-label">Teléfono*</label>
-                      <input
-                        type="tel"
-                        class="form-control"
-                        id="telefono"
-                        maxlength="10"
-                        minlength="10"
-                        placeholder="Ej: 3814961577"
-                        required />
-                    </div>
-                    <div class="mb-3">
-                      <label for="email" class="form-label">Email*</label>
-                      <input
-                        type="email"
-                        class="form-control"
-                        id="email"
-                        placeholder="Ej: juanperez@gmail.com"
-                        required />
-                    </div>
-                    <!-- <div>
-                      <label for="imagenUsuario" class="form-label">Cambiar imagen</label>
-                    </div>
-                    <div class="input-group mb-3">
-                      <input type="file" class="form-control" id="imagenUsuario" aria-describedby="imagenUsuario"
-                        aria-label="Upload" />
-                      <button class="btn btnColor" type="button" id="imagenUsuario">
-                        Subir
-                      </button>
-                    </div> -->
-                    <button type="submit" class="btn btnColor">
-                      Guardar Cambios
-                    </button>
-                  </form>
+                <div class="card-body" id="contenedorFormUsuario">
+                 
                 </div>
               </div>
             </div>
@@ -299,14 +239,10 @@
                     <div class="row mb-3">
                       <div class="col-12 col-md-4 mb-5">
                         <div class="card h-60">
-                          <div class="card-body d-flex">
-                            <h6 class="card-title">Contenido Inicial</h6>
-                            <a href="#" class="ms-auto">
-                              <i class="bi bi-plus-circle-fill"></i
-                              ><i
-                                onclick="changeIcon(this)"
-                                class="bi bi-plus-circle align-content-center fs-5"></i
-                            ></a>
+                          <div class="card-body d-flex id="iconoInteres"">
+                            <h6 class="card-title">Contenido Inicial1</h6>
+                            <a href="#" class="ms-auto" id="iconoInteres">
+                              <i onclick="cambiarIcono()" class="bi bi-plus-circle align-content-center fs-5"></i></a>
                           </div>
                         </div>
                       </div>
@@ -459,6 +395,58 @@
         </article>
       </section>
     </main>
+    <section id="modal">
+      <div class="modal" tabindex="-1" id="btnEditarUsuario">
+        <div class="modal-dialog">
+          <div class="modal-content bg-celeste">
+            <div class="modal-header">
+              <h5 class="modal-title">Editar Usuario</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="form-control mb-5" id="formUsuario">
+                  <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre*</label>
+                    <input type="text" class="form-control" id="nombre" maxlength="50" minlength="8" placeholder="Ej: Juan" required />
+                  </div>
+                  <div class="mb-3">
+                    <label for="apellido" class="form-label">Apellido*</label>
+                    <input type="text" class="form-control" id="apellido" maxlength="50" minlength="8" placeholder="Ej: Perez"
+                      required />
+                  </div>
+                  <div class="mb-3">
+                    <label for="fnacimiento" class="form-label">Fecha de Nacimiento</label>
+                    <input type="date" class="form-control" id="fnacimiento" maxlength="10" minlength="10" placeholder="Ej: 12/12/2012"
+                      required />
+                  </div>
+                  <div class="mb-3">
+                    <label for="telefono" class="form-label">Teléfono*</label>
+                    <input type="tel" class="form-control" id="telefono" maxlength="10" minlength="10" placeholder="Ej: 3814961577"
+                      required />
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Email*</label>
+                    <input type="email" class="form-control" id="email" placeholder="Ej: juanperez@gmail.com" required />
+                  </div>
+                  <!-- <div>
+                                      <label for="imagenUsuario" class="form-label">Cambiar imagen</label>
+                                    </div>
+                                    <div class="input-group mb-3">
+                                      <input type="file" class="form-control" id="imagenUsuario" aria-describedby="imagenUsuario"
+                                        aria-label="Upload" />
+                                      <button class="btn btnColor" type="button" id="imagenUsuario">
+                                        Subir
+                                      </button>
+                                    </div> -->
+                  <button type="submit" class="btn btnColor" id="">
+                    Guardar Cambios
+                  </button>
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <footer class="mt-5">
       <section class="container-fluid text-center">
         <article class="row py-5">
@@ -586,6 +574,7 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"></script>
-    <script src="../js/app.js"></script>
+    <script src="../js/usuario.js"></script>
+    <script src="../js/admin1.js"></script>
   </body>
 </html>

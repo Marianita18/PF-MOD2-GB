@@ -126,7 +126,9 @@
             <p>creelo aqui</p>
             
           </form>
-          <button class="btn morado " id="btn-nuevousario"> nuevo usario </button>
+          <DIV class="registro container" >
+            <button class="btn morado " id="btn-nuevousario"> nuevo usario </button>
+          </DIV>
         </main>
         <div class="modal fade" id="modalnuevousario" tabindex="-1" aria-labelledby="modalAdminContactoLabel" aria-hidden="true">
           <div class="modal-dialog">
@@ -137,7 +139,13 @@
               </div>
               <div class="modal-body">
                 <form id="form-nuevousario" >
-                 
+                  <div class="mb-3">
+                      <label for="apellido" class="form-label">usario</label>
+                      <input type="text" class="form-control" id="usario"placeholder="juan" min="3" max="40" required>
+                      <div class="invalid-feedback">
+                      </div>
+                  </div>
+                  <div class="mb-3">
                       <label for="apellido" class="form-label">nombre</label>
                       <input type="text" class="form-control" id="nombre"placeholder="juan" min="3" max="40" required>
                       <div class="invalid-feedback">
