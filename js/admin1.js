@@ -105,7 +105,8 @@ const modificarUsuario = () => {
   const obtenerUsuario = listaUsuarios.findIndex(
     (res) => res.id === encontrarUsuario.id
   );
-  //2- actualizar los datos del array
+  if (validarCantidadCaracteres(usuario, 5, 30)) {
+      //2- actualizar los datos del array
   listaUsuarios[obtenerUsuario].usuario = usuario.value;
   listaUsuarios[obtenerUsuario].nombre = nombre.value;
   listaUsuarios[obtenerUsuario].apellido = apellido.value;
@@ -120,6 +121,9 @@ const modificarUsuario = () => {
   actualizarFilaUsuario(obtenerUsuario);
   limpiarFormularioUsuario();
   crear = true;
+  } else {
+    console.log("hay errores en la carga del formulario");
+  }
 
 };
 
