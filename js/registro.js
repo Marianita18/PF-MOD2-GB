@@ -29,6 +29,7 @@ const crearUsuario = (e) => {
   e.preventDefault();
 
   const nusuario = new Usuario(
+    usuario.value,
     nombre.value,
     apellido.value,
     fechaNacimiento.value,
