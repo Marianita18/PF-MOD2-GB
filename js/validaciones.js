@@ -37,7 +37,7 @@ document.getElementById('form-nuevousario').addEventListener('submit', function(
     let isValid = true;
 
     // Validar usuario
-    export  const usuario = document.getElementById('usuario');
+      const usuario = document.getElementById('usuario');
     if (usuario.value.length < 3 || usuario.value.length > 40) {
         usuario.classList.add('is-invalid');
         isValid = false;
@@ -46,7 +46,7 @@ document.getElementById('form-nuevousario').addEventListener('submit', function(
     }
 
     // Validar nombre
-    export const nombre = document.getElementById('nombre');
+     const nombre = document.getElementById('nombre');
     if (nombre.value.length < 3 || nombre.value.length > 40) {
         nombre.classList.add('is-invalid');
         isValid = false;
@@ -55,7 +55,7 @@ document.getElementById('form-nuevousario').addEventListener('submit', function(
     }
 
     // Validar apellido
-    export   const apellido = document.getElementById('apellido');
+       const apellido = document.getElementById('apellido');
     if (apellido.value.length < 3 || apellido.value.length > 40) {
         apellido.classList.add('is-invalid');
         isValid = false;
@@ -64,7 +64,7 @@ document.getElementById('form-nuevousario').addEventListener('submit', function(
     }
 
     // Validar fecha de nacimiento
-    export const fechaNacimiento = document.getElementById('fechaNacimiento');
+     const fechaNacimiento = document.getElementById('fechaNacimiento');
     if (!fechaNacimiento.value) {
         fechaNacimiento.classList.add('is-invalid');
         isValid = false;
@@ -73,7 +73,7 @@ document.getElementById('form-nuevousario').addEventListener('submit', function(
     }
 
     // Validar teléfono
-    export const telefono = document.getElementById('telefono');
+     const telefono = document.getElementById('telefono');
     if (telefono.value.length < 7 || telefono.value.length > 15) {
         telefono.classList.add('is-invalid');
         isValid = false;
