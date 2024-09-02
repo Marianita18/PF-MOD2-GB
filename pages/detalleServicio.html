@@ -31,6 +31,7 @@
     />
 
     <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/styleNavFooter.css">
     <title>MAGNETO</title>
   </head>
   <body>
@@ -78,7 +79,7 @@
               <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle itemActive"
-                  href="./detalleServicio.html"
+                  href="./error404.html"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
@@ -87,7 +88,7 @@
                 </a>
                 <ul class="dropdown-menu">
                   <li>
-                    <a class="dropdown-item" href="./detalleServicio.html"
+                    <a class="dropdown-item" href="./error404.html"
                       >Redes Sociales</a
                     >
                   </li>
@@ -95,15 +96,13 @@
                     <hr class="dropdown-divider" />
                   </li>
                   <li>
-                    <a class="dropdown-item" href="./detalleServicio.html"
-                      >Email</a
-                    >
+                    <a class="dropdown-item" href="./error404.html">Email</a>
                   </li>
                   <li>
                     <hr class="dropdown-divider" />
                   </li>
                   <li>
-                    <a class="dropdown-item" href="./detalleServicio.html"
+                    <a class="dropdown-item" href="./error404.html"
                       >Páginas Web</a
                     >
                   </li>
@@ -121,24 +120,31 @@
                 type="search"
                 placeholder="Buscar"
                 aria-label="Search"
+                id="barraBusqueda"
+                maxlength="60"
               />
               <button class="btn btnColor" type="submit">Buscar</button>
             </form>
-            <div class="ms-sm-0 ms-md-4 ms-lg-4">
-              <a href="http://"
-                ><img
-                  src="../img/login.png"
-                  class="img-fluid"
-                  width="80"
-                  alt="Carrito de Compras"
-              /></a>
-              <a href="./carrito.html"
-                ><img
-                  src="../img/carrito.png"
-                  class="img-fluid"
-                  width="90"
-                  alt="Carrito de Compras"
-              /></a>
+
+            <div class="d-flex justify-content-end">
+              <div id="resultadosBusqueda"></div>
+
+              <div class="ms-sm-0 ms-md-4 ms-lg-4">
+                <a href="./usuario.html"
+                  ><img
+                    src="../img/login.png"
+                    class="img-fluid"
+                    width="80"
+                    alt="usuario"
+                /></a>
+                <a href="./carrito.html"
+                  ><img
+                    src="../img/carrito.png"
+                    class="img-fluid"
+                    width="90"
+                    alt="Carrito de Compras"
+                /></a>
+              </div>
             </div>
           </div>
         </div>
@@ -151,21 +157,28 @@
             <div id="padre" class="col-lg-12"></div>
 
             <div class="row">
-              <!-- Columna de Pasos a Seguir -->
               <div class="col-md-6">
                 <div class="steps-section mt-4" id="contenedorDePasosASeguir">
                   <h3 class="section-title">Pasos a Seguir</h3>
-                  <button class="btn btn-secondary botones-servicios mb-3" id="verMasPasosASeguir">
+                  <button
+                    class="btn btn-light botones-servicios mb-3"
+                    id="verMasPasosASeguir"
+                  >
                     Ver más...
                   </button>
                 </div>
               </div>
 
-              <!-- Columna de Términos y Condiciones -->
               <div class="col-md-6">
-                <div class="terms-section mt-4" id="contenedorDeTerminosYCondiciones">
+                <div
+                  class="terms-section mt-4"
+                  id="contenedorDeTerminosYCondiciones"
+                >
                   <h3>Términos y Condiciones</h3>
-                  <button class="btn  botones-servicios mb-3" id="verMasTerminosYCondiciones">
+                  <button
+                    class="btn btn-light botones-servicios mb-3"
+                    id="verMasTerminosYCondiciones"
+                  >
                     Ver más...
                   </button>
                 </div>
@@ -174,53 +187,41 @@
           </div>
         </article>
         <article>
-          <!-- Reseñas -->
-          <div class="row mt-5">
-            <div class="col-12">
-              <h3 class="section-title">
-                <hr />
-                Reseñas
-              </h3>
-              <div class="review-list">
-                <div class="review-card mb-3">
-                  <div class="review-card-body">
-                    <p>
-                      <strong>Juan Pérez:</strong> "Excelente opción para
-                      iniciarse en marketing digital. Muy buen trabajo."
-                    </p>
-                  </div>
-                </div>
-                <div class="review-card mb-3">
-                  <div class="review-card-body">
-                    <p>
-                      <strong>Ana Martínez:</strong> "Perfecto para darle un
-                      empuje a nuestra presencia en redes sociales."
-                    </p>
-                  </div>
-                </div>
-              </div>
-            
-          <h4>Deja una reseña</h4>
-          <form id="formResena" class="mb-3">
+          <div>
+            <h4 class="">
+              <hr />
+              Comentarios:
+            </h4>
+            <form id="formResena" class="mb-3">
               <div class="mb-3">
-                  <label for="nombreResena" class="form-label">Tu nombre</label>
-                  <input type="text" class="form-control" id="nombreResena" required>
+                <label for="nombreResena" class="form-label">Tu nombre</label>
+                <input
+                  type="text"
+                  class="form-control bg-white caja-de-reseñas"
+                  id="nombreResena"
+                  maxlength="15"
+                  minlength="3"
+                  required
+                />
               </div>
               <div class="mb-3">
-                  <label for="textoResena" class="form-label">Reseña</label>
-                  <textarea class="form-control" id="textoResena" rows="3" required></textarea>
+                <label for="textoResena" class="form-label">Reseña</label>
+                <textarea
+                  class="form-control bg-white caja-de-reseñas"
+                  id="textoResena"
+                  rows="3"
+                  maxlength="500"
+                  minlength="1"
+                  required
+                ></textarea>
               </div>
-              <button type="submit" class="btn btn-secondary botones-generales botones-servicios">Enviar Reseña</button>
-          </form>
-          
+              <button type="submit" class="btn btn-light botones-servicios">
+                Enviar Reseña
+              </button>
+            </form>
 
-          <h3 class="mt-5">Reseñas</h3>
-          <div id="resenas" class="mb-3">
-
-          </div>
-
-
-            </div>
+            <h3 class="mt-5">Reseñas</h3>
+            <div id="resenas" class="mb-3"></div>
           </div>
         </article>
       </section>
@@ -352,9 +353,7 @@
               <button class="btn btnColor fz" type="submit">Unirse</button>
             </form>
           </div>
-
         </article>
-
       </section>
     </footer>
     <script
@@ -365,7 +364,6 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
     <script src="../js/desarrolloServicio.js"></script>
     <script src="../js/acordion.js"></script>
-    <script src="../js/acordion2.js"></script>
-   
+    <script src="../js/buscar.js"></script>
   </body>
 </html>

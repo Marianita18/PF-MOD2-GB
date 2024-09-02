@@ -24,6 +24,7 @@
 https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
 " rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/styleNavFooter.css">
     <title>MAGNETO</title>
   </head>
   <body>
@@ -67,7 +68,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
               <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle text-white"
-                  href="./detalleServicio.html"
+                  href="./error404.html"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false">
@@ -75,7 +76,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
                 </a>
                 <ul class="dropdown-menu">
                   <li>
-                    <a class="dropdown-item" href="./detalleServicio.html"
+                    <a class="dropdown-item" href="./error404.html"
                       >Redes Sociales</a
                     >
                   </li>
@@ -83,7 +84,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
                     <hr class="dropdown-divider" />
                   </li>
                   <li>
-                    <a class="dropdown-item" href="./detalleServicio.html"
+                    <a class="dropdown-item" href="./error404.html"
                       >Email</a
                     >
                   </li>
@@ -91,7 +92,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
                     <hr class="dropdown-divider" />
                   </li>
                   <li>
-                    <a class="dropdown-item" href="./detalleServicio.html"
+                    <a class="dropdown-item" href="./error404.html"
                       >Páginas Web</a
                     >
                   </li>
@@ -108,11 +109,18 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
                 class="form-control me-2"
                 type="search"
                 placeholder="Buscar"
-                aria-label="Search" />
+                aria-label="Search"
+                id="barraBusqueda"
+                maxlength="60"
+              />
               <button class="btn btnColor" type="submit">Buscar</button>
             </form>
+
+            <div class="d-flex justify-content-end">
+              <div id="resultadosBusqueda"></div>
+            </div>
           <div class="ms-sm-0 ms-md-4 ms-lg-4">
-            <a href="http://"><img src="../img/login.png" class="img-fluid" width="80" alt="Carrito de Compras" /></a>
+            <a href="./usuario.html"><img src="../img/login.png" class="img-fluid" width="80" alt="Usuario" /></a>
             <a href="./carrito.html"><img src="../img/carrito.png" class="img-fluid" width="90" alt="Carrito de Compras" /></a>
           </div>
           </div>
@@ -343,5 +351,6 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.all.min.js"></script>
       <script src="../js/admin.js" type="module"></script>
       <script src="../js/validaciones.js"></script>
+      <script src="../js/buscar.js"></script>
   </body>
 </html>

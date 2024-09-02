@@ -7,27 +7,37 @@
     <meta
       name="author"
       content="Valdivia Fernando Miguel, Mendoza Mariana Eugenia, Palazzo Lobo María Valentina,
-    Infante Ezequiel, Coniglio Mauro, Lobo Valentin José" />
+    Infante Ezequiel, Coniglio Mauro, Lobo Valentin José"
+    />
     <meta
       name="keywords"
-      content="condicionales, variables, constantes, javascript, bucles, arrays, objetos, clases, poo, dom, bom, localstorage" />
+      content="condicionales, variables, constantes, javascript, bucles, arrays, objetos, clases, poo, dom, bom, localstorage"
+    />
     <link rel="icon" type="image/jpg" href="../img/mageneto.ico" />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous" />
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/styleNavFooter.css">
     <title>MAGNETO</title>
   </head>
   <body>
     <header>
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid d-flex">
-          <img src="../img/logomagnetohome.png" class="img-fluid ms-5" width="75" alt="Logo Magneto">
+          <img
+            src="../img/logomagnetohome.png"
+            class="img-fluid ms-5"
+            width="75"
+            alt="Logo Magneto"
+          />
           <a class="navbar-brand text-white titulo" href="../index.html"
             >Magneto</a
           >
@@ -38,7 +48,8 @@
             data-bs-target="#opcionesNavbar"
             aria-controls="opcionesNavbar"
             aria-expanded="false"
-            aria-label="Toggle navigation">
+            aria-label="Toggle navigation"
+          >
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="opcionesNavbar">
@@ -51,7 +62,7 @@
                   >Inicio</a
                 >
               </li>
-            
+
               <li class="nav-item">
                 <a class="nav-link text-white" href="./nosotros.html"
                   >Nosotros</a
@@ -60,15 +71,16 @@
               <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle text-white"
-                  href="./detalleServicio.html"
+                  href="./error404.html"
                   role="button"
                   data-bs-toggle="dropdown"
-                  aria-expanded="false">
+                  aria-expanded="false"
+                >
                   Servicios
                 </a>
                 <ul class="dropdown-menu">
                   <li>
-                    <a class="dropdown-item" href="./detalleServicio.html"
+                    <a class="dropdown-item" href="./error404.html"
                       >Redes Sociales</a
                     >
                   </li>
@@ -76,15 +88,13 @@
                     <hr class="dropdown-divider" />
                   </li>
                   <li>
-                    <a class="dropdown-item" href="./detalleServicio.html"
-                      >Email</a
-                    >
+                    <a class="dropdown-item" href="./error404.html">Email</a>
                   </li>
                   <li>
                     <hr class="dropdown-divider" />
                   </li>
                   <li>
-                    <a class="dropdown-item" href="./detalleServicio.html"
+                    <a class="dropdown-item" href="./error404.html"
                       >Páginas Web</a
                     >
                   </li>
@@ -99,45 +109,63 @@
                 class="form-control me-2"
                 type="search"
                 placeholder="Buscar"
-                aria-label="Search" />
+                aria-label="Search"
+                id="barraBusqueda"
+                maxlength="60"
+              />
               <button class="btn btnColor" type="submit">Buscar</button>
             </form>
-            <div class="ms-sm-0 ms-md-4 ms-lg-4"">
-              <a href="http://"><img src="../img/login.png" class="img-fluid" width="80" alt="Carrito de Compras" /></a>
-              <a href="./carrito.html"><img src="../img/carrito.png" class="img-fluid" width="90" alt="Carrito de Compras" /></a>
+
+            <div class="d-flex justify-content-end">
+              <div id="resultadosBusqueda"></div>
+            </div>
+
+            <div class="ms-sm-0 ms-md-4 ms-lg-4">
+              <a href="./usuario.html"
+                ><img
+                  src="../img/login.png"
+                  class="img-fluid"
+                  width="80"
+                  alt="Usuario"
+              /></a>
+              <a href="./carrito.html"
+                ><img
+                  src="../img/carrito.png"
+                  class="img-fluid"
+                  width="90"
+                  alt="Carrito de Compras"
+              /></a>
             </div>
           </div>
         </div>
       </nav>
     </header>
-  <main>
- 
-        
-    <div class="cointener-fluid position-relative ">
-      <div class="d-flex justify-content-center align-content-center ">
-        <div
-          class="bg-white inicio-mensaje sombra-violeta text-center mt-5 d-flex justify-content-center flex-column align-items-center text-center"
-        >
-          <h1 class="titulo-muy-grande">
-            ¡Acercamos tus  <mark class="resaltado">negocios!</mark>
-          </h1>
-          <p class="d-none d-lg-block d-md-block mt-5">
-            Somos la empresa ideal para atraer a tus nuevos <br> clientes a través de nuestros servicios digitales
-          </p>
-        
-      
-      <div class="position-absolute top-50 start-25 translate-middle-x">
-      <img
-        class=" d-none d-lg-block w-50"
-        src="../img/mensaje-con-corazon.png"
-        alt="mensaje con corazon"
-      />
-    </div>
-    </div>
-  </div>
-    </div>
-    
-  <!-- <section class="bg1 container-fluid">
+    <main>
+      <div class="cointener-fluid position-relative">
+        <div class="d-flex justify-content-center align-content-center">
+          <div
+            class="bg-white inicio-mensaje sombra-violeta text-center mt-5 d-flex justify-content-center flex-column align-items-center text-center"
+          >
+            <h1 class="titulo-muy-grande">
+              ¡Acercamos tus <mark class="resaltado">negocios!</mark>
+            </h1>
+            <p class="d-none d-lg-block d-md-block mt-5">
+              Somos la empresa ideal para atraer a tus nuevos <br />
+              clientes a través de nuestros servicios digitales
+            </p>
+
+            <div class="position-absolute top-50 start-25 translate-middle-x">
+              <img
+                class="d-none d-lg-block w-50"
+                src="../img/mensaje-con-corazon.png"
+                alt="mensaje con corazon"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <section class="bg1 container-fluid">
     <div class="row position-relative">
       <article
         class="container bg-black p-2 text-white bg-opacity-50 text-center position-absolute top-50 start-50 translate-middle col-md-6 col-sm-12"
@@ -150,155 +178,138 @@
     </div>
   </section> -->
 
-  <section class="container-fluid">
-    <div class="row my-5 px-5">
-      <article class="col-md-4 align-items-start">
-        <h4 class="fw-bold text-primary">Horario de Atención:</h4>
-        <p>Lunes a Viernes: 9:00 AM - 6:00 PM</p>
-      </article>
+      <section class="container-fluid">
+        <div class="row my-5 px-5">
+          <article class="col-md-4 align-items-start">
+            <h4 class="fw-bold text-primary">Horario de Atención:</h4>
+            <p>Lunes a Viernes: 9:00 AM - 6:00 PM</p>
+          </article>
 
-      <article class="col-md-4 align-items-start">
-        <h4 class="fw-bold text-primary">Chat en Vivo:</h4>
-        <p>
-          Visita nuestra página web y usa la función de chat en vivo para
-          obtener asistencia inmediata durante el horario de atención.
-        </p>
-      </article>
-      <article class="col-md-4 align-items-start">
-        <h4 class="fw-bold text-primary">Formulario de Contacto</h4>
-        <p>
-          Para consultas rápidas o solicitudes específicas, completa el
-          formulario a continuación y nos comunicaremos contigo lo antes
-          posible.
-        </p>
-      </article>
-    </div>
-  </section>
+          <article class="col-md-4 align-items-start">
+            <h4 class="fw-bold text-primary">Chat en Vivo:</h4>
+            <p>
+              Visita nuestra página web y usa la función de chat en vivo para
+              obtener asistencia inmediata durante el horario de atención.
+            </p>
+          </article>
+          <article class="col-md-4 align-items-start">
+            <h4 class="fw-bold text-primary">Formulario de Contacto</h4>
+            <p>
+              Para consultas rápidas o solicitudes específicas, completa el
+              formulario a continuación y nos comunicaremos contigo lo antes
+              posible.
+            </p>
+          </article>
+        </div>
+      </section>
 
-
-  <section class="container-fluid ">
-    <div class="row my-5">
-      <article class="col-md-6 p-5 bg2 ">
-              <div class="row">
-                <div class="col-md-6 bg-opacity-50 ">
-                  <div class="d-block  text-md-start">
-                    <i class="bi bi-geo-alt-fill fs-2 text-warning"></i>
-                     <h4>Dirección</h4>
-                  </div>
-                  <p>
-                    Calle Ficticia 123, Ciudad, País
-                  </p>
+      <section class="container-fluid">
+        <div class="row my-5">
+          <article class="col-md-6 p-5 bg2">
+            <div class="row">
+              <div class="col-md-6 bg-opacity-50">
+                <div class="d-block text-md-start">
+                  <i class="bi bi-geo-alt-fill fs-2 text-warning"></i>
+                  <h4>Dirección</h4>
                 </div>
-                <div class="col-md-6">
-                  <div class="d-block  text-md-start">
-                    <i class="bi bi-telephone fs-2 text-warning"></i>
+                <p>Calle Ficticia 123, Ciudad, País</p>
+              </div>
+              <div class="col-md-6">
+                <div class="d-block text-md-start">
+                  <i class="bi bi-telephone fs-2 text-warning"></i>
 
-                    <h4>Teléfono</h4>
-                  </div>
-                  <p>
-                    +123 456 7890
-                  </p>
+                  <h4>Teléfono</h4>
                 </div>
-                <div class="col-md-6" >
-                  <div class="d-block text-md-start">
-                    <i class="bi bi-envelope fs-2 text-warning"></i>
-                    <h4>Email</h4>
-                  </div>
+                <p>+123 456 7890</p>
+              </div>
+              <div class="col-md-6">
+                <div class="d-block text-md-start">
+                  <i class="bi bi-envelope fs-2 text-warning"></i>
+                  <h4>Email</h4>
+                </div>
 
-                  <p>
-                    info@magneto.com
-                  </p>
+                <p>info@magneto.com</p>
+              </div>
+              <div class="col-md-6">
+                <div class="d-block text-md-start">
+                  <i class="bi bi-hand-thumbs-up fs-2 text-warning"></i>
+                  <h4>Redes sociales</h4>
                 </div>
-                <div class="col-md-6 ">
-                  <div class="d-block text-md-start" >
-                    <i class="bi bi-hand-thumbs-up fs-2 text-warning"></i>
-                    <h4>Redes sociales</h4>
-                  </div>
-                  <div>
+                <div>
                   <i class="bi bi-facebook fs-2 text-secondary"></i>
                   <i class="bi bi-twitter fs-2 text-secondary"></i>
                   <i class="bi bi-instagram fs-2 text-secondary"></i>
                   <i class="bi bi-linkedin fs-2 text-secondary"></i>
-
-                </div>
                 </div>
               </div>
+            </div>
           </article>
-       
-      </article>
 
-      <article class="col-md-6 p-0 p-5">
-        <form>
-          <div class="mb-3">
-            <label for="nombreApellido" class="form-label"
-              >Nombre y Apellido *</label
-            >
-            <input
-              type="text"
-              id="nombreApellido"
-              minlength="3"
-              maxlength="30"
-              placeholder="Ej: Valentin Wolf"
-              required
-              class="form-control"
-            />
-          </div>
-          <div class="mb-3 ">
-            <label for="email" class="form-label">Email *</label>
-            <input
-              type="email"
-              id="email"
-              minlength="5"
-              maxlength="30"
-              placeholder="Ej: valentinwolf@mail.com"
-              required
-              class="form-control"
-            />
-          </div>
-          <div class="mb-3">
-            <label for="contacto" class="form-label">Consulta *</label>
-            <textarea
-              id="contacto"
-              rows="4"
-              class="form-control"
-              placeholder="Ingresá tu consulta"
-            ></textarea>
-          </div>
-          <button class="btn btn-success">Enviar</button>
-        </form>
-      </article>
-    </div>
-  </section>
+          <article class="col-md-6 p-0 p-5">
+            <form>
+              <div class="mb-3">
+                <label for="nombreApellido" class="form-label"
+                  >Nombre y Apellido *</label
+                >
+                <input
+                  type="text"
+                  id="nombreApellido"
+                  minlength="3"
+                  maxlength="30"
+                  placeholder="Ej: Valentin Wolf"
+                  required
+                  class="form-control"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email *</label>
+                <input
+                  type="email"
+                  id="email"
+                  minlength="5"
+                  maxlength="30"
+                  placeholder="Ej: valentinwolf@mail.com"
+                  required
+                  class="form-control"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="contacto" class="form-label">Consulta *</label>
+                <textarea
+                  id="contacto"
+                  rows="4"
+                  class="form-control"
+                  placeholder="Ingresá tu consulta"
+                ></textarea>
+              </div>
+              <button class="btn btn-success">Enviar</button>
+            </form>
+          </article>
+        </div>
+      </section>
 
-  <section >
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.1060679493976!2d-65.20974192368999!3d-26.83657849002871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225d3ad7f30f1d%3A0xf8606cd659b8e3e4!2sRollingCode%20School!5e0!3m2!1ses-419!2sar!4v1718155243198!5m2!1ses-419!2sar"
-      width="100%"
-      height="450"
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-    ></iframe>
-  </section>
-
-
-  
-
-
-
-
-
-
+      <section>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.1060679493976!2d-65.20974192368999!3d-26.83657849002871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225d3ad7f30f1d%3A0xf8606cd659b8e3e4!2sRollingCode%20School!5e0!3m2!1ses-419!2sar!4v1718155243198!5m2!1ses-419!2sar"
+          width="100%"
+          height="450"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </section>
     </main>
     <footer class="mt-1">
       <section class="container-fluid text-center">
         <article class="row py-5">
           <div
-            class="col-12 col-sm-3 col-md-3 col-lg-3 py-2 py-sm-2 py-md-0 py-lg-0">
+            class="col-12 col-sm-3 col-md-3 col-lg-3 py-2 py-sm-2 py-md-0 py-lg-0"
+          >
             <img
               src="../img/logomagnetohome.png"
               class="img-fluid"
               width="110"
-              alt="Logo Magneto" />
+              alt="Logo Magneto"
+            />
             <h6>
               <a
                 class="text-decoration-none titulo text-white"
@@ -318,10 +329,7 @@
               target="_blank"
               ><i class="bi bi-facebook fs-5"></i
             ></a>
-            <a
-              class="fz itemActive"
-              href="https://www.x.com/"
-              target="_blank"
+            <a class="fz itemActive" href="https://www.x.com/" target="_blank"
               ><i class="bi bi-twitter-x fs-5"></i
             ></a>
             <a
@@ -331,20 +339,18 @@
               ><i class="bi bi-youtube fs-5"></i
             ></a>
             <a
-              class=" fz itemActive"
+              class="fz itemActive"
               href="https://www.linkedin.com/"
               target="_blank"
               ><i class="bi bi-linkedin fs-5"></i
             ></a>
-            <a
-              class="fz itemActive"
-              href="https://discord.com/"
-              target="_blank"
+            <a class="fz itemActive" href="https://discord.com/" target="_blank"
               ><i class="bi bi-discord fs-5"></i
             ></a>
           </div>
           <div
-            class="col-12 col-sm-3 col-md-3 col-lg-3 text-center text-sm-center text-md-start text-lg-start py-2">
+            class="col-12 col-sm-3 col-md-3 col-lg-3 text-center text-sm-center text-md-start text-lg-start py-2"
+          >
             <h6 class="itemActive fw-bold">Contacto</h6>
             <ul class="list-unstyled fz">
               <li>
@@ -371,13 +377,15 @@
             </ul>
           </div>
           <div
-            class="col-12 col-sm-3 col-md-3 col-lg-3 text-center text-sm-center text-md-start text-lg-start py-2">
+            class="col-12 col-sm-3 col-md-3 col-lg-3 text-center text-sm-center text-md-start text-lg-start py-2"
+          >
             <h6 class="itemActive fw-bold">Políticas</h6>
             <ul class="list-unstyled fz">
               <li>
                 <a
                   href="./error404.html"
-                  class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">
+                  class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                >
                   Terminos y condiciones</a
                 >
               </li>
@@ -405,13 +413,15 @@
             </ul>
           </div>
           <div
-            class="col-12 col-sm-3 col-md-3 col-lg-3 text-sm-center text-md-start text-lg-start py-2">
+            class="col-12 col-sm-3 col-md-3 col-lg-3 text-sm-center text-md-start text-lg-start py-2"
+          >
             <h6 class="itemActive fw-bold">Suscríbete y recibe noticias</h6>
             <form class="d-flex ms-sm-0 me-md-0 me-lg-5">
               <input
                 class="form-control me-2 fz"
                 type="email"
-                placeholder="Escribe tu email aqui" />
+                placeholder="Escribe tu email aqui"
+              />
               <button class="btn btnColor fz" type="submit">Unirse</button>
             </form>
           </div>
@@ -421,6 +431,8 @@
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"></script>
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/buscar.js"></script>
   </body>
 </html>
