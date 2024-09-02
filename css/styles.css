@@ -422,3 +422,38 @@ footer {
  
 
 }
+/* ---------------------------------- boton buscar----------- */
+.contenedor-busqueda {
+  position: relative;
+  width: 100%;
+}
+
+#resultadosBusqueda {
+  position: absolute;
+  top: 70%;
+  border-radius: 20px;
+  border-top: none;
+  width: 17%;
+  max-height: 100%;
+  overflow-y: auto;
+  background-color: #f9f9f9b2;
+  z-index: 3; 
+ 
+
+}
+
+.item-result {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.item-result:hover {
+  background-color: rgba(184, 85, 233, 0.608);
+}
+
+@media (max-width: 991px){
+  #resultadosBusqueda {
+    width: 80%;
+
+  }  
+}
