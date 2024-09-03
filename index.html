@@ -130,7 +130,7 @@
             </div>
 
             <div class="ms-sm-0 ms-md-4 ms-lg-4">
-              <a href="./pages/usuario.html"
+              <a href="#" id="btnLogin"
                 ><img
                   src="./img/login.png"
                   class="img-fluid"
@@ -388,6 +388,78 @@
         </div>
       </section>
     </main>
+    <section>
+      <div class="modal" tabindex="-1" id="modalLogin">
+        <div class="modal-dialog">
+          <div class="modal-content bg-celeste">
+            <div class="modal-header">
+              <h5 class="modal-title">Login Usuario</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form class="form-control bg-body-tertiary" id="formLogin">
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" />
+                  <div class="invalid-feedback">
+                    Dato obligatorio, debe contener entre 3 y 30 caracteres
+                    inclusive.
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="password" class="form-label">Password</label>
+                  <input type="password" minlength="3" maxlength="15" class="form-control" id="password" />
+                  <div class="invalid-feedback">
+                    Dato obligatorio, debe contener entre 3 y 15 caracteres
+                    inclusive.
+                  </div>
+                </div>
+                <button class="btn btnColor" type="submit" id="btnEnviarLogin">
+                  Login
+                </button>
+              </form>
+              <p>No tienes una cuenta? <a href="#" id="btnRegistro">Registro</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="modal" tabindex="-1" id="modalRegistro">
+        <div class="modal-dialog">
+          <div class="modal-content bg-celeste">
+            <div class="modal-header">
+              <h5 class="modal-title">Registro Usuario</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form class="form-control bg-body-tertiary" id="formRegistro">
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" />
+                  <div class="invalid-feedback">
+                    Dato obligatorio, debe contener entre 3 y 30 caracteres
+                    inclusive.
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="password" class="form-label">Password</label>
+                  <input type="password" minlength="3" maxlength="15" class="form-control" id="password" />
+                  <div class="invalid-feedback">
+                    Dato obligatorio, debe contener entre 3 y 15 caracteres
+                    inclusive.
+                  </div>
+                </div>
+                <button class="btn btnColor" type="submit" id="btnEnviarLogin">
+                  Login
+                </button>
+              </form>
+              <p>No tienes una cuenta? <a href="#">Registro</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <footer class="bg-imagen mt-5">
       <section class="text-center container-fluid">
         <article class="row py-5">
@@ -529,5 +601,7 @@
     <script src="./js/buscar.js"></script> 
     <script src="./js/app.js"></script>
     <script src="./js/footer.js" type="module"></script>
+    <script src="./js/login.js"></script>
+    <script src="./js/registroLogin.js"></script>
   </body>
 </html>
