@@ -1,14 +1,13 @@
 import Usuario from "./classUsuario.js";
-
-const usuario = document.getElementById("usuario");
-const nombre = document.getElementById("nombre");
-const apellido = document.getElementById("apellido");
-const fechaNacimiento = document.getElementById("fechaNacimiento");
-const telefono = document.getElementById("telefono");
-const email = document.getElementById("email");
-const password = document.getElementById("password");
-const tipo = document.getElementById("tipo");
-const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+const usuario = document.getElementById("usuario")
+const nombre = document.getElementById("nombre")
+const apellido = document.getElementById("apellido")
+const fechaNacimiento = document.getElementById("fechaNacimiento")
+const telefono = document.getElementById("telefono")
+const email = document.getElementById("email")
+const password = document.getElementById("password")
+const tipo = document.getElementById("tipo")
+const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
 const btncargar = document.getElementById("btncargar");
 
 const limpiarFormulario = () => {
@@ -20,26 +19,28 @@ const limpiarFormulario = () => {
   document.getElementById("email").value = "";
   document.getElementById("password").value = "";
   document.getElementById("tipo").value = "";
-};
 
-document
-  .getElementById("btn-nuevousario")
-  .addEventListener("click", function () {
-    const modalUsuario = new bootstrap.Modal(
-      document.getElementById("modalnuevousario")
-    );
-    modalUsuario.show();
-  });
+};
+document.getElementById("btn-nuevousario").addEventListener("click", function () {
+  const modalUsuario = new bootstrap.Modal(document.getElementById("modalnuevousario"));
+  modalUsuario.show();
+});
 
 const Admin = (usuario) => {
-  return usuario.email.trim() === "admin@gmail.com" && usuario.password.trim() === "admin";
+  return (
+    usuario.email === "admin@gmail.com"&&
+    usuario.password === "admin"
+  );
 };
 
 const obtenerUsuario = () => {
-  const email = document.getElementById("email1").value.trim();
-  const password = document.getElementById("contrasena").value.trim();
+
+  const email = document.getElementById("email1").value;
+  const password = document.getElementById("contrasena").value;
+  
   return { email, password };
 };
+
 
 const crearUsuario = () => {
   const nusuario = new Usuario(
@@ -50,7 +51,7 @@ const crearUsuario = () => {
     telefono.value,
     email.value,
     password.value,
-    tipo.value
+    tipo.value,
   );
   guardarEnLocalStorage(nusuario);
   limpiarFormulario();
@@ -61,35 +62,26 @@ const guardarEnLocalStorage = (nusuario) => {
   localStorage.setItem("usuarios", JSON.stringify(usuarios));
   console.log("Usuario guardado en el local storage");
 };
-
-document
-  .getElementById("form-nuevousario")
-  .addEventListener("submit", crearUsuario);
-
+document.getElementById("form-nuevousario").addEventListener("submit", crearUsuario);
 const cargarUsuario = (usuario) => {
   document.getElementById("email1").value = usuario.email;
   document.getElementById("contrasena").value = usuario.password;
 };
-
 btncargar.addEventListener("click", () => {
   const usuario = obtenerUsuario();
   if (Admin(usuario)) {
     console.log("El usuario es administrador");
-    window.location.href = "../index.html";
+    document.getElementById("adminnav").style.display = "block"; 
   } else {
-    const usuarioEncontrado = usuarios.find(
-      (u) => u.email === usuario.email && u.password === usuario.password
-    );
+    const usuarioEncontrado = usuarios.find(u => u.email === usuario.email && u.password === usuario.password);
     if (usuarioEncontrado) {
       console.log("Usuario encontrado en el local storage");
       cargarUsuario(usuarioEncontrado);
+      window.location.href = "../index.html";
     } else {
-      const modalUsuario = new bootstrap.Modal(
-        document.getElementById("modalnuevousario")
-      );
-      modalUsuario.show();
+      const modalUsuario = new bootstrap.Modal(document.getElementById("modalnuevousario"));
       console.log("Usuario no encontrado, mostrando formulario de creación");
-      document.getElementById("admin-nav").style.display = "block";
+      modalUsuario.show();
     }
   }
 });
