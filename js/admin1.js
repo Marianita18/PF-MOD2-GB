@@ -65,7 +65,7 @@ const guardarLocalStorageUsuario = () => {
 const dibujarFilaUsuario = (usuario) => {
   tablaUsuario.innerHTML += ` <tr> 
                            
-                            <td>${usuario.usuario}</td>
+                          
                             <td>${usuario.nombre}</td>
                             <td>${usuario.apellido}</td>
                             <td>${usuario.fechaNacimiento}</td>
@@ -74,9 +74,9 @@ const dibujarFilaUsuario = (usuario) => {
                             <td>${usuario.password}</td>
                             <td>${usuario.tipo}</td>
                             <td>
-                                <button class="btn btnColor" onclick="verDetalleUsuario('${usuario.id}')">Ver</button>
-                                <button class="btn btn-warning" onclick="editarUsuario('${usuario.id}')">Editar</button>
-                                <button class="btn btn-danger" onclick="borrarUsuario('${usuario.id}')">Borrar</button>
+                                <button class="btn btnColor" onclick="verDetalleUsuario('${usuario.id}')"><i class="bi bi-eye fs-5"></i></button>
+                                <button class="btn btn-warning" onclick="editarUsuario('${usuario.id}')"><i class="bi bi-pencil fs-5"></i></button>
+                                <button class="btn btn-danger" onclick="borrarUsuario('${usuario.id}')"><i class="bi bi-trash fs-5"></i></button>
                             </td>  
                         </tr>`;
 };
@@ -148,7 +148,7 @@ const actualizarFilaUsuario = (index) => {
   const filaUsuario = tablaUsuario.children[index];
   // Actualizar el contenido de la fila
   filaUsuario.innerHTML = `
-        <td>${listaUsuarios[index].usuario}</td>
+        
         <td>${listaUsuarios[index].nombre}</td>
         <td>${listaUsuarios[index].apellido}</td>
         <td>${listaUsuarios[index].fechaNacimiento}</td>
@@ -157,10 +157,10 @@ const actualizarFilaUsuario = (index) => {
         <td>${listaUsuarios[index].password}</td>
         <td>${listaUsuarios[index].tipo}</td>
         <td>
-            <button class="btn btn-primary" onclick="verDetalleUsuario('${listaUsuarios[index].id}')">Leer</button>
-            <button class="btn btn-warning" onclick="editarUsuario('${listaUsuarios[index].id}')">Editar</button>
-            <button class="btn btn-danger" onclick="borrarUsuario('${listaUsuarios[index].id}')">Borrar</button>
-                    </td> `;
+            <button class="btn btnColor" onclick="verDetalleUsuario('${listaUsuarios[index].id}')"><i class="bi bi-eye fs-5"></i></button>
+            <button class="btn btn-warning" onclick="editarUsuario('${listaUsuarios[index].id}')"><i class="bi bi-pencil fs-5"></i></button>
+            <button class="btn btn-danger" onclick="borrarUsuario('${listaUsuarios[index].id}')"><i class="bi bi-trash fs-5"></i></button>
+        </td> `;
 };
 window.borrarUsuario = (id) => {
   console.log(id);

@@ -72,10 +72,10 @@ const dibujarFila = (servicio)=>{
               <td>${servicio.precioServicio}</td>
               <td>${servicio.tiempoServicio}</td>
               <td>
-                <button class="btn btnColor" onclick="verServicio('${servicio.id}')">Leer</button>
-                <button class="btn btn-warning" onclick="prepararServicio('${servicio.id}')">Editar</button>
-                <button class="btn btn-danger" onclick="borrarServicio('${servicio.id}')">Borrar</button>
-              </td>`
+                <button class="btn btnColor" onclick="verServicio('${servicio.id}')"><i class="bi bi-eye fs-5"></i></button>
+                <button class="btn btn-warning" onclick="prepararServicio('${servicio.id}')"><i class="bi bi-pencil fs-5"></i></button>
+                <button class="btn btn-danger" onclick="borrarServicio('${servicio.id}')"><i class="bi bi-trash fs-5"></i></button>
+              </td>`;
   fila.innerHTML = contenidoFila;
   tabla.append(fila);
 }
@@ -169,9 +169,9 @@ const actualizarFilaEnTabla = (index) => {
         <td>${listaServicios[index].precioServicio}</td>
         <td>${listaServicios[index].tiempoServicio}</td>
         <td>
-            <button class="btn btn-color" onclick="verServicio('${listaServicios[index].id}')">Leer</button>
-            <button class="btn btn-warning" onclick="prepararServicio('${listaServicios[index].id}')">Editar</button>
-            <button class="btn btn-danger" onclick="borrarServicio('${listaServicios[index].id}')">Borrar</button>
+            <button class="btn btnColor" onclick="verServicio('${listaServicios[index].id}')"><i class="bi bi-eye fs-5"></button>
+            <button class="btn btn-warning" onclick="prepararServicio('${listaServicios[index].id}')"><i class="bi bi-pencil fs-5"></i></button>
+            <button class="btn btn-danger" onclick="borrarServicio('${listaServicios[index].id}')"><i class="bi bi-trash fs-5"></i></button>
         </td>`;
 }
 

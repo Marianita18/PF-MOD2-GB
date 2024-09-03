@@ -9,8 +9,30 @@
     transition-duration: 1s;
   }
   
-  .tabContainer .tabPanel{
-    transition: all .5s ease-in;
-    display: none;
-  }
+.background{
+  background-image: url(../img/background.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  width: 100%;
+}
+
+@media all and (max-width: 992px) {
+.background{
+  background-image: url(../img/background.png);
+  background-size: 220%;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  width: 100%;
+}
+}
+@media all and (max-width: 768px) {
+.background{
+  background-image: url(../img/background.png);
+  background-size: 420%;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  width: 100%;
+}
+}
   
