@@ -25,7 +25,8 @@
 https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
 "
       rel="stylesheet" />
-    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/styleBtn.css">
+      <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="../css/styleNavFooter.css">
     <title>MAGNETO</title>
   </head>
@@ -243,6 +244,26 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
             </div>
           </div>
         </article>
+      </section>
+      <section>
+        <button class="open_button" onclick="openForm()">
+          <i class="bi bi-chat-dots-fill"></i>
+        </button>
+        <div class="chat_popup" id="myForm">
+          <form action="" class="form_container background">
+            <div class="w-100">
+              <a id="formChat" href="" class="text-decoration-none">
+                <img src="../img/logomagnetohome.png" alt="logo" />Magneto
+              </a>
+              <button type="button" class="btn-close buttonChatClose bg-white" onclick="closeForm()"
+                aria-label="Close"></button>
+            </div>
+            <label id="msg" for="msg" class=""> Dejános tu mensaje...</label>
+            <textarea class="w-100 form-container text-start ps-3" name="msg" minlength="15" maxlength="250"
+              placeholder="Escribe un mensaje aquí..." required></textarea>
+            <button type="submit" class="btn">Enviar</button>
+          </form>
+        </div>
       </section>
     </main>
     <!-- Modal servicios -->
@@ -532,5 +553,6 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
     <script src="../js/admin.js" type="module"></script>
     <script src="../js/validaciones.js" type="module"></script>
     <script src="../js/buscar.js"></script>
+    <script src="../js/app.js"></script>
   </body>
 </html>
