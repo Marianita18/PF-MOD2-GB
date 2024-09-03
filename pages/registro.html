@@ -29,6 +29,7 @@
     <title>PF-MOD2-GB</title>
   </head>
   <body>
+    <header>
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid d-flex">
         <img src="../img/logomagnetohome.png" class="img-fluid ms-5" width="75" alt="Logo Magneto">
@@ -62,8 +63,8 @@
               >
             </li>
          
-              <li class="nav-item" id="admin-nav " style="display: none;">
-               <a href="adminServicioUsuario.html">
+              <li  id="admin-nav " style="display: none;">
+               <a href="./adminServicioUsuario.html">
                  Administrador
          
               </a>
@@ -93,7 +94,6 @@
                     >Email</a
                   >
                 </li>
-  <<<<<<< HEAD
                 <li>
                   <hr class="dropdown-divider" />
                 </li>
@@ -119,77 +119,14 @@
           <div class="ms-sm-0 ms-md-4 ms-lg-4">
             <a href="./registro.html"><img src="../img/login.png" class="img-fluid" width="80" alt="Carrito de Compras" /></a>
             <a href="./carrito.html"><img src="../img/carrito.png" class="img-fluid" width="90" alt="Carrito de Compras" /></a>
-  =======
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle text-white"
-                    href="./error404.html"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Servicios
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a class="dropdown-item" href="./error404.html"
-                        >Redes Sociales</a
-                      >
-                    </li>
-                    <li>
-                      <hr class="dropdown-divider" />
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="./error404.html"
-                        >Email</a
-                      >
-                    </li>
-                    <li>
-                      <hr class="dropdown-divider" />
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="./error404.html"
-                        >Páginas Web</a
-                      >
-                    </li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-white" href="./error404.html">Contacto</a>
-                </li>
-              </ul>
-              <form class="d-flex" role="search">
-                <input
-                  class="form-control me-2"
-                  type="search"
-                  placeholder="Buscar"
-                  aria-label="Search"
-                  id="barraBusqueda"
-                  maxlength="60"
-                />
-                <button class="btn btnColor" type="submit">Buscar</button>
-              </form>
-  
-              <div class="d-flex justify-content-end">
-                <div id="resultadosBusqueda"></div>
-              </div>
-  
-              <div class="ms-sm-0 ms-md-4 ms-lg-4">
-                <a href="./usuario.html"><img src="../img/login.png" class="img-fluid" width="80" alt="Usuario" /></a>
-                <a href="./carrito.html"><img src="../img/carrito.png" class="img-fluid" width="90" alt="Carrito de Compras" /></a>
-              </div>
-            </div>
-  >>>>>>> 22649452ba38c2e9ee8551a0df70879a7adf0cc4
-          </div>
-        </div>
+
+                
       </div>
     </nav>
     <main>
       <h1 class="text-center">Cargar Usario</h1>
       <form class="registro container">
-        <label  for="">nombre</label>
-        <input class="mb-3" id="nombre1" type="text" placeholder="juan" min="3" max="40" id="nom" required />
-        <label for="">apellido</label>
-        <input class="mb-3" id="apellido1" type="text" placeholder="rodriguez" min="3" max="40" required />
+       
         <label for="">email</label>
         <input
         class="mb-3"
@@ -201,23 +138,10 @@
           required
         />
    
-        <label for="">fecha de nacimento</label>
-        <input class="mb-3" id="nacimiento1" type="date" placeholder="30/11/202" required />
-        <label for="">numero de telefono</label>
-        <input
-        class="mb-3"
-        id="telefoncargar"
-          type="number"
-          placeholder="3816070148"
-          min="1111111111"
-          max="9999999199"
-          required
-        />
         <label for="">contraseña</label>
         <input 
         class="mb-3"id="contrasena" type="password" min="2" max="20" required />
-        <label for="">metodo de pago</label>
-        <input class="mb-3" id="pago" class="form-control" type="number" required />
+
 
         <button id="btncargar" type="submit" class="btn morado">
           cargar Usario
@@ -485,6 +409,7 @@
       crossorigin="anonymous"></script>
       <script src="../js/registro.js" type="module"></script>
     </script>
-    <script src="../js/buscar.js"></script>4
+
+  </header>
   </body>
 </html>
