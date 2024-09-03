@@ -19,7 +19,7 @@ const limpiarFormulario = () => {
   document.getElementById("email").value = "";
   document.getElementById("password").value = "";
   document.getElementById("tipo").value = "";
-  document.getElementById("img").value = "";
+
 };
 document.getElementById("btn-nuevousario").addEventListener("click", function () {
   const modalUsuario = new bootstrap.Modal(document.getElementById("modalnuevousario"));
@@ -44,6 +44,7 @@ const obtenerUsuario = () => {
   return { nombre, apellido, email, password };
 };
 
+
 const crearUsuario = () => {
   const nusuario = new Usuario(
     usuario.value,
@@ -54,10 +55,9 @@ const crearUsuario = () => {
     email.value,
     password.value,
     tipo.value,
-    img.value
   );
   guardarEnLocalStorage(nusuario);
-  limpiarFormulario()
+  limpiarFormulario();
 };
 
 const guardarEnLocalStorage = (nusuario) => {
@@ -66,20 +66,30 @@ const guardarEnLocalStorage = (nusuario) => {
   console.log("Usuario guardado en el local storage");
 };
 document.getElementById("form-nuevousario").addEventListener("submit", crearUsuario);
+const cargarUsuario = (usuario) => {
+  document.getElementById("nombre1").value = usuario.nombre;
+  document.getElementById("apellido1").value = usuario.apellido;
+  document.getElementById("email1").value = usuario.email;
+  document.getElementById("nacimiento1").value = usuario.fechaNacimiento;
+  document.getElementById("telefono").value = usuario.telefono;
+  document.getElementById("telefoncargar").value = usuario.password;
+  
+};
 
 btncargar.addEventListener("click", () => {
   const usuario = obtenerUsuario();
   if (Admin(usuario)) {
     console.log("El usuario es administrador");
-    window.location.href = "../pages/administrador1.html";
+    document.getElementById("admin-nav").style.display = "block"; // Mostrar el elemento del administrador
   } else {
     const usuarioEncontrado = usuarios.find(u => u.email === usuario.email && u.password === usuario.password);
     if (usuarioEncontrado) {
       console.log("Usuario encontrado en el local storage");
       cargarUsuario(usuarioEncontrado);
+      window.location.href = "../index.html";
     } else {
-      console.log("Usuario no encontrado, mostrando formulario de creación");
       const modalUsuario = new bootstrap.Modal(document.getElementById("modalnuevousario"));
+      console.log("Usuario no encontrado, mostrando formulario de creación");
       modalUsuario.show();
     }
   }

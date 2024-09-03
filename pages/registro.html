@@ -29,16 +29,170 @@
     <title>PF-MOD2-GB</title>
   </head>
   <body>
-
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid d-flex">
+        <img src="../img/logomagnetohome.png" class="img-fluid ms-5" width="75" alt="Logo Magneto">
+        <a class="navbar-brand text-white titulo" href="../index.html"
+          >Magneto</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#opcionesNavbar"
+          aria-controls="opcionesNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="opcionesNavbar">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-bold">
+            <li class="nav-item">
+              <a
+                class="nav-link text-white"
+                aria-current="page"
+                href="../index.html"
+                >Inicio</a
+              >
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link text-white" href="./nosotros.html"
+                >Nosotros</a
+              >
+            </li>
+         
+              <li id="admin-nav" style="display: none;">
+               <a href="adminServicioUsuario.html">
+                 Administrador
+                 
+              </a>
+              </li>
+          
+     
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle text-white"
+                href="./detalleServicio.html"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Servicios
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="./detalleServicio.html"
+                    >Redes Sociales</a
+                  >
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./detalleServicio.html"
+                    >Email</a
+                  >
+                </li>
+  <<<<<<< HEAD
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./detalleServicio.html"
+                    >Páginas Web</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item itemActive">
+              <a class="nav-link" href="./contacto.html">Contacto</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Buscar"
+              aria-label="Search" />
+            <button class="btn btnColor" type="submit">Buscar</button>
+          </form>
+          <div class="ms-sm-0 ms-md-4 ms-lg-4">
+            <a href="./registro.html"><img src="../img/login.png" class="img-fluid" width="80" alt="Carrito de Compras" /></a>
+            <a href="./carrito.html"><img src="../img/carrito.png" class="img-fluid" width="90" alt="Carrito de Compras" /></a>
+  =======
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle text-white"
+                    href="./error404.html"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Servicios
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="./error404.html"
+                        >Redes Sociales</a
+                      >
+                    </li>
+                    <li>
+                      <hr class="dropdown-divider" />
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="./error404.html"
+                        >Email</a
+                      >
+                    </li>
+                    <li>
+                      <hr class="dropdown-divider" />
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="./error404.html"
+                        >Páginas Web</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="./error404.html">Contacto</a>
+                </li>
+              </ul>
+              <form class="d-flex" role="search">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Buscar"
+                  aria-label="Search"
+                  id="barraBusqueda"
+                  maxlength="60"
+                />
+                <button class="btn btnColor" type="submit">Buscar</button>
+              </form>
+  
+              <div class="d-flex justify-content-end">
+                <div id="resultadosBusqueda"></div>
+              </div>
+  
+              <div class="ms-sm-0 ms-md-4 ms-lg-4">
+                <a href="./usuario.html"><img src="../img/login.png" class="img-fluid" width="80" alt="Usuario" /></a>
+                <a href="./carrito.html"><img src="../img/carrito.png" class="img-fluid" width="90" alt="Carrito de Compras" /></a>
+              </div>
+            </div>
+  >>>>>>> 22649452ba38c2e9ee8551a0df70879a7adf0cc4
+          </div>
+        </div>
+      </div>
+    </nav>
     <main>
-      <h1>Cargar Usario</h1>
+      <h1 class="text-center">Cargar Usario</h1>
       <form class="registro container">
-        <label for="">nombre</label>
-        <input id="nombre1" type="text" placeholder="juan" min="3" max="40" id="nom" required />
+        <label  for="">nombre</label>
+        <input class="mb-3" id="nombre1" type="text" placeholder="juan" min="3" max="40" id="nom" required />
         <label for="">apellido</label>
-        <input id="apellido1" type="text" placeholder="rodriguez" min="3" max="40" required />
+        <input class="mb-3" id="apellido1" type="text" placeholder="rodriguez" min="3" max="40" required />
         <label for="">email</label>
         <input
+        class="mb-3"
         id="email1"
           type="email"
           placeholder="juan@gmial.com"
@@ -46,20 +200,24 @@
           max="40"
           required
         />
+   
         <label for="">fecha de nacimento</label>
-        <input type="date" placeholder="30/11/202" required />
+        <input class="mb-3" id="nacimiento1" type="date" placeholder="30/11/202" required />
         <label for="">numero de telefono</label>
         <input
+        class="mb-3"
+        id="telefoncargar"
           type="number"
           placeholder="3816070148"
           min="1111111111"
-          max="9999999999"
+          max="9999999199"
           required
         />
         <label for="">contraseña</label>
-        <input id="contrasena" type="password" min="2" max="20" required />
+        <input 
+        class="mb-3"id="contrasena" type="password" min="2" max="20" required />
         <label for="">metodo de pago</label>
-        <input class="form-control" type="number" required />
+        <input class="mb-3" id="pago" class="form-control" type="number" required />
 
         <button id="btncargar" type="submit" class="btn morado">
           cargar Usario
@@ -86,6 +244,7 @@
               Nuevo usuario
             </h2>
             <button
+            id="usuario"
               type="button"
               class="btn-close"
               data-bs-dismiss="modal"
@@ -122,6 +281,7 @@
               <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
                 <input
+             
                   type="email"
                   class="form-control"
                   id="email"
@@ -136,9 +296,9 @@
                 <input
                   type="number"
                   class="form-control"
-                  id="telefonoregistro"
+                  id="telefono"
                   placeholder="3816070148"
-                  min="1111111111"
+                  min=""
                   max="9999999999"
                   required
                 />
@@ -149,7 +309,7 @@
                 >
                 <input
                   class="form-control"
-                  id="nacimiento"
+                  id="fechaNacimiento"
                   type="date"
                   placeholder="30/11/202"
                   required
@@ -160,7 +320,7 @@
                 <input
                   type="password"
                   class="form-control"
-                  id="contraseña"
+                  id="password"
                   min="2"
                   max="20"
                   required
@@ -181,7 +341,7 @@
               </div>
               <div class="mb-3">
                 <label for="direccion" class="form-label">metodo de pago</label>
-                <input type="number" class="form-control" id="pago" required />
+                <input type="number" class="form-control" id="tipo" required />
               </div>
               <button class="btn morado" type="submit">Registrarce</button>
             </form>
