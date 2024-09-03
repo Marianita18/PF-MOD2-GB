@@ -5,6 +5,7 @@
   --Celeste: #c8efff;
   --Azul: #00204c;
 }
+
 body {
   min-height: 100vh;
   display: flex;
@@ -13,144 +14,45 @@ body {
   font-weight: 400;
   font-style: normal;
   background-color: var(--Celeste);
+  color: var(--Azul);
 }
 main {
   flex-grow: 1;
 }
-/*---------------------- HEADER--------------------------------------*/
-nav {
-  background-image: url(../img/background.png);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  object-fit: contain;
-  width: 100%;
-}
-@media all and (max-width: 992px) {
-  nav {
-    background-image: url(../img/background.png);
-    background-size: 200%;
-    background-repeat: no-repeat;
-    object-fit: cover;
-    width: 100%;
-  }
-}
-@media all and (max-width: 768px) {
-  nav {
-    background-image: url(../img/background.png);
-    background-size: 250%;
-    background-repeat: no-repeat;
-    object-fit: cover;
-    width: 100%;
-  }
-}
-.itemActive {
-  color: var(--Azul);
-}
-.navbar-toggler {
-  border-color: white;
-  color: white;
-  border-width: 2px;
-}
-.navbar-toggler-icon {
-  width: 1.3em;
-  height: 1.5em;
-  color: white;
-  border-color: white;
-}
-.btnColor {
-  background-color: var(--Violeta);
-  color: white;
-}
-.btnColor:hover {
-  background-color: white;
-  color: var(--Azul);
-  border-color: none;
-}
-.btnColorLogin {
-  background-color: white;
-  color: var(--Azul);
-}
-.btnColorLogin:hover {
-  background-color: white;
-  color: var(--Violeta);
-}
-@media all and (max-width: 768px) {
-  .btnColorLogin {
-    background-color: white;
-    color: var(--Azul);
-    margin-top: 10px;
-  }
-  .btnColorLogin:hover {
-    background-color: white;
-    color: var(--Violeta);
-  }
-}
-.titulo {
-  font-family: "Black Ops One", system-ui;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1.8rem;
-}
-.bgInputWhite {
-  background-color: rgba(255, 255, 255, 0.488);
-  color: white;
-  border-color: white;
-}
-.bgInputWhite:active {
-  background-color: white;
-  color: var(--Azul);
-  border-color: white;
-}
-.dropdown-menu {
-  background-color: var(--Violeta);
-  color: white;
-  border-color: none;
-}
-.dropdown-item {
-  background-color: var(--Violeta);
-  color: white;
-  border-color: none;
-}
-.dropdown-item:hover {
-  background-color: white;
-  color: var(--Azul);
-  border-color: none;
-}
-.dropdown-item:active {
-  background-color: white;
-  color: var(--Azul);
-  border-color: none;
-}
-/* --------------------------------MAIN--------------------------------------- */
+
+
 .inicio-mensaje {
-  height: 35vh;
+  height: 40vh;
   width: 60%;
 }
 .sombra-violeta {
   border-radius: 10px;
-  box-shadow: 0px 0px 50px rgb(166, 0, 249);
+  box-shadow: 0px 0px 70px var(--Violeta);
 }
+
+#contenedor-de-inicio {
+  width: 100%;
+  height: 200vh;
+}
+
 .megafono {
-  transform: scale(0.65) rotate(60deg);
-  position: absolute;
-  left: 200px;
+  transform: scale(0.45) rotate(60deg);
 }
+
 .rueda-rosa {
-  transform: scale(0.25);
+  transform: scale(0.2);
   position: relative;
-  left: 1100px;
-  top: -900px;
+  top: -45%;
 }
+
 .mensaje-con-corazon {
-  transform: scale(0.7) rotate(-40deg);
+  transform: scale(0.5) rotate(-40deg);
   position: relative;
-  top: -250px;
-  left: 60px;
+  top: -50%;
 }
+
 .sello {
-  transform: scale(0.8) rotate(15deg);
-  position: relative;
-  left: 1400px;
+  transform: scale(0.6) rotate(15deg);
 }
 .bg-imagen {
   background-attachment: fixed;
@@ -162,19 +64,24 @@ nav {
 #brazo-violeta-1 {
   transform: rotate(-90deg) scale(1.4);
   position: relative;
-  left: 72%;
+  top: -20%;
+  right: -7%;
+  margin-top: 50%;
 }
 #brazo-violeta-2 {
   transform: rotate(90deg) scale(1.4);
   position: relative;
+  top: 20%;
+  right: 7%;
+  margin-bottom: 60%;
 }
 #doble-brazos {
   position: absolute;
   top: 850px;
 }
 .resaltado {
-  background: rgb(166, 0, 249);
-  border-radius: 40px;
+  background: var(--Violeta);
+  border-radius: 20px;
   font-size: 3rem;
 }
 .subrayado {
@@ -188,47 +95,28 @@ nav {
   font-weight: bolder;
   font-size: 1.5rem;
 }
-#estrategias-personalizadas {
-  color: rgb(183, 80, 234);
+.estrategias-personalizadas {
+  color: var(--Violeta);
   position: relative;
-  top: 250px;
+  left: 180%;
 }
-#gestion-integral {
+.gestion-integral {
   color: rgb(71, 134, 222);
-  position: relative;
-  top: 350px;
-  left: 700px;
 }
-#marketing-multicanal {
-  color: rgb(0, 32, 76);
-  position: relative;
-  top: -250px;
-  left: 750px;
-}
-#nuestra-ventaja-competitiva {
+.nuestra-ventaja-competitiva {
   color: rgb(239, 184, 241);
-  position: relative;
-  top: 200px;
-  left: -750px;
 }
-#tecnologia-de-vanguardia {
+.tecnologia-de-vanguardia {
   color: rgb(143, 221, 225);
-  position: relative;
-  top: -100px;
-  left: -550px;
 }
-.titulo-principal{size:100px;}
-#relacion-con-el-cliente {
+.titulo-principal {
+  size: 100px;
+}
+.relacion-con-el-cliente {
   color: rgb(183, 80, 234);
-  position: relative;
-  top: -100px;
-  left: 125px;
 }
-#responsabilidad-social {
+.responsabilidad-social {
   color: rgb(0, 32, 76);
-  position: relative;
-  top: -350px;
-  left: -250px;
 }
 .botones-generales {
   border-radius: 20px;
@@ -236,23 +124,27 @@ nav {
   margin-bottom: 2%;
 }
 .color-texto-violeta {
-  color: rgb(166, 0, 249);
+  color: var(--Violeta);
 }
 .imagenes-de-servicios {
   border-radius: 30%;
   padding: 2%;
 }
-.color-de-titulo-servicios{
-  color: rgb(166, 0, 249);}
-
-.botones-servicios{
-  color: white;
-  background-color: rgb(166, 0, 249);
+.color-de-titulo-servicios {
+  color: var(--Violeta);
 }
-               
-/* DISPOSITIVOS PEQUEÑOS */
 
-@media (max-width: 576px) {
+.botones-servicios {
+  color: white;
+  background-color: var(--Violeta);
+}
+mark{background-color: rgba(188, 100, 231, 0.301) ;
+ border-radius: 20px; 
+}
+
+       
+
+@media (max-width: 991px) {
   .titulo-principal {
     size: 1rem;
   }
@@ -263,20 +155,8 @@ nav {
 
   .inicio-mensaje {
     height: 30vh;
-    width: 80%;
+    width: 100%;
     padding: 20px;
-  }
-
-  #brazo-violeta-1 {
-    transform: rotate(-90deg) scale(0.5);
-    position: relative;
-    left: 12px;
-  }
-
-  #brazo-violeta-2 {
-    transform: rotate(90deg) scale(0.5);
-    position: relative;
-    right: 150px;
   }
 
   #doble-brazos {
@@ -288,216 +168,23 @@ nav {
     font-size: 1rem;
   }
 
-  #estrategias-personalizadas {
-    color: rgb(183, 80, 234);
-    position: relative;
-    top: 0px;
-  }
-
-  #gestion-integral {
-    color: rgb(71, 134, 222);
-    position: relative;
-    top: 0px;
-    left: 0px;
-  }
-
-  #marketing-multicanal {
-    color: rgb(0, 32, 76);
-    position: relative;
-    top: 0px;
-    left: 0px;
-  }
-
-  #nuestra-ventaja-competitiva {
-    color: rgb(239, 184, 241);
-    position: relative;
-    top: 0px;
-    left: 0px;
-  }
-
-  #tecnologia-de-vanguardia {
-    color: rgb(143, 221, 225);
-    position: relative;
-    top: 0px;
-    left: 0px;
-  }
-
-  #relacion-con-el-cliente {
-    color: rgb(183, 80, 234);
-    position: relative;
-    top: 0px;
-    left: 0px;
-  }
-
-  #responsabilidad-social {
-    color: rgb(0, 32, 76);
-    position: relative;
-    top: 0px;
-    left: 0px;
-  }
-
   .titulo-muy-grande {
     font-size: 2rem;
   }
   .resaltado {
     background: rgba(166, 0, 249, 0.508);
-    border-radius: 40px;
+    border-radius: 30px;
     font-size: 2rem;
     padding: 2px;
   }
-}
+  #contenedor-de-inicio {
+    width: auto;
+    height: auto;
+  }
 
- /* dispositivos medianos */
-   @media (min-width: 768px) and (max-width: 991.98px) {
-
-
-    .titulo-principal {
-      size: 1rem;
-    }
-  
-    * {
-      font-size: 1rem;
-    }
-  
-    .inicio-mensaje {
-      height: 30vh;
-      width: 80%;
-      padding: 20px;
-    }
-  
-    #brazo-violeta-1 {
-      transform: rotate(-90deg) scale(0.5);
-      position: relative;
-      left: 12px;
-    }
-  
-    #brazo-violeta-2 {
-      transform: rotate(90deg) scale(0.5);
-      position: relative;
-      right: 150px;
-    }
-  
-    #doble-brazos {
-      position: relative;
-      top: 100%;
-    }
-    .por-que-elegirnos {
-      font-weight: bolder;
-      font-size: 1rem;
-    }
-  
-    #estrategias-personalizadas {
-      color: rgb(183, 80, 234);
-      position: relative;
-      top: 0px;
-    }
-  
-    #gestion-integral {
-      color: rgb(71, 134, 222);
-      position: relative;
-      top: 0px;
-      left: 0px;
-    }
-  
-    #marketing-multicanal {
-      color: rgb(0, 32, 76);
-      position: relative;
-      top: 0px;
-      left: 0px;
-    }
-  
-    #nuestra-ventaja-competitiva {
-      color: rgb(239, 184, 241);
-      position: relative;
-      top: 0px;
-      left: 0px;
-    }
-  
-    #tecnologia-de-vanguardia {
-      color: rgb(143, 221, 225);
-      position: relative;
-      top: 0px;
-      left: 0px;
-    }
-  
-    #relacion-con-el-cliente {
-      color: rgb(183, 80, 234);
-      position: relative;
-      top: 0px;
-      left: 0px;
-    }
-  
-    #responsabilidad-social {
-      color: rgb(0, 32, 76);
-      position: relative;
-      top: 0px;
-      left: 0px;
-    }
-  
-    .titulo-muy-grande {
-      font-size: 2rem;
-    }
-    .resaltado {
-      background: rgba(166, 0, 249, 0.508);
-      border-radius: 40px;
-      font-size: 2rem;
-      padding: 2px;
-    }
-   }
-/* -----------------------FOOTER----------------------------- */
-footer {
-  background-image: url(../img/background.png);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  object-fit: contain;
-  width: 100%;
-}
-@media all and (max-width: 992px) {
- footer {
-  background-image: url(../img/background.png);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  object-fit: contain;
-  width: 100%;
-}
-.fz{
-  font-size: 13px;;
-}
-}
-@media all and (max-width: 768px) {
-footer {
-  background-image: url(../img/background.png);
-  background-size: 320%;
-  background-repeat: no-repeat;
-  object-fit: contain;
-  width: 100%;
-}
-.fz{
-  font-size: 13px;;
-}
-}
-.fz{
-  font-size: 14px;;
-}
-/* -----------------------------NOSOTROS-------------------------------- */
-.animate-card {
-  box-shadow: 0 4px 8px rgba(166, 0, 249, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.animate-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(166, 0, 249, 0.5);
-  cursor: pointer;
-}
-/* ------------------------------------------------------------------------ */
-
-/* -----------------------------CONTACTO-------------------------------- */
-
-.bg1 {
-  background-image: url(../img/brazos-diferentes.png);
-  background-size: 320%;
-  background-repeat: no-repeat;
-  object-fit: contain;
-  width: 100%;
+  .estrategias-personalizadas {
+    color: var(--Violeta);
+    position: relative;
+    left: 0%;
+  }
 }

@@ -13,6 +13,11 @@
       content="condicionales, variables, constantes, javascript, bucles, arrays, objetos, clases, poo, dom, bom, localstorage" />
     <link rel="icon" type="image/jpg" href="../img/mageneto.ico" />
     <link
+      href="
+            https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
+            "
+      rel="stylesheet" />
+    <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <link
@@ -20,14 +25,21 @@
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous" />
+    <link rel="stylesheet" href="../css/styleBtn.css" />
     <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/styleNavFooter.css" />
     <title>MAGNETO</title>
   </head>
+
   <body>
     <header>
       <nav class="navbar navbar-expand-lg">
-        <div class="container d-flex">
-          <img src="../img/logomagnetohome.png" class="img-fluid" width="75" alt="Logo Magneto">
+        <div class="container-fluid d-flex">
+          <img
+            src="../img/logomagnetohome.png"
+            class="img-fluid ms-5"
+            width="75"
+            alt="Logo Magneto" />
           <a class="navbar-brand text-white titulo" href="../index.html"
             >Magneto</a
           >
@@ -62,7 +74,7 @@
               <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle text-white"
-                  href="./detalleServicio.html"
+                  href="./error404.html"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false">
@@ -70,7 +82,7 @@
                 </a>
                 <ul class="dropdown-menu">
                   <li>
-                    <a class="dropdown-item" href="./detalleServicio.html"
+                    <a class="dropdown-item" href="./error404.html"
                       >Redes Sociales</a
                     >
                   </li>
@@ -78,22 +90,22 @@
                     <hr class="dropdown-divider" />
                   </li>
                   <li>
-                    <a class="dropdown-item" href="./detalleServicio.html"
-                      >Email</a
-                    >
+                    <a class="dropdown-item" href="./error404.html">Email</a>
                   </li>
                   <li>
                     <hr class="dropdown-divider" />
                   </li>
                   <li>
-                    <a class="dropdown-item" href="./detalleServicio.html"
+                    <a class="dropdown-item" href="./error404.html"
                       >Páginas Web</a
                     >
                   </li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="./contacto.html">Contacto</a>
+                <a class="nav-link text-white" href="./contacto.html"
+                  >Contacto</a
+                >
               </li>
             </ul>
             <form class="d-flex" role="search">
@@ -101,18 +113,32 @@
                 class="form-control me-2"
                 type="search"
                 placeholder="Buscar"
-                aria-label="Search" />
+                aria-label="Search"
+                id="barraBusqueda"
+                maxlength="60" />
               <button class="btn btnColor" type="submit">Buscar</button>
             </form>
-            <ul class="navbar-nav ms-auto mb-lg-0 fw-bold">
-              <li class="nav-item">
-                <button
-                  class="btn btnColorLogin fw-bold rounded-pill ms-auto fs-6"
-                  type="button">
-                  <i class="bi bi-person-circle"></i> Login
-                </button>
-              </li>
-            </ul>
+
+            <div class="d-flex justify-content-end">
+              <div id="resultadosBusqueda"></div>
+            </div>
+
+            <div class="ms-sm-0 ms-md-4 ms-lg-4">
+              <a href="./usuario.html"
+                ><img
+                  src="../img/login.png"
+                  class="img-fluid"
+                  width="80"
+                  alt="Usuario"
+              /></a>
+              <a href="./carrito.html"
+                ><img
+                  src="../img/carrito.png"
+                  class="img-fluid"
+                  width="90"
+                  alt="Carrito de Compras"
+              /></a>
+            </div>
           </div>
         </div>
       </nav>
@@ -136,7 +162,36 @@
           >Volver al Inicio</a
         >
       </div>
+      <section>
+        <button class="open_button" onclick="openForm()">
+          <i class="bi bi-chat-dots-fill"></i>
+        </button>
+        <div class="chat_popup" id="myForm">
+          <form action="" class="form_container background">
+            <div class="w-100">
+              <a id="formChat" href="" class="text-decoration-none">
+                <img src="../img/logomagnetohome.png" alt="logo" />Magneto
+              </a>
+              <button
+                type="button"
+                class="btn-close buttonChatClose bg-white"
+                onclick="closeForm()"
+                aria-label="Close"></button>
+            </div>
+            <label id="msg" for="msg" class=""> Dejános tu mensaje...</label>
+            <textarea
+              class="w-100 form-container text-start ps-3"
+              name="msg"
+              minlength="15"
+              maxlength="250"
+              placeholder="Escribe un mensaje aquí..."
+              required></textarea>
+            <button type="submit" class="btn">Enviar</button>
+          </form>
+        </div>
+      </section>
     </main>
+
     <footer class="mt-5">
       <section class="container-fluid text-center">
         <article class="row py-5">
@@ -155,39 +210,33 @@
               >
             </h6>
             <a
-              class="link-secondary fz"
+              class="fz itemActive"
               href="https://www.instagram.com/"
               target="_blank"
               ><i class="bi bi-instagram fs-5"></i
             ></a>
             <a
-              class="link-secondary fz"
+              class="fz itemActive"
               href="https://www.facebook.com/"
               target="_blank"
               ><i class="bi bi-facebook fs-5"></i
             ></a>
-            <a
-              class="link-secondary fz"
-              href="https://www.x.com/"
-              target="_blank"
+            <a class="fz itemActive" href="https://www.x.com/" target="_blank"
               ><i class="bi bi-twitter-x fs-5"></i
             ></a>
             <a
-              class="link-secondary fz"
+              class="fz itemActive"
               href="https://www.youtube.com/"
               target="_blank"
               ><i class="bi bi-youtube fs-5"></i
             ></a>
             <a
-              class="link-secondary fz"
+              class="fz itemActive"
               href="https://www.linkedin.com/"
               target="_blank"
               ><i class="bi bi-linkedin fs-5"></i
             ></a>
-            <a
-              class="link-secondary fz"
-              href="https://discord.com/"
-              target="_blank"
+            <a class="fz itemActive" href="https://discord.com/" target="_blank"
               ><i class="bi bi-discord fs-5"></i
             ></a>
           </div>
@@ -255,10 +304,11 @@
           <div
             class="col-12 col-sm-3 col-md-3 col-lg-3 text-sm-center text-md-start text-lg-start py-2">
             <h6 class="itemActive fw-bold">Suscríbete y recibe noticias</h6>
-            <form class="d-flex ms-sm-0 me-md-0 me-lg-5">
+            <form class="d-flex ms-sm-0 me-md-0 me-lg-5" id="formSuscripcion">
               <input
                 class="form-control me-2 fz"
                 type="email"
+                id="emailFooter"
                 placeholder="Escribe tu email aqui" />
               <button class="btn btnColor fz" type="submit">Unirse</button>
             </form>
@@ -270,5 +320,9 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.all.min.js"></script>
+    <script src="../js/buscar.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/footer.js" type="module"></script>
   </body>
 </html>

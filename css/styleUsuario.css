@@ -1,0 +1,38 @@
+.cardUser {
+    transform: scale(1);
+    transition-property: transform;
+    transition-duration: 1s;
+  }
+  .cardUser:hover {
+    transform: scale(1.1);
+    transition-property: transform;
+    transition-duration: 1s;
+  }
+  
+.background{
+  background-image: url(../img/background.png);
+  background-size: 200%;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  width: 100%;
+}
+
+@media all and (max-width: 992px) {
+.background{
+  background-image: url(../img/background.png);
+  background-size: 220%;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  width: 100%;
+}
+}
+@media all and (max-width: 768px) {
+.background{
+  background-image: url(../img/background.png);
+  background-size: 420%;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  width: 100%;
+}
+}
+  

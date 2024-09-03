@@ -1,0 +1,180 @@
+nav {
+  background-image: url(../img/background.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  width: 100%;
+}
+
+.itemActive {
+  color: var(--Azul);
+}
+.navbar-toggler {
+  border-color: white;
+  color: white;
+  border-width: 2px;
+}
+.navbar-toggler-icon {
+  width: 1.3em;
+  height: 1.5em;
+  color: white;
+  border-color: white;
+}
+.btnColor {
+  background-color: var(--Violeta);
+  color: white;
+}
+.btnColor:hover {
+  background-color: white;
+  color: var(--Azul);
+  border-color: none;
+}
+.btnColorLogin {
+  background-color: white;
+  color: var(--Azul);
+}
+.btnColorLogin:hover {
+  background-color: white;
+  color: var(--Violeta);
+}
+.titulo {
+  font-family: "Black Ops One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.8rem;
+}
+.bgInputWhite {
+  background-color: rgba(255, 255, 255, 0.488);
+  color: white;
+  border-color: white;
+}
+.bgInputWhite:active {
+  background-color: white;
+  color: var(--Azul);
+  border-color: white;
+}
+.dropdown-menu {
+  background-color: var(--Violeta);
+  color: white;
+  border-color: none;
+}
+.dropdown-item {
+  background-color: var(--Violeta);
+  color: white;
+  border-color: none;
+}
+.dropdown-item:hover {
+  background-color: white;
+  color: var(--Azul);
+  border-color: none;
+}
+.dropdown-item:active {
+  background-color: white;
+  color: var(--Azul);
+  border-color: none;
+}
+
+footer {
+  background-image: url(../img/background.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  width: 100%;
+}
+@media all and (max-width: 992px) {
+ footer {
+  background-image: url(../img/background.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  width: 100%;
+}
+.fz{
+  font-size: 13px;;
+}
+}
+@media all and (max-width: 768px) {
+footer {
+  background-image: url(../img/background.png);
+  background-size: 320%;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  width: 100%;
+}
+.fz{
+  font-size: 13px;;
+}
+}
+  .fz {
+    font-size: 14px;
+  }
+
+
+/* ---------------------------------- boton buscar----------- */
+.contenedor-busqueda {
+    position: relative;
+    width: 100%;
+  }
+  
+  #resultadosBusqueda {
+    position: absolute;
+    top: 70%;
+    border-radius: 20px;
+    border-top: none;
+    width: 17%;
+    max-height: 100%;
+    overflow-y: auto;
+    background-color: #f9f9f9b2;
+    z-index: 3; 
+   
+  
+  }
+  
+  .item-result {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .item-result:hover {
+    background-color: rgba(184, 85, 233, 0.608);
+  }
+  
+  @media (max-width: 991px){
+    #resultadosBusqueda {
+      width: 80%;
+  
+    }  
+  }
+  
+  
+
+
+@media all and (max-width: 992px) {
+  nav {
+    background-image: url(../img/background.png);
+    background-size: 200%;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+@media all and (max-width: 768px) {
+  nav {
+    background-image: url(../img/background.png);
+    background-size: 280%;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+@media all and (max-width: 768px) {
+  .btnColorLogin {
+    background-color: white;
+    color: var(--Azul);
+    margin-top: 10px;
+  }
+  .btnColorLogin:hover {
+    background-color: white;
+    color: var(--Violeta);
+  }
+}
