@@ -65,12 +65,14 @@ main {
   transform: rotate(-90deg) scale(1.4);
   position: relative;
   top: -20%;
+  right: -7%;
   margin-top: 50%;
 }
 #brazo-violeta-2 {
   transform: rotate(90deg) scale(1.4);
   position: relative;
   top: 20%;
+  right: 7%;
   margin-bottom: 60%;
 }
 #doble-brazos {
@@ -155,16 +157,6 @@ mark{background-color: rgba(188, 100, 231, 0.301) ;
     height: 30vh;
     width: 100%;
     padding: 20px;
-  }
-
-  #brazo-violeta-1 {
-    transform: rotate(-90deg) scale(0.5);
-  }
-
-  #brazo-violeta-2 {
-    transform: rotate(90deg) scale(0.5);
-    position: relative;
-    right: 150px;
   }
 
   #doble-brazos {
