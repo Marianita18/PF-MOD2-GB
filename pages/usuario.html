@@ -165,7 +165,7 @@
         </div>
             </article>
           </section>
-      <section >
+      <section>
         <button class="open_button" onclick="openForm()">
           <i class="bi bi-chat-dots-fill"></i>
         </button>
@@ -175,7 +175,8 @@
               <a id="formChat" href="" class="text-decoration-none">
                 <img src="../img/logomagnetohome.png" alt="logo" />Magneto
               </a>
-              <button type="button" class="btn-close buttonChatClose bg-white" onclick="closeForm()" aria-label="Close"></button>
+              <button type="button" class="btn-close buttonChatClose bg-white" onclick="closeForm()"
+                aria-label="Close"></button>
             </div>
             <label id="msg" for="msg" class=""> Dejános tu mensaje...</label>
             <textarea class="w-100 form-container text-start ps-3" name="msg" minlength="15" maxlength="250"
@@ -185,63 +186,6 @@
         </div>
       </section>
     </main>
-    <section>
-      <div class="modal" tabindex="-1" id="modalEditarUsuario">
-        <div class="modal-dialog">
-          <div class="modal-content bg-celeste">
-            <div class="modal-header">
-              <h5 class="modal-title">Editar Usuario</h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-                <form class="form-control mb-5" id="formEditarUsuario">
-                  <div class="mb-3">
-                    <label for="nombre" class="form-label">Nombre*</label>
-                    <input type="text" class="form-control" id="nombre" maxlength="50" minlength="8" placeholder="Ej: Juan" required />
-                  </div>
-                  <div class="mb-3">
-                    <label for="apellido" class="form-label">Apellido*</label>
-                    <input type="text" class="form-control" id="apellido" maxlength="50" minlength="8" placeholder="Ej: Perez"
-                      required />
-                  </div>
-                  <div class="mb-3">
-                    <label for="fnacimiento" class="form-label">Fecha de Nacimiento</label>
-                    <input type="date" class="form-control" id="fnacimiento" maxlength="10" minlength="10" placeholder="Ej: 12/12/2012"
-                      required />
-                  </div>
-                  <div class="mb-3">
-                    <label for="telefono" class="form-label">Teléfono*</label>
-                    <input type="tel" class="form-control" id="telefono" maxlength="10" minlength="10" placeholder="Ej: 3814961577"
-                      required />
-                  </div>
-                  <div class="mb-3">
-                    <label for="email" class="form-label">Email*</label>
-                    <input type="email" class="form-control" id="email" placeholder="Ej: juanperez@gmail.com" required />
-                  </div>
-                  <!-- <div>
-                                      <label for="imagenUsuario" class="form-label">Cambiar imagen</label>
-                                    </div>
-                                    <div class="input-group mb-3">
-                                      <input type="file" class="form-control" id="imagenUsuario" aria-describedby="imagenUsuario"
-                                        aria-label="Upload" />
-                                      <button class="btn btnColor" type="button" id="imagenUsuario">
-                                        Subir
-                                      </button>
-                                    </div> -->
-                  <button type="submit" class="btn btnColor" onclick="buscarUsuario">
-                    Guardar Cambios
-                  </button>
-                </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
     <footer class="mt-5">
       <section class="container-fluid text-center">
         <article class="row py-5">
