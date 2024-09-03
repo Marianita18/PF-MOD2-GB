@@ -29,7 +29,7 @@ const mostrarModalUsuario = () => {
 
 const crearUsuario = () => {
   crear = true;
-     if(validarCantidadCaracteres(usuario,3,30) === true && validarCantidadCaracteres(nombre,4,1000) === true && validarCantidadCaracteres(apellido,1,15) === true && validarCantidadCaracteres(telefono,1,15) === true && validarCantidadCaracteres(tipoServicio,1,15) === true ){
+     if(validarCantidadCaracteres(usuario,3,30) === true && validarCantidadCaracteres(nombre,4,1000) === true && validarCantidadCaracteres(apellido,1,15) === true && validarCantidadCaracteres(telefono,1,15) === true && validarCantidadCaracteres(tipo,1,15) === true ){
     const nuevoUsuario = new Usuario(
       usuario.value,
       nombre.value,
@@ -105,7 +105,7 @@ const modificarUsuario = () => {
   const obtenerUsuario = listaUsuarios.findIndex(
     (res) => res.id === encontrarUsuario.id
   );
-  if(validarCantidadCaracteres(usuario,3,30) === true && validarCantidadCaracteres(nombre,4,1000) === true && validarCantidadCaracteres(apellido,1,15) === true && validarCantidadCaracteres(telefono,1,15) === true && validarCantidadCaracteres(tipoServicio,1,15) === true ){
+  if(validarCantidadCaracteres(usuario,3,30) === true && validarCantidadCaracteres(nombre,4,1000) === true && validarCantidadCaracteres(apellido,1,15) === true && validarCantidadCaracteres(telefono,1,15) === true && validarCantidadCaracteres(tipo,1,15) === true ){
 
       //2- actualizar los datos del array
   listaUsuarios[obtenerUsuario].usuario = usuario.value;
