@@ -164,14 +164,14 @@ const actualizarFilaEnTabla = (index) => {
 
  // Actualizar el contenido de la fila
   fila.innerHTML = `
-        <td>${listaServicios.nombreServicio}</td>
-        <td>${listaServicios.descripcionServicio}</td>
-        <td>${listaServicios.precioServicio}</td>
-        <td>${listaServicios.tiempoServicio}</td>
+        <td>${listaServicios[index].nombreServicio}</td>
+        <td>${listaServicios[index].descripcionServicio}</td>
+        <td>${listaServicios[index].precioServicio}</td>
+        <td>${listaServicios[index].tiempoServicio}</td>
         <td>
-            <button class="btn btnColor" onclick="verServicio('${listaServicios.id}')"><i class="bi bi-eye fs-5"></button>
-            <button class="btn btn-warning" onclick="prepararServicio('${listaServicios.id}')"><i class="bi bi-pencil fs-5"></i></button>
-            <button class="btn btn-danger" onclick="borrarServicio('${listaServicios.id}')"><i class="bi bi-trash fs-5"></i></button>
+            <button class="btn btnColor" onclick="verServicio('${listaServicios[index].id}')"><i class="bi bi-eye fs-5"></button>
+            <button class="btn btn-warning" onclick="prepararServicio('${listaServicios[index].id}')"><i class="bi bi-pencil fs-5"></i></button>
+            <button class="btn btn-danger" onclick="borrarServicio('${listaServicios[index].id}')"><i class="bi bi-trash fs-5"></i></button>
         </td>`;
 }
 
