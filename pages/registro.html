@@ -23,6 +23,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="../css/styleBtn.css">
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="../css/styleNavFooter.css">
     <link rel="stylesheet" href="../css/styleRegistro.css">
@@ -62,8 +63,8 @@
                 >Nosotros</a
               >
             </li>
-              <li class="nav-item" id="adminnav " style="display: block;">
-               <a href="adminServicioUsuario.html">
+              <li class="nav-item" id="adminnav " style="display: none;">
+               <a class="nav-link text-white" href="./adminServicioUsuario.html">
                  Administrador
               </a>
               </li>
@@ -102,8 +103,8 @@
                 </li>
               </ul>
             </li>
-            <li class="nav-item itemActive">
-              <a class="nav-link" href="./contacto.html">Contacto</a>
+            <li class="nav-item ">
+              <a class="nav-link text-white" href="./contacto.html">Contacto</a>
             </li>
           </ul>
           <form class="d-flex" role="search">
@@ -150,6 +151,26 @@
           nuevo usario
         </button>
       </form>
+      <section>
+        <button class="open_button" onclick="openForm()">
+          <i class="bi bi-chat-dots-fill"></i>
+        </button>
+        <div class="chat_popup" id="myForm">
+          <form action="" class="form_container background">
+            <div class="w-100">
+              <a id="formChat" href="" class="text-decoration-none">
+                <img src="../img/logomagnetohome.png" alt="logo" />Magneto
+              </a>
+              <button type="button" class="btn-close buttonChatClose bg-white" onclick="closeForm()"
+                aria-label="Close"></button>
+            </div>
+            <label id="msg" for="msg" class=""> Dejános tu mensaje...</label>
+            <textarea class="w-100 form-container text-start ps-3" name="msg" minlength="15" maxlength="250"
+              placeholder="Escribe un mensaje aquí..." required></textarea>
+            <button type="submit" class="btn">Enviar</button>
+          </form>
+        </div>
+      </section>
     </main>
     <div
       class="modal fade"

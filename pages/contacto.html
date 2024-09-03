@@ -24,6 +24,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="../css/styleBtn.css">
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="../css/styleNavFooter.css">
     <title>MAGNETO</title>
@@ -57,8 +58,8 @@
                 >
               </li>
             
-              <li class="nav-item">
-                <a class="nav-item" class="nav-link text-white" href="./nosotros.html"
+              <li class="nav-item ">
+                <a class="nav-link text-white" class="nav-link text-white" href="./nosotros.html"
                   >Nosotros</a
                 >
               </li>
@@ -267,6 +268,26 @@
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
       </section>
+      <section>
+        <button class="open_button" onclick="openForm()">
+          <i class="bi bi-chat-dots-fill"></i>
+        </button>
+        <div class="chat_popup" id="myForm">
+          <form action="" class="form_container background">
+            <div class="w-100">
+              <a id="formChat" href="" class="text-decoration-none">
+                <img src="../img/logomagnetohome.png" alt="logo" />Magneto
+              </a>
+              <button type="button" class="btn-close buttonChatClose bg-white" onclick="closeForm()"
+                aria-label="Close"></button>
+            </div>
+            <label id="msg" for="msg" class=""> Dejános tu mensaje...</label>
+            <textarea class="w-100 form-container text-start ps-3" name="msg" minlength="15" maxlength="250"
+              placeholder="Escribe un mensaje aquí..." required></textarea>
+            <button type="submit" class="btn">Enviar</button>
+          </form>
+        </div>
+      </section>
     </main>
     <footer class="mt-1">
       <section class="container-fluid text-center">
@@ -404,5 +425,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="../js/buscar.js"></script>
+    <script src="../js/app.js"></script>
   </body>
 </html>

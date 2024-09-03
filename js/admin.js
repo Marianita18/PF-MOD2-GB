@@ -30,7 +30,9 @@ const mostrarModal = ()=>{
 
 const crearServicio = ()=>{
     estoyCreando = true;
-    if(validarCantidadCaracteres(nombreServicio,3,30) === true && validarCantidadCaracteres(descripcionServicio,10,1000) && validarUrl(imagenServicio)){
+    if(validarCantidadCaracteres(nombreServicio,3,30) === true && validarCantidadCaracteres(descripcionServicio,4,1000) === true
+ && validarCantidadCaracteres(precioServicio,1,15) === true && validarCantidadCaracteres(tiempoServicio,1,15) === true
+  && validarCantidadCaracteres(tipoServicio,1,15) === true && validarUrl(imagenServicio)){
       const servicios = new Servicios(nombreServicio.value,descripcionServicio.value,precioServicio.value,tiempoServicio.value,tipoServicio.value,imagenServicio.value);
       //quiero guardar el objeto en la lista de servicio
       listaServicios.push(servicios);
@@ -72,10 +74,10 @@ const dibujarFila = (servicio)=>{
               <td>${servicio.precioServicio}</td>
               <td>${servicio.tiempoServicio}</td>
               <td>
-                <button class="btn btnColor" onclick="verServicio('${servicio.id}')">Leer</button>
-                <button class="btn btn-warning" onclick="prepararServicio('${servicio.id}')">Editar</button>
-                <button class="btn btn-danger" onclick="borrarServicio('${servicio.id}')">Borrar</button>
-              </td>`
+                <button class="btn btnColor" onclick="verServicio('${servicio.id}')"><i class="bi bi-eye fs-5"></i></button>
+                <button class="btn btn-warning" onclick="prepararServicio('${servicio.id}')"><i class="bi bi-pencil fs-5"></i></button>
+                <button class="btn btn-danger" onclick="borrarServicio('${servicio.id}')"><i class="bi bi-trash fs-5"></i></button>
+              </td>`;
   fila.innerHTML = contenidoFila;
   tabla.append(fila);
 }
@@ -140,7 +142,10 @@ const modificarServicio = ()=>{
 //Posicion
   const obtenerServicio = listaServicios.findIndex(res => res.id === servicioAEditar.id);
 //actualizar datos del array
-if(validarCantidadCaracteres(nombreServicio,3,30) === true && validarCantidadCaracteres(descripcionServicio,10,1000) && validarUrl(imagenServicio)){
+if(validarCantidadCaracteres(nombreServicio,3,30) === true && validarCantidadCaracteres(descripcionServicio,4,1000) === true
+ && validarCantidadCaracteres(precioServicio,1,15) === true && validarCantidadCaracteres(tiempoServicio,1,15) === true
+  && validarCantidadCaracteres(tipoServicio,1,15) === true && validarUrl(imagenServicio)){
+
   listaServicios[obtenerServicio].nombreServicio = nombreServicio.value;
   listaServicios[obtenerServicio].descripcionServicio = descripcionServicio.value;
   listaServicios[obtenerServicio].precioServicio = precioServicio.value;
@@ -169,9 +174,9 @@ const actualizarFilaEnTabla = (index) => {
         <td>${listaServicios[index].precioServicio}</td>
         <td>${listaServicios[index].tiempoServicio}</td>
         <td>
-            <button class="btn btn-color" onclick="verServicio('${listaServicios[index].id}')">Leer</button>
-            <button class="btn btn-warning" onclick="prepararServicio('${listaServicios[index].id}')">Editar</button>
-            <button class="btn btn-danger" onclick="borrarServicio('${listaServicios[index].id}')">Borrar</button>
+            <button class="btn btnColor" onclick="verServicio('${listaServicios[index].id}')"><i class="bi bi-eye fs-5"></i></button>
+            <button class="btn btn-warning" onclick="prepararServicio('${listaServicios[index].id}')"><i class="bi bi-pencil fs-5"></i></button>
+            <button class="btn btn-danger" onclick="borrarServicio('${listaServicios[index].id}')"><i class="bi bi-trash fs-5"></i></button>
         </td>`;
 }
 

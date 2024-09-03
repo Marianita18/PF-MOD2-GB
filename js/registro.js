@@ -25,12 +25,8 @@ document.getElementById("btn-nuevousario").addEventListener("click", function ()
   const modalUsuario = new bootstrap.Modal(document.getElementById("modalnuevousario"));
   modalUsuario.show();
 });
-
 const Admin = (usuario) => {
-  return (
-    usuario.email === "admin@gmail.com"&&
-    usuario.password === "admin"
-  );
+  return usuario.email === "admin@gmail.com" && usuario.password === "12345";
 };
 
 const obtenerUsuario = () => {
@@ -69,15 +65,15 @@ const cargarUsuario = (usuario) => {
 };
 btncargar.addEventListener("click", () => {
   const usuario = obtenerUsuario();
-  if (Admin(usuario)) {
+  if (esAdmin(usuario)) {
     console.log("El usuario es administrador");
+    window.location.href = "../pages/adminServicioUsuario.html";
     document.getElementById("adminnav").style.display = "block"; 
   } else {
     const usuarioEncontrado = usuarios.find(u => u.email === usuario.email && u.password === usuario.password);
     if (usuarioEncontrado) {
       console.log("Usuario encontrado en el local storage");
       cargarUsuario(usuarioEncontrado);
-      window.location.href = "../index.html";
     } else {
       const modalUsuario = new bootstrap.Modal(document.getElementById("modalnuevousario"));
       console.log("Usuario no encontrado, mostrando formulario de creación");

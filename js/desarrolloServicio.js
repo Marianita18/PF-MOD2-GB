@@ -7,8 +7,6 @@ const servicioBuscado = listaServicios.find(
   (servicio) => servicio.id === parametroId
 );
 
-console.log(servicioBuscado);
-
 const seccionDeInformacion = document.querySelector("#padre");
 
 seccionDeInformacion.innerHTML = ` 
