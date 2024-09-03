@@ -290,6 +290,8 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
                 >
                 <input
                   type="text"
+                  minlength="3"
+                  maxlength="30"
                   class="form-control"
                   id="nombreServicio"
                   placeholder="Ejemplo: Pack basico.... " />
@@ -304,6 +306,8 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
                 >
                 <input
                   type="text"
+                  minlength="4"
+                  maxlength="1000"
                   class="form-control"
                   id="descripcionServicio"
                   placeholder="El pack contiene..." />
@@ -318,6 +322,8 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
                 >
                 <input
                   type="text"
+                  minlength="1"
+                  maxlength="15"
                   class="form-control"
                   id="precioServicio"
                   placeholder="100 U$D " />
@@ -329,6 +335,8 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
                 >
                 <input
                   type="text"
+                  minlength="1"
+                  maxlength="15"
                   class="form-control"
                   id="tiempoServicio"
                   placeholder="5 Dias " />
@@ -374,15 +382,27 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
               <form class="form-control bg-body-tertiary" id="formRegistro">
                 <div class="mb-3">
                   <label for="usuario" class="form-label">Usuario</label>
-                  <input type="text" class="form-control" id="usuario" />
+                  <input type="text" minlength="3" maxlength="30" class="form-control" id="usuario" />
+                  <div class="invalid-feedback">
+                    Dato obligatorio, debe contener entre 3 y 30 caracteres
+                    inclusive.
+                  </div>
                 </div>
                 <div class="mb-3">
                   <label for="nombre" class="form-label">Nombre</label>
-                  <input type="text" class="form-control" id="nombre" />
+                  <input type="text" minlength="3" maxlength="30"  class="form-control" id="nombre" />
+                  <div class="invalid-feedback">
+                    Dato obligatorio, debe contener entre 3 y 30 caracteres
+                    inclusive.
+                  </div>
                 </div>
                 <div class="mb-3">
                   <label for="apellido" class="form-label">Apellido</label>
-                  <input type="text" class="form-control" id="apellido" />
+                  <input type="text" minlength="3" maxlength="30"  class="form-control" id="apellido" />
+                  <div class="invalid-feedback">
+                    Dato obligatorio, debe contener entre 3 y 30 caracteres
+                    inclusive.
+                  </div>
                 </div>
                 <div class="mb-3">
                   <label for="fechaNacimiento" class="form-label"
@@ -395,19 +415,35 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
                 </div>
                 <div class="mb-3">
                   <label for="telefono" class="form-label">Teléfono</label>
-                  <input type="tel" class="form-control" id="telefono" />
+                  <input type="tel" minlength="3" maxlength="30" class="form-control" id="telefono" />
+                  <div class="invalid-feedback">
+                    Dato obligatorio, debe contener entre 3 y 30 caracteres
+                    inclusive.
+                  </div>
                 </div>
                 <div class="mb-3">
                   <label for="email" class="form-label">Email</label>
                   <input type="email" class="form-control" id="email" />
+                  <div class="invalid-feedback">
+                    Dato obligatorio, debe contener entre 3 y 30 caracteres
+                    inclusive.
+                  </div>
                 </div>
                 <div class="mb-3">
                   <label for="tipo" class="form-label">Tipo</label>
                   <input type="text" class="form-control" id="tipo" />
+                  <div class="invalid-feedback">
+                    Dato obligatorio, debe contener entre 3 y 30 caracteres
+                    inclusive.
+                  </div>
                 </div>
                 <div class="mb-3">
                   <label for="password" class="form-label">Password</label>
-                  <input type="password" class="form-control" id="password" />
+                  <input type="password" minlength="3" maxlength="15"  class="form-control" id="password" />
+                  <div class="invalid-feedback">
+                    Dato obligatorio, debe contener entre 3 y 15 caracteres
+                    inclusive.
+                  </div>
                 </div>
                 <button class="btn btnColor" type="submit" id="btnEnviar">
                   Enviar
