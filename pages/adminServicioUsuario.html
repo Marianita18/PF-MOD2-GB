@@ -12,9 +12,11 @@
       name="keywords"
       content="condicionales, variables, constantes, javascript, bucles, arrays, objetos, clases, poo, dom, bom, localstorage" />
     <link rel="icon" type="image/jpg" href="../img/mageneto.ico" />
-    <link href="
+    <link
+      href="
             https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
-            " rel="stylesheet">
+            "
+      rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
@@ -28,9 +30,9 @@
 https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
 "
       rel="stylesheet" />
-    <link rel="stylesheet" href="../css/styleBtn.css">
-      <link rel="stylesheet" href="../css/styles.css" />
-    <link rel="stylesheet" href="../css/styleNavFooter.css">
+    <link rel="stylesheet" href="../css/styleBtn.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/styleNavFooter.css" />
     <title>MAGNETO</title>
   </head>
   <body>
@@ -94,9 +96,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
                     <hr class="dropdown-divider" />
                   </li>
                   <li>
-                    <a class="dropdown-item" href="./error404.html"
-                      >Email</a
-                    >
+                    <a class="dropdown-item" href="./error404.html">Email</a>
                   </li>
                   <li>
                     <hr class="dropdown-divider" />
@@ -121,8 +121,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
                 placeholder="Buscar"
                 aria-label="Search"
                 id="barraBusqueda"
-                maxlength="60"
-              />
+                maxlength="60" />
               <button class="btn btnColor" type="submit">Buscar</button>
             </form>
 
@@ -152,7 +151,10 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
     <main>
       <section>
         <article class="p-5 mt-5">
-          <ul class="nav nav-tabs d-flex justify-content-center" id="myTab" role="tablist">
+          <ul
+            class="nav nav-tabs d-flex justify-content-center"
+            id="myTab"
+            role="tablist">
             <li class="nav-item mx-2" role="presentation">
               <button
                 class="nav-link active btnColor"
@@ -162,8 +164,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
                 type="button"
                 role="tab"
                 aria-controls="servicio-tab-pane"
-                aria-selected="true"
-                >
+                aria-selected="true">
                 Servicios
               </button>
             </li>
@@ -181,7 +182,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
               </button>
             </li>
           </ul>
-          <div class="tab-content  px-3" id="myTabContent">
+          <div class="tab-content px-3" id="myTabContent">
             <div
               class="tab-pane fade show active"
               id="servicio-tab-pane"
@@ -192,7 +193,9 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
                 <div
                   class="d-flex flex-direction-row justify-content-between mb-3">
                   <h2>Tabla de Servicios</h2>
-                  <button class="btn btnColor" id="btnNuevo">Nuevo Servicio</button>
+                  <button class="btn btnColor" id="btnNuevo">
+                    Nuevo Servicio
+                  </button>
                 </div>
                 <div class="table-responsive" id="tablaServicio">
                   <table class="table table-striped table-hover">
@@ -255,12 +258,20 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
               <a id="formChat" href="" class="text-decoration-none">
                 <img src="../img/logomagnetohome.png" alt="logo" />Magneto
               </a>
-              <button type="button" class="btn-close buttonChatClose bg-white" onclick="closeForm()"
+              <button
+                type="button"
+                class="btn-close buttonChatClose bg-white"
+                onclick="closeForm()"
                 aria-label="Close"></button>
             </div>
             <label id="msg" for="msg" class=""> Dejános tu mensaje...</label>
-            <textarea class="w-100 form-container text-start ps-3" name="msg" minlength="15" maxlength="250"
-              placeholder="Escribe un mensaje aquí..." required></textarea>
+            <textarea
+              class="w-100 form-container text-start ps-3"
+              name="msg"
+              minlength="15"
+              maxlength="250"
+              placeholder="Escribe un mensaje aquí..."
+              required></textarea>
             <button type="submit" class="btn">Enviar</button>
           </form>
         </div>
@@ -385,7 +396,12 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
               <form class="form-control bg-body-tertiary" id="formRegistro">
                 <div class="mb-3">
                   <label for="usuario" class="form-label">Usuario</label>
-                  <input type="text" minlength="3" maxlength="30" class="form-control" id="usuario" />
+                  <input
+                    type="text"
+                    minlength="3"
+                    maxlength="30"
+                    class="form-control"
+                    id="usuario" />
                   <div class="invalid-feedback">
                     Dato obligatorio, debe contener entre 3 y 30 caracteres
                     inclusive.
@@ -393,7 +409,12 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
                 </div>
                 <div class="mb-3">
                   <label for="nombre" class="form-label">Nombre</label>
-                  <input type="text" minlength="3" maxlength="30"  class="form-control" id="nombre" />
+                  <input
+                    type="text"
+                    minlength="3"
+                    maxlength="30"
+                    class="form-control"
+                    id="nombre" />
                   <div class="invalid-feedback">
                     Dato obligatorio, debe contener entre 3 y 30 caracteres
                     inclusive.
@@ -401,7 +422,12 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
                 </div>
                 <div class="mb-3">
                   <label for="apellido" class="form-label">Apellido</label>
-                  <input type="text" minlength="3" maxlength="30"  class="form-control" id="apellido" />
+                  <input
+                    type="text"
+                    minlength="3"
+                    maxlength="30"
+                    class="form-control"
+                    id="apellido" />
                   <div class="invalid-feedback">
                     Dato obligatorio, debe contener entre 3 y 30 caracteres
                     inclusive.
@@ -418,7 +444,12 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
                 </div>
                 <div class="mb-3">
                   <label for="telefono" class="form-label">Teléfono</label>
-                  <input type="tel" minlength="3" maxlength="30" class="form-control" id="telefono" />
+                  <input
+                    type="tel"
+                    minlength="3"
+                    maxlength="30"
+                    class="form-control"
+                    id="telefono" />
                   <div class="invalid-feedback">
                     Dato obligatorio, debe contener entre 3 y 30 caracteres
                     inclusive.
@@ -442,7 +473,12 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
                 </div>
                 <div class="mb-3">
                   <label for="password" class="form-label">Password</label>
-                  <input type="password" minlength="3" maxlength="15"  class="form-control" id="password" />
+                  <input
+                    type="password"
+                    minlength="3"
+                    maxlength="15"
+                    class="form-control"
+                    id="password" />
                   <div class="invalid-feedback">
                     Dato obligatorio, debe contener entre 3 y 15 caracteres
                     inclusive.
@@ -586,7 +622,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.all.min.js"></script>
-    <script src="../js/admin1.js" type="module" ></script>
+    <script src="../js/admin1.js" type="module"></script>
     <script src="../js/admin.js" type="module"></script>
     <script src="../js/validaciones.js" type="module"></script>
     <script src="../js/buscar.js"></script>
