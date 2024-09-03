@@ -1,0 +1,130 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color:#a600f9;
+}
+/* BTN CHAT */
+.open_button {
+  width: 55px;
+  height: 55px;
+  padding: 16px 20px;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: rgb(183, 80, 234);
+}
+.open_button i {
+  display: inline-flex;
+  margin-right: 5px;
+}
+.chat_popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+}
+.form_container {
+  max-width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  color: #ffffff;
+  /* background-color:#a600f9; */
+}
+.form_container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background:#a600f9;
+  resize: none;
+  min-height: 200px;
+  font-size: 16px;
+}
+::placeholder {
+  color: white;
+}
+.form_container h2 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.form_container textarea:focus {
+  background-color:#a600f9;
+  outline: none;
+}
+.form_container textarea:hover {
+  background-color: rgb(183, 80, 234);
+  outline: none;
+}
+.form_container .btn {
+  width: 100%;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  background-color: rgb(183, 80, 234);
+}
+.form_container .btnCancel {
+  width: 100%;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: #ffffff;
+  font-weight: 700;
+  background-color: red;
+}
+.form-container .btn:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+.form-container .btnCancel {
+  background-color: red;
+}
+#formChat {
+  color: var(--white);
+  width: 50px;
+  font-weight: 700;
+}
+ #formChat img{
+  width: 30px;
+  padding-right: 5px; 
+  margin-top: 0px;
+} 
+#msg {
+  color: var(--white);
+  width: 150px;
+  font-size: 0.8rem;
+}
+.buttonChatClose {
+  float: right;
+  margin-right: 15px;
+  cursor: pointer;
+  
+}
+
+.background{
+  background-image: url(../img/background.png);
+  background-size: 200%;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  width: 100%;
+}
