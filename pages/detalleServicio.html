@@ -14,6 +14,9 @@
       content="condicionales, variables, constantes, javascript, bucles, arrays, objetos, clases, poo, dom, bom, localstorage"
     />
     <link rel="icon" type="image/jpg" href="../img/mageneto.ico" />
+    <link href="
+            https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css
+            " rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
@@ -365,10 +368,11 @@
             class="col-12 col-sm-3 col-md-3 col-lg-3 text-sm-center text-md-start text-lg-start py-2"
           >
             <h6 class="itemActive fw-bold">Suscríbete y recibe noticias</h6>
-            <form class="d-flex ms-sm-0 me-md-0 me-lg-5">
+            <form class="d-flex ms-sm-0 me-md-0 me-lg-5" id="formSuscripcion">
               <input
                 class="form-control me-2 fz"
                 type="email"
+                id="emailFooter"
                 placeholder="Escribe tu email aqui"
               />
               <button class="btn btnColor fz" type="submit">Unirse</button>
@@ -387,5 +391,6 @@
     <script src="../js/acordion.js"></script>
     <script src="../js/buscar.js"></script>
     <script src="../js/app.js"></script>
+    <script src="../js/footer.js"></script>
   </body>
 </html>
